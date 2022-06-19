@@ -27,17 +27,17 @@ body {
     position: relative;
     width: 100%;
     max-width: 70%;
-  }
-  
-  .image {
+    }
+
+.image {
     display: block;
     width: 100%;
     height: auto;
     padding-top: 20px;
     filter: grayscale(30%);
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute; 
     bottom: 0; 
     background: rgb(0, 0, 0);
@@ -58,8 +58,8 @@ body {
     /* background-color: #000; */
     /* color: #FFF; */
     z-index:5;
-  }
-  
-  .container:hover .overlay {
+    }
+
+    .container:hover .overlay {
     opacity: 1;
-  }
+    }
