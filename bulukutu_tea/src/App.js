@@ -4,12 +4,17 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import './App.css';
 
 import Navbar from './components/common/Navbar';
+import Homepage from './components/homepage';
 
 function App() {
   return (
     <div className='container-fluid'>
-      <Navbar></Navbar>
-
+      <div>
+        <Navbar></Navbar>
+      </div>
+      <div>
+        <Homepage></Homepage>
+      </div>
     </div>
   );
 }
