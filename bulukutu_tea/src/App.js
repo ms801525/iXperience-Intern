@@ -5,6 +5,7 @@ import './App.css';
 
 import Navbar from './components/common/Navbar';
 import Layout from './components/common/Layout';
+import Homepage from './components/homepage';
 
 function App() {
   return (
@@ -14,6 +15,12 @@ function App() {
         
       </Layout>
 
+      <div>
+        <Navbar></Navbar>
+      </div>
+      <div>
+        <Homepage></Homepage>
+      </div>
     </div>
   );
 }
