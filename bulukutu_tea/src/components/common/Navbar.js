@@ -7,12 +7,30 @@ export default function Navbar(props) {
     <nav className="navbar" style={{backgroundColor: "#E6CBBF"}}>
         <form className="container-fluid">
             <div className='container-fluid'>
-                <div className='row'>
-                    <Button 
-                        size={"btn-lg"}
-                        width={'w-50'}>
-                        Bulukutu Tea
-                    </Button>
+                <div className='row align-items-center'>
+                    <div className='col-8'>
+                        <div className='card m-1 text-center border-dark'
+                            style={{backgroundColor : '#B2755E',
+                            height: '50px',
+                            width:'75%'}}>
+                            Bulukutu Tea
+                        </div>
+                    </div>
+                    <div className='col'>
+                        <div className='m-1 text-center rounded-circle'
+                            style={{backgroundColor : '#B2755E',
+                            height: '30px',
+                            width:'70px',
+                            fontSize: "10px"}}>
+                            Welcome Username
+                        </div>
+                    </div>
+                    <div className='col'>
+                        <Button
+                            size={'btn-sm'}>
+                            <i class="bi bi-cart3"></i>
+                        </Button>
+                    </div>
                 </div>
                 <div className='row'>      
                     <div className='col'>
