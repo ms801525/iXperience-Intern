@@ -1,0 +1,192 @@
+body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+
+
+.icons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  column-gap: 25px;
+
+
+}
+.icon{
+  width:60px;
+  height: 60px;
+  align-items:left;
+  justify-content:right;
+  text-decoration: none;
+  font-size: 26px;
+  color: #fff;
+  border-radius: 500%;
+  outline: 2px solid rgb(255, 252, 252);
+  transition-property: 
+  outline-offset, outline-color,backround-color;
+  transition-duration: .25s;
+
+
+
+
+
+}
+
+
+.icon:hover{
+  outline-offset: 4px;
+  outline-style:double;
+  
+
+
+}
+
+.icon:hover i {
+  animation: shake .25s;
+  animation: Icon Drop ;
+  
+
+
+}
+
+.icon--instagram:hover {
+background-image: 
+radial-gradient(circle at 30% 107%,
+#fdf497 0%, #fdf497 5%, #fd5949 45%,
+#d6249f 60%, #285AEB 90%);
+outline-color: #d6249f;
+
+}
+
+.icon--twitter:hover{
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+
+
+}
+
+.icon--tiktok:hover{
+  background= img src: "tiktok.png"
+  outline-color: #1da1f2;
+
+
+}
+
+
+
+
+.row{
+
+  display:flex;
+  flex-direction: row;
+  justify-content: middle;
+  align-items:center;
+
+  margin: 9px;
+}
+
+.form-p
+{
+justify-content: last baseline;
+justify-content: center;
+
+
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+.container {
+  width: 50%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 60px 50px 60px #00000010;
+  background-color: rgb(227, 241, 237);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.form-group input,
+.form-group textarea {
+  width: 60%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px;
+
+}
+
+  
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  font-family: "Montserrat";
+  color: rgb(27, 188, 247);
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease background-color;
+}
+
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: white;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
