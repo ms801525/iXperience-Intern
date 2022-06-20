@@ -12,16 +12,17 @@ export default function Navbar(props) {
                         <div className='card m-1 text-center border-dark'
                             style={{backgroundColor : '#B2755E',
                             height: '50px',
-                            width:'75%'}}>
+                            width:'75%',
+                            fontSize: "x-large"}}>
                             Bulukutu Tea
                         </div>
                     </div>
                     <div className='col'>
                         <div className='m-1 text-center rounded-circle'
                             style={{backgroundColor : '#B2755E',
-                            height: '30px',
-                            width:'70px',
-                            fontSize: "10px"}}>
+                            height: '40px',
+                            width:'80px',
+                            fontSize: "small"}}>
                             Welcome Username
                         </div>
                     </div>

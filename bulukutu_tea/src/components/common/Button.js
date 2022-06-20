@@ -8,7 +8,8 @@ export default function Button({
 }) {
   return (
     <button className={'btn btn-outline-dark m-1 ' + size + ' ' + width} 
-      style={{backgroundColor : '#B2755E'}}>
+      style={{backgroundColor : '#B2755E',
+              fontSize : "large"}}>
         {children}
     </button>
   )
