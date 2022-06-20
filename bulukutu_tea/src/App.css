@@ -1,8 +1,5 @@
 body {
     background-color: #E6CBBF;
-<<<<<<< HEAD
-    font-family: "flamenco", "cursive";};
-=======
     font-family: "flamenco", "cursive";
     margin: 0;
 
@@ -66,4 +63,3 @@ body {
     .container:hover .overlay {
     opacity: 1;
     }
->>>>>>> main
