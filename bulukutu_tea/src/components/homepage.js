@@ -6,11 +6,9 @@ export default function homepage() {
     return (
         <div>
             <div className = 'container text-center'>
-            <img className='image' src={require('../images/bulu.jpeg')} alt='Background'></img>
-            <div className='overlay'><button className = 'btn btn-lg btn-block w-100'style={{backgroundColor : '#B2755E'}}>Learn More</button></div>
-        
-            
-        </div>
+                <img className='image' src={require('../images/bulu.jpeg')} alt='Background'></img>
+                <div className='overlay'><button className = 'btn btn-lg btn-block w-100'style={{backgroundColor : '#B2755E'}}>Learn More</button></div>
+            </div>
         <br></br>
         <div className = 'container p-3 border border-dark rounded' style={{backgroundColor : '#cfb09c'}}>
             <h2 className='text-center'>Bulukutu Tea</h2>
