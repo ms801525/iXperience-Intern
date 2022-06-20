@@ -10,9 +10,9 @@ function App() {
   return (
     <div className='container-fluid'>
       <Layout>
-      <div>
-        <Homepage></Homepage>
-      </div>
+        <div>
+          <Homepage></Homepage>
+        </div>
       </Layout>
     </div>
   );
