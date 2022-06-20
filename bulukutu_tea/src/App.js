@@ -13,24 +13,19 @@ import Homepage from './components/homepage';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/about-us" element={<AboutUsPage />}></Route>
-      </Routes>
-    </BrowserRouter>
-    )
+    <div className='container-fluid'>
+      <Layout>
+        <div>
+          <Homepage></Homepage>
+        </div>
+      </Layout>
+    </div>
+  );
+  // return (
+  //   <BrowserRouter>
+  //     <Routes>
+  //       <Route path="/about-us" element={<AboutUsPage />}></Route>
+  //     </Routes>
+  //   </BrowserRouter>
+  //   )
   }
-
-
-
-// function App() {
-//   return (
-//     <div className='container-fluid'>
-//       <Layout>
-//         <div>
-//           <Homepage></Homepage>
-//         </div>
-//       </Layout>
-//     </div>
-//   );
-// }
