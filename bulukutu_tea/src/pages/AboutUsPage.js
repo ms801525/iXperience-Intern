@@ -9,7 +9,7 @@ import "../styles/aboutUsStyles.css";
 
 function AboutUsPage() {
   return (
-    <div className="body">
+    <div className="body container">
       <div className="d-flex justify-content-center">
         <div style={{ float: "left", display: "inline", marginRight: "210px" }}>
           <div className="text-center">
@@ -24,7 +24,7 @@ function AboutUsPage() {
         </div>
       </div>
 
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center mb-5">
         <div style={{float: "left", display: "inline-block", marginRight: "50px" }}>
           <div className="infoPanel p-3">
             <img
@@ -34,16 +34,16 @@ function AboutUsPage() {
               height="auto"
               alt="background"
             ></img>
-            <div class="card" style={{ marginTop: "40px" }}>
-              <div class="card-body">Bulukutu Tea's motives and purpose!</div>
+            <div className="card" style={{ marginTop: "40px" }}>
+              <div className="card-body">Bulukutu Tea's motives and purpose!</div>
             </div>
           </div>
         </div>
         
         <div style={{ float: "left", display: "inline-block", marginLeft: "50px" }}>
           <div className="infoPanel p-3">
-            <div class="card">
-              <div class="card-body">
+            <div className="card">
+              <div className="card-body">
                 Story and the uprising info of Bulukutu Tea!
               </div>
             </div>

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Button from './Button';
 
-export default function Navbar(props) {
+export default function Navbar() {
     return (
         <nav className="navbar" style={{backgroundColor: "#E6CBBF"}}>
             <form className="container-fluid">
@@ -13,7 +12,7 @@ export default function Navbar(props) {
                                 style={{backgroundColor : '#B2755E',
                                 height: '50px',
                                 width:'75%',
-                                fontSize:"x-large"}}>
+                                fontSize:"xx-large"}}>
                                 Bulukutu Tea
                             </div>
                         </div>
@@ -28,7 +27,8 @@ export default function Navbar(props) {
                         </div>
                         <div className='col'>
                             <Button
-                                size={'btn-sm'}>
+                                size={'btn-sm'}
+                                page="/cart">
                                 <i class="bi bi-cart3"></i>
                             </Button>
                         </div>
@@ -37,28 +37,32 @@ export default function Navbar(props) {
                         <div className='col'>
                             <Button
                                 width={'w-100'}
-                                size={'btn-sm'}>
+                                size={'btn-sm'}
+                                page="/">
                                 Home
                             </Button>
                         </div>
                         <div className='col'>
                             <Button
                                 width={'w-100'}
-                                size={'btn-sm'}>
+                                size={'btn-sm'}
+                                page="/shop">
                                 Shop
                             </Button>
                         </div>   
                         <div className='col'>
                             <Button
                                 width={'w-100'}
-                                size={'btn-sm'}>
+                                size={'btn-sm'}
+                                page="/about-us">
                                 Our Story
                             </Button>
                         </div>   
                         <div className='col'>
                             <Button
                                 width={'w-100'}
-                                size={'btn-sm'}>
+                                size={'btn-sm'}
+                                page="/contact">
                                 Contact
                             </Button>
                         </div>
