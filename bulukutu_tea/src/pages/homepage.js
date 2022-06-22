@@ -1,5 +1,7 @@
 import React from "react";
 
+import Button from "../components/common/Button";
+
 export default function homepage() {
   return (
     <div>
@@ -10,12 +12,9 @@ export default function homepage() {
           alt="Background"
         ></img>
         <div className="overlay">
-          <button
-            className="btn btn-lg btn-block w-100"
-            style={{ backgroundColor: "#B2755E" }}
-          >
+          <Button size={"btn-lg"} width={"w-100"} page="/product-description">
             Learn More
-          </button>
+          </Button>
         </div>
       </div>
       <br></br>
