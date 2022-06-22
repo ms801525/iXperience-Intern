@@ -29,11 +29,17 @@ export default function homepage() {
       </div>
       <br></br>
       <div
-        className="container p-3 rounded"
+        className="container p-4 rounded"
         style={{ backgroundColor: "white" }}
       >
-        <h2 className="text-center">Bulukutu Tea</h2>
-        <h4 className="text-center">Central Congo's Finest</h4>
+        <h1 className="text-center">Bulukutu Tea</h1>
+        <h3 className="text-center">Central Congo's Finest</h3>
+        <p className="text-center mt-4" style={{fontFamily: "REFINMENT, Serif", color: "#779730"}}>
+          “GROWN SOLELY ON AFRICAN SOIL AND ETHICALLY SOURCED, OUR GOURMET TEAS
+          PAY TRIBUTE TO AFRICAN ELEGANCE AND REFINEMENT. THE CAREFUL BLENDING
+          OF THE FINEST BUDS, LEAVES AND SPICES ENSURES THAT YOU ARE NOT JUST
+          DRINKING OUR TEA, BUT ALSO TASTING A PIECE OF OUR STORY.”
+        </p>
         <div className="row align-items-end text-center">
           <div className="col">
             <div className="p-0">
