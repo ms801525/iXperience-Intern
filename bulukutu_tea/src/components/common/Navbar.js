@@ -3,22 +3,23 @@ import Button from './Button';
 
 export default function Navbar() {
     return (
-        <nav className="navbar" style={{backgroundColor: "#E6CBBF"}}>
+        <nav className="navbar p-4" style={{backgroundColor: "#DBE3C7"}}>
             <form className="container-fluid">
                 <div className='container-fluid'>
                     <div className='row align-items-center'>
                         <div className='col-8'>
                             <div className='card m-1 text-center border-dark'
-                                style={{backgroundColor : '#B2755E',
-                                height: '50px',
+                                style={{backgroundColor : 'white',
+                                height: '65px',
                                 width:'75%',
-                                fontSize:"xx-large"}}>
+                                fontSize:"xxx-large"}}>
                                 Bulukutu Tea
                             </div>
                         </div>
                         <div className='col'>
                             <div className='m-1 text-center'
-                                style={{backgroundColor : '#B2755E',
+                                style={{backgroundColor : 'white',
+                                color: '#779730',
                                 height: '50px',
                                 width:'70px',
                                 borderRadius: "5px"}}>

@@ -5,12 +5,22 @@ import Button from "../components/common/Button";
 export default function homepage() {
   return (
     <div>
-      <div className="container text-center">
-        <img
-          className="image"
-          src={require("../images/bulu.jpeg")}
-          alt="Background"
-        ></img>
+      <div
+        className="container text-center"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div>
+          <img
+            className="image px-5"
+            style={{ width: "100vw" }}
+            src={require("../images/bulu.jpeg")}
+            alt="Background"
+          ></img>
+        </div>
         <div className="overlay">
           <Button size={"btn-lg"} width={"w-100"} page="/product-description">
             Learn More
@@ -19,8 +29,8 @@ export default function homepage() {
       </div>
       <br></br>
       <div
-        className="container p-3 border border-dark rounded"
-        style={{ backgroundColor: "#cfb09c" }}
+        className="container p-3 rounded"
+        style={{ backgroundColor: "white" }}
       >
         <h2 className="text-center">Bulukutu Tea</h2>
         <h4 className="text-center">Central Congo's Finest</h4>
@@ -28,7 +38,7 @@ export default function homepage() {
           <div className="col">
             <div className="p-0">
               <img
-                className="background-image"
+                className="background-image border border-dark"
                 src={require("../images/back1.jpeg")}
                 alt="Background"
                 width="100%"
@@ -39,7 +49,7 @@ export default function homepage() {
           <div className="col">
             <div className="p-0 ">
               <img
-                className="background-image"
+                className="background-image border border-dark"
                 src={require("../images/tea.jpeg")}
                 alt="Background"
                 width="100%"
@@ -50,7 +60,7 @@ export default function homepage() {
           <div className="col">
             <div className="p-0">
               <img
-                className="background-image"
+                className="background-image border border-dark"
                 src={require("../images/bulu.jpeg")}
                 alt="Background"
                 width="100%"
