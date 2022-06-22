@@ -8,8 +8,9 @@ export default function Navbar() {
                 <div className='container-fluid'>
                     <div className='row align-items-center'>
                         <div className='col-8'>
-                            <div className='card m-1 text-center border-dark'
+                            <div className='card m-1 text-center'
                                 style={{backgroundColor : 'white',
+                                color: "#779730",
                                 height: '65px',
                                 width:'75%',
                                 fontSize:"xxx-large"}}>

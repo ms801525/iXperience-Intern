@@ -20,7 +20,7 @@ export default function Button({ children, size, width, page }) {
 
   return (
     <button
-      className={"btn btn-outline-dark m-1 " + size + " " + width}
+      className={"btn  m-1 " + size + " " + width}
       style={{ backgroundColor: "white", fontSize: "x-large", color: isHovering ? 'black' : '#779730'}}
       onClick={navToPage}
       onMouseEnter={handleMouseEnter}
