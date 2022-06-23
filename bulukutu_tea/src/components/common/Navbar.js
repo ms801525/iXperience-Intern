@@ -57,7 +57,7 @@ export default function Navbar() {
                                 width={'w-100'}
                                 size={'btn-sm'}
                                 page="/about-us">
-                                Our Story
+                                About Us
                             </Button>
                         </div>   
                         <div className='col'>

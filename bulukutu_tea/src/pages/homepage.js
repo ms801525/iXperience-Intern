@@ -21,7 +21,7 @@ export default function homepage() {
           >
             <div
               class="carousel-inner p-2"
-              style={{ minWidth: "500px", maxWidth: "100vw" }}
+              style={{ minWidth: "500px", maxWidth: "100vw"}}
             >
               <div class="carousel-item active">
                 <img
@@ -72,7 +72,7 @@ export default function homepage() {
           </div>
         </div>
         <div className="overlay">
-          <Button size={"btn-lg"} width={"w-100"} page="/product-description">
+          <Button size={"btn-lg"} width={"w-100"} page="/about-us">
             Learn More
           </Button>
         </div>
@@ -82,8 +82,7 @@ export default function homepage() {
         className="container p-4 rounded mt-4"
         style={{
           backgroundColor: "white",
-          minWidth: "500px",
-          maxWidth: "100vw",
+          width: "2000px"
         }}
       >
         <h1 className="text-center" style={{ color: "#779730" }}>
@@ -100,18 +99,6 @@ export default function homepage() {
           PAY TRIBUTE TO AFRICAN ELEGANCE AND REFINEMENT. THE CAREFUL BLENDING
           OF THE FINEST BUDS, LEAVES AND SPICES ENSURES THAT YOU ARE NOT JUST
           DRINKING OUR TEA, BUT ALSO TASTING A PIECE OF OUR STORY.”
-        </p>
-        <p
-          className="text-center my-4"
-          style={{ fontSize: "large", color: "#779730" }}
-        >
-          Bulukutu Tea is an aromatic and perennial plant from the Savannah bush
-          found in the DRC. The tea leaf is pungent yet soft on the palate. It
-          has a hint of lemon, mint and eucalyptus aroma– An aroma that
-          surrounds you like a comforting mist. The tea is caffeine-free. The
-          tea leaf is pungent yet soft on the palate. It has a hint of lemon and
-          eucalyptus aroma– An aroma that surrounds you like a comforting mist.
-          The tea is caffeine-free.
         </p>
         <Button size={"btn-lg"} width={"w-100"} page="/product-description">
           Learn More
