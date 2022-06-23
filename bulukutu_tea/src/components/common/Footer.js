@@ -1,5 +1,5 @@
 import React from "react";
-import Bfooter from "./Button-footer";
+import Bfooter from "./ButtonFooter";
 import { FaInstagram, FaFacebookF, FaWhatsapp, FaTiktok } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -15,15 +15,15 @@ export default function Footer(page) {
           About us
         </Bfooter>
 
-        <Bfooter width={"w-50"} size={"btn-sm"} page="/privacy">
+        <Bfooter width={"w-50"} size={"btn-sm"} page="/policy-page">
           Privacy Policy
         </Bfooter>
 
-        <Bfooter width={"w-50"} size={"btn-sm"} page="/Returnpol">
+        <Bfooter width={"w-50"} size={"btn-sm"} page="/policy-page">
           Refunds & Return policy
         </Bfooter>
 
-        <Bfooter width={"w-50"} size={"btn-sm"} page="/term">
+        <Bfooter width={"w-50"} size={"btn-sm"} page="/terms">
           Terms & Conditions
         </Bfooter>
 
