@@ -8,7 +8,7 @@ import ProductDescription from "./products/ProductDescription";
 import AboutUsPage from "./pages/AboutUsPage";
 import Shop from "./pages/Shop";
 import Retail from "./pages/Retail";
-import Terms from "./pages/Terms";
+import Terms from "./pages/terms";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
