@@ -1,49 +1,50 @@
 import React from 'react'
 import Bfooter from './Button-footer';
 
+
 export default function Footer() {
     return (
-        <div className="text-center" style = {{backgroundColor : '#FFFFFF'}}>
-            <h1>Company Menu</h1>
-            <div>
+        <div className="text-center p-3" style = {{backgroundColor : '#FFFFFF'}}>
+            <h2 className="mb-4 mt-3">Company Menu</h2>
+            <div style = {{backgroundColor : '#FFFFFF'}}>
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/about-us">
                     About us
                 </Bfooter>
             
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/privacy">
                     Privacy Policy
                 </Bfooter>
            
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/Returnpol">
                     Refunds & Return policy
                 </Bfooter>
            
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/terms">
                     Terms & Conditions
                 </Bfooter>
             
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/contact">
                     Contact Us
                 </Bfooter>
             </div>
         <div className="p-2">
-            <h5>© Copyright 2022: Bulukutu Tea</h5>
-            <h5>All rights reserved.</h5>
+            <p>© Copyright 2022: Bulukutu Tea</p>
+            <p>All rights reserved.</p>
         </div>
         </div>
     )

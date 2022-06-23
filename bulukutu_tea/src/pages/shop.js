@@ -44,24 +44,24 @@ export default function Shop() {
         <div className="container text-center">
             <div className="row">
                 <div className="col-6 p-1">
-                <Button
-                              
-                              width={'w-100'}
-                              size={'btn-lg'}
-                              page="/retail">
-                              Buying For me
-            
-                </Button>
+                    <Button
+                                
+                        width={'w-100'}
+                        size={'btn-lg'}
+                        page="/retail">
+                        Buying For me
+                
+                    </Button>
                 </div>
                 <div className="col-6 p-1">
                     <div class="d-grid gap-2">
                         <Button
                                     
-                                    width={'w-100'}
-                                    size={'btn-lg'}
-                                    page="/retail">
-                                    Buying For Business
-                    
+                            width={'w-100'}
+                            size={'btn-lg'}
+                            page="/retail">
+                            Buying For Business
+                
                         </Button>
                         </div>
                             
