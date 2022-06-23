@@ -10,7 +10,7 @@ export default function Button({ children, size, width, page }) {
   return (
     <button className={'btn btn-secondary-light m-1 ' + size + ' ' + width} 
       style={{backgroundColor : '#000000',
-              fontSize : "small",
+              fontSize : "large",
               color : '#FFFFFF',}}
               onClick={navToPage}>
         {children}
