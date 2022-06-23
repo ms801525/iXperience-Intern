@@ -13,9 +13,6 @@
     font-size: x-large;
     width: 275px;
     border-radius: 5px;
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: black;
     margin-top: 60px;
 }
 
@@ -23,7 +20,7 @@
     background-color: white;
     text-align: center;
     width: 800px;
-    height: 1000px;
+    height: "auto";
     margin-top: 60px;
 }
 

@@ -25,21 +25,21 @@ export default function homepage() {
             >
               <div class="carousel-item active">
                 <img
-                  src={require("../images/HomePage1.png")}
+                  src={require("../images/new-tea-1.png")}
                   class="d-block w-100"
                   alt="Background"
                 ></img>
               </div>
               <div class="carousel-item">
                 <img
-                  src={require("../images/HomePage2.png")}
+                  src={require("../images/new-tea-2.png")}
                   class="d-block w-100"
                   alt="Background"
                 ></img>
               </div>
               <div class="carousel-item">
                 <img
-                  src={require("../images/HomePage3.png")}
+                  src={require("../images/new-tea-3.png")}
                   class="d-block w-100"
                   alt="Background"
                 ></img>
@@ -101,7 +101,10 @@ export default function homepage() {
           OF THE FINEST BUDS, LEAVES AND SPICES ENSURES THAT YOU ARE NOT JUST
           DRINKING OUR TEA, BUT ALSO TASTING A PIECE OF OUR STORY.”
         </p>
-        <p className="text-center mt-4" style={{ fontSize: "large", color: "#779730" }}>
+        <p
+          className="text-center my-4"
+          style={{ fontSize: "large", color: "#779730" }}
+        >
           Bulukutu Tea is an aromatic and perennial plant from the Savannah bush
           found in the DRC. The tea leaf is pungent yet soft on the palate. It
           has a hint of lemon, mint and eucalyptus aroma– An aroma that
@@ -110,9 +113,9 @@ export default function homepage() {
           eucalyptus aroma– An aroma that surrounds you like a comforting mist.
           The tea is caffeine-free.
         </p>
-        <Button size={"btn-lg"} width={"w-100"} page="/about-us">
-            Learn More
-          </Button>
+        <Button size={"btn-lg"} width={"w-100"} page="/product-description">
+          Learn More
+        </Button> 
         <div className="row align-items-end text-center">
           <div className="col">
             <div className="p-0">
@@ -140,7 +143,7 @@ export default function homepage() {
             <div className="p-0">
               <img
                 className="background-image border border-dark"
-                src={require("../images/HomePage4.png")}
+                src={require("../images/new-tea-4.png")}
                 alt="Background"
                 width="100%"
                 height="340px"
