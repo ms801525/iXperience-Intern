@@ -124,7 +124,7 @@ export default function homepage() {
                 src={require("../images/back1.jpeg")}
                 alt="Background"
                 width="100%"
-                height="auto"
+                height="340px"
               ></img>
             </div>
           </div>
