@@ -8,6 +8,9 @@ import ProductDescription from "./products/ProductDescription";
 import AboutUsPage from "./pages/AboutUsPage";
 import Shop from "./pages/shop";
 import Retail from "./pages/retail";
+import Privacy from "./pages/privacy";
+import Terms from "./pages/terms";
+import Returnpol from "./pages/returnpol";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -24,6 +27,9 @@ export default function App() {
             <Route path = "/product-description" element = { <ProductDescription/> } />
             <Route path = "/shop" element = {<Shop/>}></Route>
             <Route path = "/retail" element = {<Retail/>}></Route>
+            <Route path = "/privacy" element = {<Privacy/>}></Route>
+            <Route path = "/term" element = {<Terms/>}></Route>
+            <Route path = "/returnpol" element = {<Returnpol/>}></Route>
           </Routes>
         </Layout>
       </BrowserRouter>
