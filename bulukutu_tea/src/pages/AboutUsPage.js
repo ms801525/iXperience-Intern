@@ -24,7 +24,7 @@ function AboutUsPage() {
         </div>
       </div>
 
-      <div className="d-flex justify-content-center mb-5">
+      <div className="d-flex justify-content-center m-5">
         <div style={{float: "left", display: "inline-block", marginRight: "50px" }}>
           <div className="infoPanel p-3">
             <img
@@ -40,7 +40,7 @@ function AboutUsPage() {
           </div>
         </div>
         
-        <div style={{ float: "left", display: "inline-block", marginLeft: "50px" }}>
+        <div style={{ }}>
           <div className="infoPanel p-3">
             <div className="card">
               <div className="card-body">
