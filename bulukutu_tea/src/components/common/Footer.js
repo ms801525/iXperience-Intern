@@ -1,49 +1,67 @@
 import React from 'react'
 import Bfooter from './Button-footer';
+import { FaInstagram,FaFacebookF, FaWhatsapp, FaTiktok } from "react-icons/fa";
+import { useNavigate} from 'react-router-dom';
 
-export default function Footer() {
+
+export default function Footer(page) {
+
+
     return (
-        <div className="text-center" style = {{backgroundColor : '#FFFFFF'}}>
-            <h1>Company Menu</h1>
-            <div>
+        <div className="text-center p-3" style = {{backgroundColor : '#FFFFFF'}}>
+            <h2 className="mb-4 mt-3">Company Menu</h2>
+            <div style = {{backgroundColor : '#FFFFFF'}}>
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/about-us">
                     About us
                 </Bfooter>
             
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/privacy">
                     Privacy Policy
                 </Bfooter>
            
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/Returnpol">
                     Refunds & Return policy
                 </Bfooter>
            
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/term">
                     Terms & Conditions
                 </Bfooter>
             
                 <Bfooter
                     width={'w-50'}
                     size={'btn-sm'}
-                    page="/retail">
+                    page="/contact">
                     Contact Us
                 </Bfooter>
             </div>
+            <div className="container text-center">
+        <p className="icons">
+        <a href="https://www.instagram.com/bulukutu_tea/"><button className='btn btn-outline-dark btn-floating m-1'>
+                <FaInstagram/>
+            </button></a>
+            <a href="https://www.facebook.com/BulukutuTea"><button className='btn btn-outline-dark btn-floating m-1'>
+                <FaFacebookF/>
+            </button></a>
+            <button className='btn btn-outline-dark btn-floating m-1'href="#!">
+                <FaTiktok/>
+            </button>
+        </p>
+        </div>
         <div className="p-2">
-            <h5>© Copyright 2022: Bulukutu Tea</h5>
-            <h5>All rights reserved.</h5>
+            <p>© Copyright 2022: Bulukutu Tea</p>
+            <p>All rights reserved.</p>
         </div>
         </div>
     )

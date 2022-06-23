@@ -1,0 +1,33 @@
+.body {
+    background-color:  #DBE3C7;
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+.header {
+    background-color: white;
+    color: #779730;
+    font-size: x-large;
+    width: 275px;
+    border-radius: 5px;
+    margin-top: 60px;
+}
+
+.infoPanel {
+    background-color: white;
+    text-align: center;
+    width: 800px;
+    height: "auto";
+    margin-top: 60px;
+}
+
+.background-image {
+    border-radius: 5px;
+}
+
+.card-body {
+    background-color: #DBE3C7;
+}
