@@ -4,7 +4,7 @@ import Button from "../components/common/Button";
 
 export default function homepage() {
   return (
-    <div>
+    <div className="mb-5">
       <div
         className="container text-center"
         style={{
@@ -149,52 +149,6 @@ export default function homepage() {
                 height="340px"
               ></img>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="container p-5">
-        <div className="row align-items-end text-center">
-          <div className="col">
-            <div className="p-0">
-              <img
-                className="background-image"
-                src={require("../images/instagram.png")}
-                alt="Background"
-                width="15%"
-                height="20%"
-              ></img>
-            </div>
-            <button className="btn m-1" style={{ backgroundColor: "white" }}>
-              Connect
-            </button>
-          </div>
-          <div className="col">
-            <div className="p-0">
-              <img
-                className="background-image"
-                src={require("../images/facebook.png")}
-                alt="Background"
-                width="15%"
-                height="20%"
-              ></img>
-            </div>
-            <button className="btn m-1" style={{ backgroundColor: "white" }}>
-              Connect
-            </button>
-          </div>
-          <div className="col">
-            <div className="p-0">
-              <img
-                className="background-image"
-                src={require("../images/tiktok.png")}
-                alt="Background"
-                width="15%"
-                height="20%"
-              ></img>
-            </div>
-            <button className="btn m-1" style={{ backgroundColor: "white" }}>
-              Connect
-            </button>
           </div>
         </div>
       </div>
