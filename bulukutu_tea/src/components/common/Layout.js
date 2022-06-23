@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 export default function Layout({children}) {
     return (
-        <div className="layout" style={{backgroundColor : '#E6CBBF'}}>
+        <div className="layout" style={{backgroundColor : '#DBE3C7'}}>
             <header>
                 <Navbar />
             </header>
