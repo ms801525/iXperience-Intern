@@ -115,7 +115,7 @@ export default function homepage() {
         </p>
         <Button size={"btn-lg"} width={"w-100"} page="/product-description">
           Learn More
-        </Button> 
+        </Button>
         <div className="row align-items-end text-center">
           <div className="col">
             <div className="p-0">
