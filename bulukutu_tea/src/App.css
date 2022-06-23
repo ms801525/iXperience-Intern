@@ -1,11 +1,11 @@
 body {
-    background-color: #E6CBBF;
+    background-color:  #DBE3C7;
     font-family: "flamenco", "cursive";
     margin: 0;
 
 }; 
 .background-image{
-    background-image: url(../src/images/bulu.jpeg);
+    background-image: url(../src/images/new-tea-1.png);
 }
 .ig{
     width: 100%;

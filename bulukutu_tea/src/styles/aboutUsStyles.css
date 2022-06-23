@@ -1,5 +1,5 @@
 .body {
-    background-color: #E6CBBF;
+    background-color:  #DBE3C7;
     position:absolute;
     top:0px;
     right:0px;
@@ -8,20 +8,19 @@
 }
 
 .header {
-    background-color: #B2755E;
+    background-color: white;
+    color: #779730;
     font-size: x-large;
     width: 275px;
     border-radius: 5px;
-    outline-style: solid;
-    outline-width: 1px;
     margin-top: 60px;
 }
 
 .infoPanel {
-    background-color: #B2755E;
+    background-color: white;
     text-align: center;
     width: 800px;
-    height: 1000px;
+    height: "auto";
     margin-top: 60px;
 }
 
@@ -30,5 +29,5 @@
 }
 
 .card-body {
-    background-color: #E6CBBF;
+    background-color: #DBE3C7;
 }
