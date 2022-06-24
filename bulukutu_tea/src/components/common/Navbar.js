@@ -57,7 +57,7 @@ export default function Navbar() {
                                 width={'w-100'}
                                 size={'btn-sm'}
                                 page="/about-us">
-                                About Us
+                                About Bulukutu Tea
                             </Button>
                         </div>   
                         <div className='col'>
