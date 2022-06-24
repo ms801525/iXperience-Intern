@@ -1,5 +1,4 @@
 import React, {Fragment,useState} from 'react'
-import { Row, Col } from 'antd';
 import { Carousel } from 'bootstrap'
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
