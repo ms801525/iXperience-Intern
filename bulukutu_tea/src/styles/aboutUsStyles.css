@@ -10,20 +10,17 @@
 .header {
     background-color: white;
     color: #779730;
-    font-size: x-large;
+    font-size: xx-large;
     width: 275px;
     border-radius: 5px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .infoPanel {
-    display: grid;
     background-color: white;
     text-align: center;
-    min-width: 300px;
-    max-width: 900px;
-    min-height: 1000px;
-    max-height: 1200px;
+    width: auto;
+    height: auto;
     margin-top: 45px;
     margin-bottom: 60px;
 }

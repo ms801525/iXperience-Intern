@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 export default function Footer(page) {
   return (
-    <div className="text-center p-3" style={{ backgroundColor: "#FFFFFF" }}>
+    <div className="text-center p-3 mt-5" style={{ backgroundColor: "#FFFFFF" }}>
       <img
         src={require("../../images/the-miracle-tea.png")}
         alt="Background"
       ></img>
       <div style={{ backgroundColor: "#FFFFFF" }}>
         <Bfooter width={"w-50"} size={"btn-sm"} page="/about-us">
-          About us
+          About Bulukutu Tea
         </Bfooter>
 
         <Bfooter width={"w-50"} size={"btn-sm"} page="/policy-page">
