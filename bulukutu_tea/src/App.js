@@ -3,12 +3,16 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/common/Layout";
-import Homepage from "./pages/HomePage";
+import Homepage from "./pages/homepage";
 import ProductDescription from "./products/ProductDescription";
 import AboutUsPage from "./pages/AboutUsPage";
-import Shop from "./pages/Shop";
-import Retail from "./pages/Retail";
-import Terms from "./pages/terms";
+import Shop from "./pages/shop";
+import Retail from "./pages/retail";
+import Terms from"./pages/terms";
+
+// import Shop from "./pages/Shop";
+// import Retail from "./pages/Retail";
+// import Terms from "./pages/terms";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
