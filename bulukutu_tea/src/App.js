@@ -10,9 +10,6 @@ import Shop from "./pages/shop";
 import Retail from "./pages/retail";
 import Terms from"./pages/terms";
 
-// import Shop from "./pages/Shop";
-// import Retail from "./pages/Retail";
-// import Terms from "./pages/terms";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
