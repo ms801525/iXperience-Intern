@@ -9,12 +9,11 @@ import AboutUsPage from "./pages/AboutUsPage";
 import Shop from "./pages/Shop";
 import Retail from "./pages/Retail";
 import Terms from"./pages/Terms";
-
+import PolicyPage from "./pages/PolicyPage";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
-import PolicyPage from "./pages/PolicyPage";
 
 export default function App() {
   return (
