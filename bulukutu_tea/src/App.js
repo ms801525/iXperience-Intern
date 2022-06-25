@@ -9,6 +9,9 @@ import AboutUsPage from "./pages/AboutUsPage";
 import Shop from "./pages/shop";
 import Retail from "./pages/retail";
 import Terms from"./pages/terms";
+import NotFound from "./components/NotFound";
+import DisplayProducts from "./products/DisplayProducts";
+import AddProducts from "./products/AddProducts";
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -32,6 +35,10 @@ export default function App() {
             <Route path="/retail" element={<Retail />}></Route>
             <Route path="/policy-page" element={<PolicyPage />}></Route>
             <Route path="/terms" element={<Terms />}></Route>
+            <Route path='*' element={<NotFound/>}></Route>
+            <Route path='/products' element={<DisplayProducts/>}></Route>
+            <Route path='/products/:id' element={<ProductDescription/>}></Route>
+            <Route path='/upload' element={<AddProducts/>}></Route>
           </Routes>
         </Layout>
       </BrowserRouter>
