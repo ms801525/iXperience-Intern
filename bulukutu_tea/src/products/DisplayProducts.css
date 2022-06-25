@@ -1,0 +1,12 @@
+.card {
+    margin: 10px;
+    position: relative;
+  }
+  
+  .product-img {
+    height: 100%;
+    width: 500px;
+    /* width: 100vw; */
+    object-fit: cover;
+  }
+  
