@@ -3,21 +3,20 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/common/Layout";
-import Homepage from "./pages/homepage";
+import Homepage from "./pages/HomePage";
 import ProductDescription from "./products/ProductDescription";
 import AboutUsPage from "./pages/AboutUsPage";
-import Shop from "./pages/shop";
-import Retail from "./pages/retail";
-import Terms from"./pages/terms";
+import Shop from "./pages/Shop";
+import Retail from "./pages/Retail";
+import Terms from"./pages/Terms";
+import PolicyPage from "./pages/PolicyPage";
 import NotFound from "./components/NotFound";
 import DisplayProducts from "./products/DisplayProducts";
 import AddProducts from "./products/AddProducts";
 
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
-import PolicyPage from "./pages/PolicyPage";
 
 export default function App() {
   return (
