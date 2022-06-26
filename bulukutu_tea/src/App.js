@@ -3,19 +3,25 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/common/Layout";
-import Homepage from "./pages/homepage";
+import Homepage from "./pages/HomePage";
 import ProductDescription from "./products/ProductDescription";
 import AboutUsPage from "./pages/AboutUsPage";
-import Shop from "./pages/shop";
-import Retail from "./pages/retail";
-import Terms from"./pages/terms";
-
+import Shop from "./pages/Shop";
+import Retail from "./pages/Retail";
+import Terms from"./pages/Terms";
+import PolicyPage from "./pages/PolicyPage";
+import NotFound from "./components/NotFound";
+import DisplayProducts from "./products/DisplayProducts";
+import AddProducts from "./products/AddProducts";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
+<<<<<<< HEAD
 import PolicyPage from "./pages/PolicyPage";
 import Registerpage from "./pages/Registerpage";
+=======
+>>>>>>> 121b71a18c744d204b901e4cbde50ba29c900b13
 
 export default function App() {
   return (
@@ -33,7 +39,14 @@ export default function App() {
             <Route path="/retail" element={<Retail />}></Route>
             <Route path="/policy-page" element={<PolicyPage />}></Route>
             <Route path="/terms" element={<Terms />}></Route>
+<<<<<<< HEAD
             <Route path="/register" element={<Registerpage/>}></Route>
+=======
+            <Route path='*' element={<NotFound/>}></Route>
+            <Route path='/products' element={<DisplayProducts/>}></Route>
+            <Route path='/products/:id' element={<ProductDescription/>}></Route>
+            <Route path='/upload' element={<AddProducts/>}></Route>
+>>>>>>> 121b71a18c744d204b901e4cbde50ba29c900b13
           </Routes>
         </Layout>
       </BrowserRouter>

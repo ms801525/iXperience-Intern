@@ -1,83 +1,87 @@
+// HOME PAGE OF WEBSITE
 import React from "react";
 
+// Buttons for the home page
 import Button from "../components/common/Button";
 
+// import stylesheet for homepage
+import "../styles/homePageStyles.css";
+
 export default function homepage() {
+  //renders homepage
   return (
     <div className="mb-5">
       <div
-        className="container text-center"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+        className="carousel-div container text-center"
       >
         <div style={{ backgroundColor: "white", width: "100%" }}>
           <div
             id="carouselExampleControls"
-            class="carousel slide"
+            className="carousel slide"
             data-bs-ride="carousel"
           >
             <div
-              class="carousel-inner p-2"
+              className="carousel-inner p-2"
               style={{ minWidth: "500px", maxWidth: "100vw"}}
             >
-              <div class="carousel-item active">
+              <div className="carousel-item active">
                 <img
                   src={require("../images/new-tea-1.png")}
-                  class="d-block w-100"
+                  className="d-block w-100"
                   alt="Background"
                 ></img>
               </div>
-              <div class="carousel-item">
+              <div className="carousel-item">
                 <img
                   src={require("../images/new-tea-2.png")}
-                  class="d-block w-100"
+                  className="d-block w-100"
                   alt="Background"
                 ></img>
               </div>
-              <div class="carousel-item">
+              <div className="carousel-item">
                 <img
                   src={require("../images/new-tea-3.png")}
-                  class="d-block w-100"
+                  className="d-block w-100"
                   alt="Background"
                 ></img>
               </div>
             </div>
             <button
-              class="carousel-control-prev"
+              className="carousel-control-prev"
               type="button"
               data-bs-target="#carouselExampleControls"
               data-bs-slide="prev"
             >
               <span
-                class="carousel-control-prev-icon"
+                className="carousel-control-prev-icon"
                 aria-hidden="true"
               ></span>
-              <span class="visually-hidden">Previous</span>
+              <span className="visually-hidden">Previous</span>
             </button>
             <button
-              class="carousel-control-next"
+              className="carousel-control-next"
               type="button"
               data-bs-target="#carouselExampleControls"
               data-bs-slide="next"
             >
               <span
-                class="carousel-control-next-icon"
+                className="carousel-control-next-icon"
                 aria-hidden="true"
               ></span>
-              <span class="visually-hidden">Next</span>
+              <span className="visually-hidden">Next</span>
             </button>
           </div>
         </div>
+
         <div className="overlay">
           <Button size={"btn-lg"} width={"w-100"} page="/about-us">
             Learn More
           </Button>
         </div>
       </div>
+
       <br></br>
+
       <div
         className="container p-4 rounded mt-4"
         style={{
@@ -85,7 +89,7 @@ export default function homepage() {
           width: "2000px"
         }}
       >
-        <h1 className="text-center" style={{ color: "#779730" }}>
+        <h1 className="text-center bulukutu-text-color" style={{ color: "#779730" }}>
           Bulukutu Tea
         </h1>
         <h3 className="text-center" style={{ color: "#779730" }}>

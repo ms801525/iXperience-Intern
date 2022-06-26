@@ -1,10 +1,5 @@
 import React from "react";
 
-//NOTE: Height of some elements will be adjusted once information is typed and available,
-// Need more info for about us
-
-// import the bootstrap styles from node_modules folder
-import "bootstrap/dist/css/bootstrap.css";
 // import stylesheet for about us page
 import "../styles/aboutUsStyles.css";
 
