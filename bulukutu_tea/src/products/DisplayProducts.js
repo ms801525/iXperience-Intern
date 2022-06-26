@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ProductsService from '../products/services/product.service'
 import { Link } from 'react-router-dom'
-import "./DisplayProducts.css"
+import "../styles/DisplayProducts.css"
 import { BsFillCartFill } from "react-icons/bs";
 import Imagegallery from './imagegallery';
 
