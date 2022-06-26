@@ -15,6 +15,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import PolicyPage from "./pages/PolicyPage";
+import Registerpage from "./pages/Registerpage";
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/retail" element={<Retail />}></Route>
             <Route path="/policy-page" element={<PolicyPage />}></Route>
             <Route path="/terms" element={<Terms />}></Route>
+            <Route path="/register" element={<Registerpage/>}></Route>
           </Routes>
         </Layout>
       </BrowserRouter>

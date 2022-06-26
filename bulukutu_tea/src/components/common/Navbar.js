@@ -1,6 +1,9 @@
 import React from 'react';
 import Button from './Button';
 
+
+
+
 export default function Navbar() {
     return (
         <nav className="navbar p-4" style={{backgroundColor: "#DBE3C7"}}>
