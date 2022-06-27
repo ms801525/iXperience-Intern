@@ -74,8 +74,8 @@ export default function homepage() {
         </div>
 
         <div className="overlay">
-          <Button size={"btn-lg"} width={"w-100"} page="/about-us">
-            Learn More
+          <Button size={"btn-lg"} width={"w-100"} page="/image-list">
+            View Full Gallery
           </Button>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function homepage() {
           OF THE FINEST BUDS, LEAVES AND SPICES ENSURES THAT YOU ARE NOT JUST
           DRINKING OUR TEA, BUT ALSO TASTING A PIECE OF OUR STORY.”
         </p>
-        <Button size={"btn-lg"} width={"w-100"} page="/product-description">
+        <Button size={"btn-lg"} width={"w-100"} page="/products">
           Learn More
         </Button>
         <div className="row align-items-end text-center">
