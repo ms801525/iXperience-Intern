@@ -13,6 +13,7 @@ import PolicyPage from "./pages/PolicyPage";
 import NotFound from "./components/NotFound";
 import DisplayProducts from "./products/DisplayProducts";
 import ImageList from "./pages/ImageList";
+import Recipe from "./pages/Recipe";
 import AddProducts from "./products/AddProducts";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -42,6 +43,7 @@ export default function App() {
             <Route path='/products/:id' element={<ProductDescription/>}></Route>
             <Route path='/upload' element={<AddProducts/>}></Route>
             <Route path='/image-list' element={<ImageList/>}></Route>
+            <Route path='/recipe' element={<Recipe/>}></Route>
           </Routes>
         </Layout>
       </BrowserRouter>

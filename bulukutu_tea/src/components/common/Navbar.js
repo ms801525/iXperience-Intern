@@ -67,6 +67,14 @@ export default function Navbar() {
                             <Button
                                 width={'w-100'}
                                 size={'btn-sm'}
+                                page="/recipe">
+                                Tea Recipes
+                            </Button>
+                        </div>
+                        <div className='col'>
+                            <Button
+                                width={'w-100'}
+                                size={'btn-sm'}
                                 page="/contact">
                                 Contact
                             </Button>
