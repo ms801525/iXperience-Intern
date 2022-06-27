@@ -75,7 +75,7 @@ export default function homepage() {
 
         <div className="overlay">
           <Button size={"btn-lg"} width={"w-100"} page="/about-us">
-            Learn More
+            View Full Gallery
           </Button>
         </div>
       </div>
