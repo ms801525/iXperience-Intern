@@ -10,7 +10,7 @@ export default function Recipe() {
 
         <div>
             <h1>Teabag:</h1>
-            <p style={{fontSize: 20}}>
+            <p className='font-size'>
                 <ul>
                 <p> Prepare the perfect BULUKUTU Tea: </p>
                 <li><p>Use one tea bag per cup</p> </li>
@@ -22,7 +22,7 @@ export default function Recipe() {
         </div>
         <div className="p-3">
             <h1>Leaves</h1>
-            <p style={{fontSize: 20}}>
+            <p className='font-size'>
                 <ul>
                 <p> To prepare the perfect BULUKUTU Tea:</p>
                 <li><p>Put 2 cups of fresh water into a pot and slightly rinse 3-4 tea leaves</p></li> 
@@ -35,13 +35,13 @@ export default function Recipe() {
                 </ul>
             </p>
         </div>
-            <div class="row align-items-start p-2">
-                <div class="col">
+            <div className="row align-items-start p-2">
+                <div className="col">
                 </div>
-                <div class="col">
+                <div className="col">
                 </div>
-                <div class="col">
-                    <p style={{fontSize: 20}}>ALWAYS STORE IN A COOL, DRY AREA</p>
+                <div className="col">
+                    <p className='font-size'>ALWAYS STORE IN A COOL, DRY AREA</p>
                 </div>
             </div>
     </div>
