@@ -11,19 +11,14 @@ export default function homepage() {
   //renders homepage
   return (
     <div className="mb-5">
-      <div
-        className="container text-center"
-      >
+      <div className="container text-center">
         <div className="carousel-panel">
           <div
             id="carouselExampleControls"
             className="carousel slide"
             data-bs-ride="carousel"
           >
-            <div
-              className="carousel-inner p-2"
-              style={{ minWidth: "500px", maxWidth: "100vw"}}
-            >
+            <div className="carousel-size carousel-inner p-2">
               <div className="carousel-item active">
                 <img
                   src={require("../images/new-tea-1.png")}
@@ -82,22 +77,12 @@ export default function homepage() {
 
       <br></br>
 
-      <div
-        className="container p-4 rounded mt-4"
-        style={{
-          backgroundColor: "white",
-          width: "2000px"
-        }}
-      >
-        <h1 className="bulukutu-text-color text-center">
-          Bulukutu Tea
-        </h1>
+      <div className="container p-4 rounded mt-4 info-panel">
+        <h1 className="bulukutu-text-color text-center">Bulukutu Tea</h1>
         <h3 className="bulukutu-text-color text-center">
           Central Congo's Finest
         </h3>
-        <p
-          className="bulukutu-text-color bulukutu-quote text-center mt-4"
-        >
+        <p className="bulukutu-text-color bulukutu-quote text-center mt-4">
           “GROWN SOLELY ON AFRICAN SOIL AND ETHICALLY SOURCED, OUR GOURMET TEAS
           PAY TRIBUTE TO AFRICAN ELEGANCE AND REFINEMENT. THE CAREFUL BLENDING
           OF THE FINEST BUDS, LEAVES AND SPICES ENSURES THAT YOU ARE NOT JUST
