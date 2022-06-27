@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ProductsService from '../products/services/product.service'
-import {Carousel} from 'better-react-carousel'
+import Carousel from 'better-react-carousel'
 
 export default function Imagegallery() {
 
