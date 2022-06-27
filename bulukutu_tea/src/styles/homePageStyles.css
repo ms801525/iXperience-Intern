@@ -1,3 +1,4 @@
+/* Stylesheet for home page */
 .bulukutu-text-color {
     color: #779730;
 }
@@ -9,4 +10,14 @@
 
 .bulukutu-quote {
     font-family: REFINMENT, Serif;
+}
+
+.carousel-size {
+    min-width: 500px;
+    max-width: 100vw;
+}
+
+.info-panel {
+    background-color: white;
+    width: 2000px;
 }
