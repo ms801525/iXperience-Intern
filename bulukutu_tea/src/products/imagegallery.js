@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ProductsService from '../products/services/product.service'
-import Carousel from 'better-react-carousel'
+// import {Carousel} from 'better-carousel'
 
 export default function Imagegallery() {
 
@@ -24,7 +24,7 @@ export default function Imagegallery() {
                 {
           pictures.map(product =>
             <div key={product.id}>
-            <Carousel  gap={10} loop >
+            {/* <Carousel  gap={10} loop >
                 <Carousel.Item>
                     <img width="100%" src={product.downloadUrl} />
                 </Carousel.Item>
@@ -34,7 +34,7 @@ export default function Imagegallery() {
                 <Carousel.Item>
                     <img width="100%" src={product.downloadUrl[2]} />
                 </Carousel.Item>
-            </Carousel>
+            </Carousel> */}
             </div>
           )
         }
