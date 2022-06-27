@@ -1,9 +1,12 @@
-.carousel-div {
-    float: "left";
-    display: "inline-block";
-    margin-right: "50px";
+.bulukutu-text-color {
+    color: #779730;
 }
 
-.bulukutu-text-color {
-    color: "#779730";
+.carousel-panel {
+    background-color: white;
+    width: 100%;
+}
+
+.bulukutu-quote {
+    font-family: REFINMENT, Serif;
 }

@@ -12,9 +12,9 @@ export default function homepage() {
   return (
     <div className="mb-5">
       <div
-        className="carousel-div container text-center"
+        className="container text-center"
       >
-        <div style={{ backgroundColor: "white", width: "100%" }}>
+        <div className="carousel-panel">
           <div
             id="carouselExampleControls"
             className="carousel slide"
@@ -89,15 +89,14 @@ export default function homepage() {
           width: "2000px"
         }}
       >
-        <h1 className="text-center bulukutu-text-color" style={{ color: "#779730" }}>
+        <h1 className="bulukutu-text-color text-center">
           Bulukutu Tea
         </h1>
-        <h3 className="text-center" style={{ color: "#779730" }}>
+        <h3 className="bulukutu-text-color text-center">
           Central Congo's Finest
         </h3>
         <p
-          className="text-center mt-4"
-          style={{ fontFamily: "REFINMENT, Serif", color: "#779730" }}
+          className="bulukutu-text-color bulukutu-quote text-center mt-4"
         >
           “GROWN SOLELY ON AFRICAN SOIL AND ETHICALLY SOURCED, OUR GOURMET TEAS
           PAY TRIBUTE TO AFRICAN ELEGANCE AND REFINEMENT. THE CAREFUL BLENDING
