@@ -1,9 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import ProductsService from '../products/services/product.service'
 import { Link } from 'react-router-dom'
-import "../styles/DisplayProducts.css"
 import { BsFillCartFill } from "react-icons/bs";
+
+// import from image gallery
 import Imagegallery from './imagegallery';
+
+// import stylesheet for page
+import "../styles/DisplayProducts.css"
 
 export default function DisplayProducts() {
   const [products,setProducts] = useState([])
@@ -30,7 +34,7 @@ export default function DisplayProducts() {
       </div>
 
       {products.length === 0?
-        <div style={{ display: 'flex', height: '300px', justifyContent: 'center', alignItems: 'center' }}>
+        <div className='no-products-div'>
           <h2>No products yet...</h2>
         </div> :
 

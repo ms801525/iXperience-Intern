@@ -9,4 +9,11 @@
     /* width: 100vw; */
     object-fit: cover;
   }
+
+  .no-products-div {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
   
