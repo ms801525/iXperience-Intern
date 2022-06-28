@@ -1,5 +1,6 @@
 import React from 'react'
 
+// renders the gallery page
 export default function ImageList() {
   return (
     <div className="container">

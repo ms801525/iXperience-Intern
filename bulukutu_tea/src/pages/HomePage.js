@@ -7,8 +7,8 @@ import Button from "../components/common/Button";
 // import stylesheet for homepage
 import "../styles/homePageStyles.css";
 
+//renders homepage
 export default function homepage() {
-  //renders homepage
   return (
     <div className="mb-5">
       <div className="container text-center">

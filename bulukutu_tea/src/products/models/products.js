@@ -1,3 +1,4 @@
+// Product class represents a model of a bulukutu tea product
 export class Product{
     constructor({id,title,description,price,downloadUrl}){
         this.id = id;

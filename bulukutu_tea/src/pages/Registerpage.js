@@ -4,6 +4,7 @@ import {createUserWithEmailAndPassword} from 'firebase/auth';
 import { auth } from '../firebase/Firebase';
 import { useNavigate } from 'react-router-dom';
 
+// renders register page and handles register auth
 export default function Registerpage() {
    
   const [email,setEmail]=useState('')

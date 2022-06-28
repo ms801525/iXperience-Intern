@@ -1,5 +1,6 @@
 import React from "react";
 
+// renders terms page
 export default function Terms() {
   return (
     <div>

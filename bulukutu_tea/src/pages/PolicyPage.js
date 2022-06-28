@@ -1,5 +1,6 @@
 import React from "react";
 
+// renders the policy page
 export default function PolicyPage() {
   return (
     <div>
