@@ -12,59 +12,61 @@ export default function homepage() {
   return (
     <div className="mb-5">
       <div className="container text-center">
-        <div className="carousel-panel">
-          <div
-            id="carouselExampleControls"
-            className="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-size carousel-inner p-2">
-              <div className="carousel-item active">
-                <img
-                  src={require("../images/new-tea-1.png")}
-                  className="d-block w-100"
-                  alt="Background"
-                ></img>
+        <div className="carousel-center">
+          <div className="carousel-panel">
+            <div
+              id="carouselExampleControls"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-size carousel-inner p-2">
+                <div className="carousel-item active">
+                  <img
+                    src={require("../images/new-tea-1.png")}
+                    className="d-block w-100"
+                    alt="Background"
+                  ></img>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={require("../images/new-tea-2.png")}
+                    className="d-block w-100"
+                    alt="Background"
+                  ></img>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src={require("../images/new-tea-3.png")}
+                    className="d-block w-100"
+                    alt="Background"
+                  ></img>
+                </div>
               </div>
-              <div className="carousel-item">
-                <img
-                  src={require("../images/new-tea-2.png")}
-                  className="d-block w-100"
-                  alt="Background"
-                ></img>
-              </div>
-              <div className="carousel-item">
-                <img
-                  src={require("../images/new-tea-3.png")}
-                  className="d-block w-100"
-                  alt="Background"
-                ></img>
-              </div>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
             </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
 
@@ -93,25 +95,25 @@ export default function homepage() {
         </Button>
         <div className="row text-center">
           <div className="col-md">
-              <img
-                className="border border-dark info-img"
-                src={require("../images/back1.jpg")}
-                alt="Background"
-              ></img>
+            <img
+              className="border border-dark info-img"
+              src={require("../images/back1.jpg")}
+              alt="Background"
+            ></img>
           </div>
           <div className="col-md">
-              <img
-                className="border border-dark info-img"
-                src={require("../images/tea.jpg")}
-                alt="Background"
-              ></img>
+            <img
+              className="border border-dark info-img"
+              src={require("../images/tea.jpg")}
+              alt="Background"
+            ></img>
           </div>
           <div className="col-md">
-              <img
-                className="border border-dark info-img"
-                src={require("../images/new-tea-4.png")}
-                alt="Background"
-              ></img>
+            <img
+              className="border border-dark info-img"
+              src={require("../images/new-tea-4.png")}
+              alt="Background"
+            ></img>
           </div>
         </div>
       </div>

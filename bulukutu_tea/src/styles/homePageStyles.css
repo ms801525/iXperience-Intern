@@ -3,19 +3,24 @@
     color: #779730;
 }
 
-.carousel-panel {
-    background-color: white;
-    width: 100%;
-}
-
 .bulukutu-quote {
     color: #779730;
     font-family: REFINMENT, Serif;
 }
 
+.carousel-panel {
+    background-color: white;
+    width: 80%;
+}
+
+.carousel-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .carousel-size {
-    min-width: 500px;
-    max-width: 100vw;
+    width: 100%;
 }
 
 .info-panel {
