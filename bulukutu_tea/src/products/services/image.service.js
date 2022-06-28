@@ -6,6 +6,7 @@ import{
 
 import { storage } from "../../firebase/Firebase"
 
+// handles images in firebase
 class ImageService{
     uploadImage(file, onUploadProgress){
         return new Promise((resolve,reject)=>{
