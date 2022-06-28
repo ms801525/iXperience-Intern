@@ -1,12 +1,13 @@
 import React from 'react';
 import Footer from './Footer';
-import NewNavBar from './NewNavBar';
+import NavBar from './NavBar';
 
+// renders the default layout of the website
 export default function Layout({children}) {
     return (
         <div className="layout">
             <header>
-                <NewNavBar/>
+                <NavBar/>
             </header>
             <div>
             <main className="container">
