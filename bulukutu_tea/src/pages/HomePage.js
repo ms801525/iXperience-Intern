@@ -77,12 +77,12 @@ export default function homepage() {
 
       <br></br>
 
-      <div className="container p-4 rounded mt-4 info-panel">
+      <div className="p-4 rounded mt-4 info-panel">
         <h1 className="bulukutu-text-color text-center">Bulukutu Tea</h1>
         <h3 className="bulukutu-text-color text-center">
           Central Congo's Finest
         </h3>
-        <p className="bulukutu-text-color bulukutu-quote text-center mt-4">
+        <p className="bulukutu-quote text-center mt-4">
           “GROWN SOLELY ON AFRICAN SOIL AND ETHICALLY SOURCED, OUR GOURMET TEAS
           PAY TRIBUTE TO AFRICAN ELEGANCE AND REFINEMENT. THE CAREFUL BLENDING
           OF THE FINEST BUDS, LEAVES AND SPICES ENSURES THAT YOU ARE NOT JUST
@@ -91,39 +91,27 @@ export default function homepage() {
         <Button size={"btn-lg"} width={"w-100"} page="/products">
           Learn More
         </Button>
-        <div className="row align-items-end text-center">
-          <div className="col">
-            <div className="p-0">
+        <div className="row text-center">
+          <div className="col-md">
               <img
-                className="background-image border border-dark"
-                src={require("../images/back1.jpeg")}
+                className="border border-dark info-img"
+                src={require("../images/back1.jpg")}
                 alt="Background"
-                width="100%"
-                height="340px"
               ></img>
-            </div>
           </div>
-          <div className="col">
-            <div className="p-0 ">
+          <div className="col-md">
               <img
-                className="background-image border border-dark"
-                src={require("../images/tea.jpeg")}
+                className="border border-dark info-img"
+                src={require("../images/tea.jpg")}
                 alt="Background"
-                width="100%"
-                height="340px"
               ></img>
-            </div>
           </div>
-          <div className="col">
-            <div className="p-0">
+          <div className="col-md">
               <img
-                className="background-image border border-dark"
+                className="border border-dark info-img"
                 src={require("../images/new-tea-4.png")}
                 alt="Background"
-                width="100%"
-                height="340px"
               ></img>
-            </div>
           </div>
         </div>
       </div>
