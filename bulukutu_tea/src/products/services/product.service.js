@@ -8,6 +8,7 @@ import {
 import { db } from '../../firebase/Firebase';
 import { Product } from '../models/products';
 
+// handles products in firebase 
 class ProductsService{
     constructor(){
         this.collection = 'Products'

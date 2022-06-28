@@ -1,0 +1,17 @@
+.center-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-position {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+}
+
+.username {
+    color: #779730;
+    height: 50%;
+    width: 100%;
+}

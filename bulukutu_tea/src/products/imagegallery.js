@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import ProductsService from '../products/services/product.service'
 import Carousel from 'better-react-carousel'
 
+// render image gallery for products page
 export default function Imagegallery() {
 
     const [pictures,setPictures] = useState([])

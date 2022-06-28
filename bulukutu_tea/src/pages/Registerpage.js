@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+
+// firebase imports
 import {createUserWithEmailAndPassword} from 'firebase/auth';
 import { auth } from '../firebase/Firebase';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +13,7 @@ export default function Registerpage() {
   const [password,setPassword]=useState('')
   const navigate=useNavigate();
 
+  // creates user on submit with err handling
   async function onFormSubmit(e){
     e.preventDefault();
    try{
