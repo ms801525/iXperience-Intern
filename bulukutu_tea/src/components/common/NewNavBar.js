@@ -4,22 +4,23 @@ import Button from "./Button";
 
 export default function NewNavBar() {
   return (
-    <div className="container-fluid mt-3">
+    <div className="container-fluid mb-5" style={{ backgroundColor: "white" }}>
       <div className="container-fluid">
         <div className="row align-items-center">
           <div className="col-8">
-            <div
-              className="card m-1 text-center"
-              style={{
-                backgroundColor: "white",
-                color: "#779730",
-                height: "65px",
-                width: "75%",
-                fontSize: "xxx-large",
-              }}
-            >
-              Bulukutu Tea
-            </div>
+            <img className="p-3" src={require("../../images/bulukutu-title.png")} alt="Background"></img>
+            {/* <div
+                className="m-1 text-center"
+                style={{
+                  backgroundColor: "white",
+                  color: "#779730",
+                  height: "65px",
+                  width: "75%",
+                  fontSize: "xxx-large",
+                }}
+              >
+                Bulukutu Tea
+              </div> */}
           </div>
           <div className="col">
             <div
@@ -42,7 +43,8 @@ export default function NewNavBar() {
           </div>
         </div>
       </div>
-      <nav className="navbar navbar-expand-lg p-4">
+
+      <nav className="navbar navbar-light navbar-expand-lg p-4">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
