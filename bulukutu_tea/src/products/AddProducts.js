@@ -30,15 +30,13 @@ export default function AddProducts() {
 
           const downloadUrls = await Promise.all(uploads);
     
-          console.log(downloadUrls);
-    
           // save the movie to firebase
           await ProductsService.createProduct(new Product({
             id: null,
             title: title,
             description: description,
             price: price,
-            downloadUrl: downloadUrls,
+            downloadUrls: downloadUrls,
             
           })).then(() => {
               setSuccessMsg('Product added successfully')

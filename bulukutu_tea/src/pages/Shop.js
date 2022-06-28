@@ -54,7 +54,7 @@ export default function Shop() {
                     </Button>
                 </div>
                 <div className="col-6 p-1">
-                    <div class="d-grid gap-2">
+                    <div className="d-grid gap-2">
                         <Button
                                     
                             width={'w-100'}

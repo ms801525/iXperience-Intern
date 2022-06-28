@@ -1,31 +1,26 @@
 import React from 'react'
 import { useParams, Link} from 'react-router-dom'
-import { useState, useEffect, props  } from 'react'
-import ProductsService from './services/product.service'
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 export default function ProductDescription() {
 
   // const productId = props.match.params.productId
-  const productId = useParams;
-  const [productDetail,setProductDetail] = useState([])
-  const [products] = ProductsService.fetchProducts();
+  let { productId } = useParams();
+  console.log(productId)
 
-  // const thisProduct = ProductsService.fetchProducts(prod => prod.id === productId{
-  //           setProductDetail(products);
-  //         })
 
-  useEffect(()=>{
-    // const products = ProductsService.fetchProducts();
-    // if (productId){
-      products.forEach(product =>{
-        if(product.id === productId){
-          setProductDetail(products);
-        }
-      })
-    // }
-  }, [productId,products])
+  // useEffect(()=>{
+  //   <div>Hello</div>
+  //   // // const products = ProductsService.fetchProducts();
+  //   // // if (productId){
+  //   //   products.forEach(product =>{
+  //   //     if(product.id === productId){
+  //   //       setProductDetail(products);
+  //   //     }
+  //   //   })
+  //   // // }
+  // }, [productId,products])
 
   // const [productDetail,setProductDetail] = useState([])
 
@@ -33,46 +28,46 @@ export default function ProductDescription() {
   //   fetchProducts();
   // }, [])
 
-  // async function fetchProducts(){
-  //   try {
-  //     const products = await ProductsService.fetchProducts();
-  //     setProductDetail(products);
-  //   } catch (err) {
-  //   }
-  // }  console.log(productDetail)
-
-  let [num, setNum]= useState(0);
-  let incNum =()=>{
-    if(num<10)
-    {
-    setNum(Number(num)+1);
-    }
-  };
-  let decNum = () => {
-     if(num>0)
-     {
-      setNum(num - 1);
-     }
-  }
- let handleChange = (e)=>{
-   setNum(e.target.value);
-  }
+//   async function fetchProducts(){
+//     try {
+//       const products = await ProductsService.fetchProducts();
+//       setProductDetail(products);
+//     } catch (err) {
+//     }
+//   }  
+// //   let [num, setNum]= useState(0);
+//   let incNum =()=>{
+//     if(num<10)
+//     {
+//     setNum(Number(num)+1);
+//     }
+//   };
+//   let decNum = () => {
+//      if(num>0)
+//      {
+//       setNum(num - 1);
+//      }
+//   }
+//  let handleChange = (e)=>{
+//    setNum(e.target.value);
+//   }
 
   // const [package,setPackage]=useState('')
 
-  if(productDetail.length === 0) return null;
+  // if(productDetail.length === 0) return null;
 
   return (
     <div className='container my-4'>
-      <div className='d-flex justify-content-end'>
+      Hello
+      {/* <div className='d-flex justify-content-end'>
         <Link to='/upload'>Add Product</Link>
       </div>
 
       <div className='d-flex flex-wrap'>
         {
           productDetail.map(productDetail =>
-            <div className='container-fluid'>
-            <div key={productDetail.id} className="row" >
+            <div className='container-fluid'key={productDetail.id}>
+            <div  className="row" >
               <div className="col-xl-6 col-lg-6 col-md-6" >
                 <img src={productDetail.downloadUrl} className="card-img-thumbnail product-img" alt="product cover" />
               </div>
@@ -104,7 +99,7 @@ export default function ProductDescription() {
             </div>
           )
         }
-      </div>
+      </div> */}
     </div>
   )
 }

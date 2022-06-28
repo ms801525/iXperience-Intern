@@ -41,7 +41,7 @@ export default function Registerpage() {
              vaule={email}
              type="email" className="form-control"/>
         </div>
-        <div class="mb-3">
+        <div className="mb-3">
             <label className="form-label">Password</label>
             <input onChange={(e)=>setPassword(e.target.value)}
              vaule={password} 

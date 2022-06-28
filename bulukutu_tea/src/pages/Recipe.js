@@ -35,12 +35,12 @@ export default function Recipe() {
                 </ul>
             </p>
         </div>
-            <div class="row align-items-start p-2">
-                <div class="col">
+            <div className="row align-items-start p-2">
+                <div className="col">
                 </div>
-                <div class="col">
+                <div className="col">
                 </div>
-                <div class="col">
+                <div className="col">
                     <p style={{fontSize: 20}}>ALWAYS STORE IN A COOL, DRY AREA</p>
                 </div>
             </div>

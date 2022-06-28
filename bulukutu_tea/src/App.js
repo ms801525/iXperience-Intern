@@ -40,7 +40,7 @@ export default function App() {
             <Route path="/register" element={<Registerpage/>}></Route>
             <Route path='*' element={<NotFound/>}></Route>
             <Route path='/products' element={<DisplayProducts/>}></Route>
-            <Route path='/products/:id' element={<ProductDescription/>}></Route>
+            <Route path='/products/:productId' element={<ProductDescription/>}></Route>
             <Route path='/upload' element={<AddProducts/>}></Route>
             <Route path='/image-list' element={<ImageList/>}></Route>
             <Route path='/recipe' element={<Recipe/>}></Route>

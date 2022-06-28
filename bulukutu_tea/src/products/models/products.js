@@ -1,17 +1,17 @@
 export class Product{
-    constructor({id,title,description,price,downloadUrl}){
+    constructor({id,title,description,price,downloadUrls}){
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
-        this.downloadUrl = downloadUrl;
+        this.downloadUrls = downloadUrls;
     }
     toJson() {
         return {
           title: this.title,
           description: this.description,
           price: this.price,
-          downloadUrl: this.downloadUrl,
+          downloadUrls: this.downloadUrls,
         }
       }
     
@@ -22,7 +22,7 @@ export class Product{
           title: data.title,
           description: data.description,
           price: data.price,
-          downloadUrl: data.downloadUrl,
+          downloadUrls: data.downloadUrls,
         });
       }
 }

@@ -1,44 +1,20 @@
-import React, {useEffect, useState} from 'react'
-import ProductsService from '../products/services/product.service'
-import Carousel from 'better-react-carousel'
+import React from "react";
+import Carousel from "better-react-carousel";
 
-export default function Imagegallery() {
+export default function Imagegallery({product}) {
 
-    const [pictures,setPictures] = useState([])
-    
-    useEffect(()=>{
-      fetchProducts();
-    }, [])
-  
-    async function fetchProducts(){
-      try {
-        const pictures = await ProductsService.fetchProducts();
-        setPictures(pictures);
-      } catch (err) {
-  
-      }
-    }
-
-        return (
-            <div >
-                {
-          pictures.map(product =>
-            <div key={product.id}>
-            <Carousel  gap={10} loop >
-                <Carousel.Item>
-                    <img width="100%" alt="product cover" src={product.downloadUrl}/>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img width="100%" alt="product cover" src={product.downloadUrl[1]} />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img width="100%" alt="product cover" src={product.downloadUrl[2]} />
-                </Carousel.Item>
-            </Carousel>
-            </div>
-          )
-        }
-            </div>
-        )
-// }
+  return (
+    <div>
+      <Carousel gap={10} loop>
+        {product.downloadUrls.map((image) => (
+         
+            <Carousel.Item key={image} >
+              <img width="100%" alt="product cover" src={image} />
+            </Carousel.Item >
+           
+        ))}
+      </Carousel>
+    </div>
+  );
+  // }
 }

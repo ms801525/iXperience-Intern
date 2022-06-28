@@ -34,7 +34,7 @@ export default function Navbar() {
                             <Button
                                 size={'btn-sm'}
                                 page="/cart">
-                                <i class="bi bi-cart3"></i>
+                                <i className="bi bi-cart3"></i>
                             </Button>
                         </div>
                     </div>
