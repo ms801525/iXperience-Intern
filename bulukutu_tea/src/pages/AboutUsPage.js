@@ -3,6 +3,7 @@ import React from "react";
 // import stylesheet for about us page
 import "../styles/aboutUsStyles.css";
 
+//renders the about us page
 function AboutUsPage() {
   return (
     <div className="body container">
