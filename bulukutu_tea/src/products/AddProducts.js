@@ -1,12 +1,14 @@
-
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
+// services imports
 import ProductsService from './services/product.service'
 import ImageService from './services/image.service'
 
+// product model import
 import { Product } from '../products/models/products'
 
+// renders the products page / handles products
 export default function AddProducts() {
 
     const [title,setTitle] = useState('')

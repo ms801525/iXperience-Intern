@@ -9,6 +9,7 @@ import Imagegallery from './imagegallery';
 // import stylesheet for page
 import "../styles/DisplayProducts.css"
 
+// displays products
 export default function DisplayProducts() {
   const [products,setProducts] = useState([])
 
