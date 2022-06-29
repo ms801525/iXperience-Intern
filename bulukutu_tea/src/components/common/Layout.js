@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from './Footer';
-import NavBar from './NavBar';
+import NavBar from './Navbar';
 
 // renders the default layout of the website
 export default function Layout({children}) {
