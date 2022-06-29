@@ -18,7 +18,7 @@ export default function NavBar() {
           ></img>
           <div className="text-center cart-position">
             <Button size={"btn-sm"} page="/cart">
-              <i class="bi bi-cart3"></i>
+              <i className="bi bi-cart3"></i>
             </Button>
             <div className="m-1 text-center">Welcome Username</div>
           </div>
