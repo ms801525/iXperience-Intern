@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from "react";
-import ProductsService from "../products/services/product.service";
-import { Link } from "react-router-dom";
-import "../styles/DisplayProducts.css";
+import React, {useState, useEffect} from 'react'
+import ProductsService from '../products/services/product.service'
+import { Link } from 'react-router-dom'
 import { BsFillCartFill } from "react-icons/bs";
-import Imagegallery from "./imagegallery";
+
+// import from image gallery
+import Imagegallery from './imagegallery';
+
+// import stylesheet for page
+import "../styles/DisplayProducts.css"
 
 export default function DisplayProducts() {
   const [products, setProducts] = useState([]);
@@ -26,30 +30,21 @@ export default function DisplayProducts() {
           <Link to="/upload">Add Product</Link>
         </div>
 
-        {products.length === 0 ? (
-          <div
-            style={{
-              display: "flex",
-              height: "300px",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <h2>No products yet...</h2>
-          </div>
-        ) : (
-          <div className="d-flex flex-wrap">
-            {products.map((product) => (
-              <div className="container-fluid" key={product.id}>
-                <div className="row">
-                  <div
-                    className="col-xl-5 col-lg-5 col-md-5"
-                    style={{ flex: "5" }}
-                  >
+      {products.length === 0?
+        <div className='no-products-div'>
+          <h2>No products yet...</h2>
+        </div> :
+
+        <div className='d-flex flex-wrap'>
+        {
+          products.map(product =>
+            <div className='container-fluid'>
+                <div key={product.id} className="row" >
+                <div className="col-xl-5 col-lg-5 col-md-5 product-img" style={{flex:"5"}} >
                     {/* <img src={product.downloadUrl} className="card-img-thumbnail product-img" alt="product cover" /> */}
                     <Imagegallery
                       product={product}
-                      className="card-img-thumbnail product-img"
+                      className="card-img-thumbnail"
                       alt="product cover"
                     />
                   </div>
@@ -83,9 +78,9 @@ export default function DisplayProducts() {
                 </div>
                 <hr></hr>
               </div>
-            ))}
+            )}
           </div>
-        )}
+        }
 
         {/* <div className="container-fluid mx-10">
           <h2>Related Products</h2>

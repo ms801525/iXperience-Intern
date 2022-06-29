@@ -2,12 +2,8 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 import Button from '../components/common/Button';
 
-
-
-
+// renders shop page
 export default function Shop() {
-
-
   return (
     <div>
         <div className="container p-0">
