@@ -20,6 +20,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 
 import Registerpage from "./pages/Registerpage";
+import LoginPage from "./pages/LoginPage";
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="/policy-page" element={<PolicyPage />}></Route>
             <Route path="/terms" element={<Terms />}></Route>
             <Route path="/register" element={<Registerpage/>}></Route>
+            <Route path="/login" element={<LoginPage/>}></Route>
             <Route path='*' element={<NotFound/>}></Route>
             <Route path='/products' element={<DisplayProducts/>}></Route>
             <Route path='/products/:productId' element={<ProductDescription/>}></Route>
