@@ -3,10 +3,6 @@
     font-size: 20;
 }
 
-.bulukutu-text-color {
-    color: #779730;
-}
-
 .title {
     background-color: white;
     color: #779730;
@@ -20,4 +16,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.info-body {
+    background-color: #DBE3C7;
+    color: #779730;
+    padding: 20px;
+}
+
+.infoPanel {
+    background-color: white;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin-top: 45px;
+    margin-bottom: 60px;
 }

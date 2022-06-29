@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
+//import Button component
 import Button from '../components/common/Button';
 
 // renders shop page
@@ -14,7 +14,7 @@ export default function Shop() {
         ></img>
         <br/>
         </div>
-        <div className="p-4 border border-light">
+        <div className="p-4 border border-light bulukutu-text-color">
             <p>
             “If you are cold, tea will warm you;
             if you are too heated, it will cool you;
@@ -24,7 +24,7 @@ export default function Shop() {
 
         </div>
         <br/>
-        <div className="p-4 border border-light">
+        <div className="p-4 border border-light bulukutu-text-color">
             <p><b>
                 Two Options allow to differentiate the type of purchase you are making
             </b></p>

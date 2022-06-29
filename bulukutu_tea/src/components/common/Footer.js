@@ -1,8 +1,8 @@
 import React from "react";
 import Bfooter from "./ButtonFooter";
-import { FaInstagram, FaFacebookF, FaWhatsapp, FaTiktok } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 
+// renders the footer of the webpage
 export default function Footer(page) {
   return (
     <div className="text-center p-3 mt-5" style={{ backgroundColor: "#FFFFFF" }}>

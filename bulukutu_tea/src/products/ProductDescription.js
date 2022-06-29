@@ -3,6 +3,7 @@ import { useParams, Link} from 'react-router-dom'
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
+// renders product description
 export default function ProductDescription() {
 
   // const productId = props.match.params.productId
