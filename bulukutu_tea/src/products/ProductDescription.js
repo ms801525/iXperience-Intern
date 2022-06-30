@@ -1,65 +1,46 @@
 import React from 'react'
+// import React, {useState, useEffect} from 'react'
 import { useParams, Link} from 'react-router-dom'
+import ProductsService from "../products/services/product.service"
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import Imagegallery from './imagegallery';
 
 // renders product description
-export default function ProductDescription() {
+export default function ProductDescription({products}) {
 
-  // const productId = props.match.params.productId
   let { productId } = useParams();
-  console.log(productId)
-
-
-  // useEffect(()=>{
-  //   <div>Hello</div>
-  //   // // const products = ProductsService.fetchProducts();
-  //   // // if (productId){
-  //   //   products.forEach(product =>{
-  //   //     if(product.id === productId){
-  //   //       setProductDetail(products);
-  //   //     }
-  //   //   })
-  //   // // }
-  // }, [productId,products])
-
-  // const [productDetail,setProductDetail] = useState([])
-
-  // useEffect(()=>{
-  //   fetchProducts();
-  // }, [])
-
-//   async function fetchProducts(){
-//     try {
-//       const products = await ProductsService.fetchProducts();
-//       setProductDetail(products);
-//     } catch (err) {
-//     }
-//   }  
-// //   let [num, setNum]= useState(0);
-//   let incNum =()=>{
-//     if(num<10)
-//     {
-//     setNum(Number(num)+1);
-//     }
-//   };
-//   let decNum = () => {
-//      if(num>0)
-//      {
-//       setNum(num - 1);
-//      }
-//   }
-//  let handleChange = (e)=>{
-//    setNum(e.target.value);
-//   }
-
-  // const [package,setPackage]=useState('')
-
+  const thisProduct = ProductsService.fetchProducts(product => product.id === productId)
+  // console.log(productId)
+  console.log(thisProduct)
+  
   // if(productDetail.length === 0) return null;
-
   return (
     <div className='container my-4'>
       Hello
+      {/* <h1>{thisProduct.title}</h1>
+            <p>Price: ${thisProduct.price}</p>
+            <p>{thisProduct.description}</p> */}
+
+            {/* <div>
+            {thisProduct.map((thisProduct)=>
+            <div key={thisProduct.id}>
+              <h1>{thisProduct.title}</h1>
+            <p>Price: $ {thisProduct.price}</p>
+            <p>{thisProduct.description}</p>
+            </div> 
+            )}
+        </div>  */}
+
+      {/* <div>
+            {products.filter(product => product.id === productId).map((product)=>
+            <div key={product.id}>
+              <h1>{product.title}</h1>
+            <p>Price: ${product.price}</p>
+            <p>{product.description}</p>
+            </div> 
+            )}
+        </div> */}
       {/* <div className='d-flex justify-content-end'>
         <Link to='/upload'>Add Product</Link>
       </div>
@@ -104,3 +85,20 @@ export default function ProductDescription() {
     </div>
   )
 }
+
+// //   let [num, setNum]= useState(0);
+//   let incNum =()=>{
+//     if(num<10)
+//     {
+//     setNum(Number(num)+1);
+//     }
+//   };
+//   let decNum = () => {
+//      if(num>0)
+//      {
+//       setNum(num - 1);
+//      }
+//   }
+//  let handleChange = (e)=>{
+//    setNum(e.target.value);
+//   }

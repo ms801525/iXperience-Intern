@@ -8,7 +8,7 @@ export default function Imagegallery({product}) {
       <Carousel gap={10} loop>
         {product.downloadUrls.map((image) => (
          
-            <Carousel.Item key={image} >
+            <Carousel.Item key={image}  >
               <img width="100%" alt="product cover" src={image} />
             </Carousel.Item >
            

@@ -42,7 +42,6 @@ export default function DisplayProducts() {
             <div className='container-fluid'>
                 <div key={product.id} className="row" >
                 <div className="col-xl-5 col-lg-5 col-md-5 product-img" style={{flex:"5"}} >
-                    {/* <img src={product.downloadUrl} className="card-img-thumbnail product-img" alt="product cover" /> */}
                     <Imagegallery
                       product={product}
                       className="card-img-thumbnail"
