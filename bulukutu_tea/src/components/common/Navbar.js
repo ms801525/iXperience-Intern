@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+
 
 // import for nav buttons
 import Button from "./Button";
@@ -12,10 +14,11 @@ export default function Navbar() {
     <div className="container-fluid mb-5" style={{ backgroundColor: "white" }}>
       <div className="container center-title">
         <div className="p-3">
+          <Link to="/">
           <img
             src={require("../../images/bulukutu-title.png")}
             alt="Background"
-          ></img>
+          ></img></Link>
           <div className="text-center cart-position">
             <Button size={"btn-sm"} page="/cart">
               <i className="bi bi-cart3"></i>
