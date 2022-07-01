@@ -9,15 +9,13 @@ import Imagegallery from "./imagegallery";
 export default function ProductDescription() {
   let { productId } = useParams();
   const [product, setProduct] = useState(null);
-  // const thisProduct =  ProductsService.fetchMyProduct(
-  //   productId)
 
+  //displaying the product that was selected
   useEffect(() => {
     getProduct();
   }, []);
 
   async function getProduct() {
-    //replace with fetch one product
     const thisProduct = await ProductsService.fetchMyProduct(productId);
     console.log(thisProduct);
     setProduct(thisProduct);
@@ -35,6 +33,7 @@ export default function ProductDescription() {
     }
   };
 
+  //to fetch the other ptoducts other than the product displayed
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetchProduct();
