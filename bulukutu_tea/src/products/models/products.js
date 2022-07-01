@@ -16,10 +16,10 @@ export class Product{
         }
       }
     
-      static fromFirebase(doc) {
-        const data = doc.data();
+      static fromFirebase(docSnap) {
+        const data = docSnap.data();
         return new Product({
-          id: doc.id,
+          id: docSnap.id,
           title: data.title,
           description: data.description,
           price: data.price,

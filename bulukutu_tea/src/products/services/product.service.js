@@ -2,13 +2,16 @@ import {
     collection,
     query,
     getDocs,
+    doc,getDoc,
     addDoc,
   } from 'firebase/firestore';
 
 import { db } from '../../firebase/Firebase';
 import { Product } from '../models/products';
+import { useParams, Link } from "react-router-dom";
 
 // handles products in firebase 
+
 class ProductsService{
     constructor(){
         this.collection = 'Products'
@@ -22,6 +25,20 @@ class ProductsService{
         product.id = docRef.id;
         return product;
       }
+
+      //get product by id
+      async fetchMyProduct(productId) {
+        const docRef = doc(db, 'Products', productId);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          // create product from doc snap
+          return Product.fromFirebase(docSnap);
+        } else {
+          // return an new product with the productId
+          return new Product({ id: productId });
+        }
+      }
+
 
     async fetchProducts(){
     const collectionRef = collection(db, this.collection);

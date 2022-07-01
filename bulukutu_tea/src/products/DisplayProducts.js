@@ -82,42 +82,6 @@ export default function DisplayProducts() {
           </div>
         }
 
-        {/* <div className="container-fluid mx-10">
-          <h2>Related Products</h2>
-          <div className="d-flex justify-content-center">
-            {products.map((product) => (
-              <div
-                className="container-fluid"
-                key={product.id}
-                style={{ width: "300px" }}
-              >
-                <div className="card" hoverable="true">
-                  <img
-                    src={product.downloadUrls}
-                    className="card-img-top"
-                    alt="product cover"
-                    style={{
-                      height: "200px",
-                      width: "200px",
-                      objectFit: "cover",
-                    }}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{product.title}</h5>
-                    <h5 className="col">ZAR {product.price}</h5>
-                    <Link
-                      to={`/products/${product.id}`}
-                      className="btn btn-outline-dark"
-                    >
-                      {" "}
-                      Read More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
       </div>
     </>
   );
