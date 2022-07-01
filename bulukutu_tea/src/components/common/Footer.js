@@ -5,8 +5,8 @@ import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 // renders the footer of the webpage
 export default function Footer(page) {
   return (
-    <div className="text-center p-3 mt-5" style={{ backgroundColor: "#FFFFFF" }}>
-      <img
+    <div className="text-center p-1 rounded info-panel mb-1" style={{ backgroundColor: "#FFFFFF" }}>
+      <img style={{ width: 180 }}
         src={require("../../images/the-miracle-tea.png")}
         alt="Background"
       ></img>
@@ -31,7 +31,7 @@ export default function Footer(page) {
           Contact Us
         </Bfooter>
       </div>
-      <div className="container text-center">
+      <div className="text-center m-0">
         <p className="icons">
           <a href="https://www.instagram.com/bulukutu_tea/">
             <button className="btn btn-outline-dark btn-floating m-1">
@@ -47,18 +47,15 @@ export default function Footer(page) {
             <FaTiktok />
           </button>
         </p>
-      </div>
-      <div className="p-2">
+      
         <img
           src={require("../../images/product-symbols.png")}
           alt="Background"
-          style={{ width: "200px" }}
+          style={{ width: 100 }}
         ></img>
-        <div className="mt-2">
-          <p>© Copyright 2022: Bulukutu Tea</p>
-          <p>All rights reserved.</p>
-        </div>
-      </div>
+          <p className='m-0'>© Copyright 2022: Bulukutu Tea</p>
+          <p className='m-0'>All rights reserved.</p>
+          </div>
     </div>
   );
 }
