@@ -4,6 +4,7 @@ import ProductsService from "../products/services/product.service";
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import Imagegallery from "./imagegallery";
+import { useNavigate } from "react-router-dom";
 
 // renders product description
 export default function ProductDescription() {
@@ -54,6 +55,8 @@ export default function ProductDescription() {
     window.location.pathname(product.id);
   }
 
+  const navigate = useNavigate()
+
   return (
     <>
       <div>
@@ -74,7 +77,7 @@ export default function ProductDescription() {
                   style={{ border: "5px solid red", padding: "200px" }}
                 ></div>
                   {/* <Imagegallery
-                    productId ={productId.downloadUrls}
+                    product ={product?.downloadUrls}
                     className="card-img-thumbnail"
                     alt="product cover"
                   /> */}
@@ -159,6 +162,10 @@ export default function ProductDescription() {
           </div>
         </div>
       </div>
+      <div className="d-flex justify-content-center">
+        <button className="btn btn-outline-dark" onClick={()=> navigate("/products")}>Back to Products page</button>
+      </div>
+      <br></br>
     </>
   );
 }
