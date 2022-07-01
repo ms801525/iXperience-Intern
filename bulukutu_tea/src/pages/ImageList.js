@@ -65,6 +65,7 @@ export default function ImageList() {
             controls = {true}
             width='100%'
             />
+            
             </div>
         </div>
     </div>
