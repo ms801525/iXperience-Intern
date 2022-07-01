@@ -8,7 +8,6 @@ import {
 
 import { db } from '../../firebase/Firebase';
 import { Product } from '../models/products';
-import { useParams, Link } from "react-router-dom";
 
 // handles products in firebase 
 

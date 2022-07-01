@@ -69,13 +69,22 @@ export default function ProductDescription() {
             <div>
               <div className="d-flex flex-wrap">
                 <div
-                  className="col-xl-5 col-lg-5 col-md-5 product-img"
+                  className="col-xl-5 col-lg-5 col-md-5 product-img "
                   style={{ flex: "5" }}
                 >
-                  <div
+                  {/* <div
                   className="container"
                   style={{ border: "5px solid red", padding: "200px" }}
-                ></div>
+                ></div> */}
+                <img
+                    src={product?.downloadUrls[0]}
+                    className="card-img-thumbnail"
+                    alt="product cover"
+                    style={{
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
                   {/* <Imagegallery
                     product ={product?.downloadUrls}
                     className="card-img-thumbnail"
@@ -83,7 +92,7 @@ export default function ProductDescription() {
                   /> */}
                 </div>
                 <div
-                  className="container col-xl-4 col-lg-4 col-md-4"
+                  className="container col-xl-4 col-lg-4 col-md-4 mx-3"
                   style={{ flex: "5" }}
                 >
                   <h5 className="card-title">{product?.title}</h5>
@@ -128,15 +137,15 @@ export default function ProductDescription() {
         <div className="container-fluid mx-10">
           <h2 className="d-flex align-items-center">You may also like:</h2>
           <div className="d-flex justify-content-center">
-            {getRelatedProducts().map((product) => (
+            {getRelatedProducts().map((theproduct) => (
               <div
                 className="container-fluid"
-                key={product.id}
+                key={theproduct.id}
                 style={{ width: "227px" }}
               >
                 <div className="card " hoverable="true">
                   <img
-                    src={product.downloadUrls}
+                    src={theproduct.downloadUrls}
                     className="card-img-top d-flex justify-content-center"
                     alt="product cover"
                     style={{
@@ -146,10 +155,10 @@ export default function ProductDescription() {
                     }}
                   />
                   <div className="card-body">
-                    <h5 className="card-title align-top">{product.title}</h5>
-                    <p className="align-middle">ZAR {product.price}</p>
+                    <h5 className="card-title align-top">{theproduct.title}</h5>
+                    <p className="align-middle">ZAR {theproduct.price}</p>
                     <Link
-                      to={`/products/${product?.id}`}
+                      to={`/products/${theproduct?.id}`}
                       className="btn btn-outline-dark"
                       onClick={refreshPage}
                     >
