@@ -43,9 +43,11 @@ export default function Footer(page) {
               <FaFacebookF />
             </button>
           </a>
+          <a href="https://www.tiktok.com/@bulukututea">
           <button className="btn btn-outline-dark btn-floating m-1" href="#!">
             <FaTiktok />
           </button>
+          </a>
         </p>
       
         <img
