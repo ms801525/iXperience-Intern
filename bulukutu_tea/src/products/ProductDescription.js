@@ -55,7 +55,7 @@ export default function ProductDescription() {
     window.location.pathname(product.id);
   }
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
@@ -72,24 +72,59 @@ export default function ProductDescription() {
                   className="col-xl-5 col-lg-5 col-md-5 product-img "
                   style={{ flex: "5" }}
                 >
-                  {/* <div
-                  className="container"
-                  style={{ border: "5px solid red", padding: "200px" }}
-                ></div> */}
-                <img
-                    src={product?.downloadUrls[0]}
-                    className="card-img-thumbnail"
-                    alt="product cover"
-                    style={{
-                      width: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                  {/* <Imagegallery
-                    product ={product?.downloadUrls}
-                    className="card-img-thumbnail"
-                    alt="product cover"
-                  /> */}
+                  <div
+                    id="carouselExampleControls"
+                    className="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div className="carousel-size carousel-inner p-2">
+                      <div className="carousel-item active">
+                        <img
+                          src={product?.downloadUrls[0]}
+                          className="d-block w-100"
+                          alt="Background"
+                        ></img>
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src={product?.downloadUrls[1]}
+                          className="d-block w-100"
+                          alt="Background"
+                        ></img>
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src={product?.downloadUrls[2]}
+                          className="d-block w-100"
+                          alt="Background"
+                        ></img>
+                      </div>
+                    </div>
+                    <button
+                      className="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExampleControls"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        className="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      className="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExampleControls"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        className="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 </div>
                 <div
                   className="container col-xl-4 col-lg-4 col-md-4 mx-3"
@@ -172,7 +207,12 @@ export default function ProductDescription() {
         </div>
       </div>
       <div className="d-flex justify-content-center">
-        <button className="btn btn-outline-dark" onClick={()=> navigate("/products")}>Back to Products page</button>
+        <button
+          className="btn btn-outline-dark"
+          onClick={() => navigate("/products")}
+        >
+          Back to Products page
+        </button>
       </div>
       <br></br>
     </>
