@@ -29,6 +29,7 @@ export default function Footer(page) {
 
         <Bfooter width={"w-50"} size={"btn-sm"} page="/contact">
           Contact Us
+          
         </Bfooter>
       </div>
       <div className="text-center m-0">
@@ -43,9 +44,11 @@ export default function Footer(page) {
               <FaFacebookF />
             </button>
           </a>
+          <a href="https://www.tiktok.com/@bulukututea">
           <button className="btn btn-outline-dark btn-floating m-1" href="#!">
             <FaTiktok />
           </button>
+          </a>
         </p>
       
         <img

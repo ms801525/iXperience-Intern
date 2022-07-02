@@ -9,7 +9,7 @@ export default function Imagegallery({product}) {
         {product.downloadUrls.map((image) => (
          
             <Carousel.Item key={image}  >
-              <img width="100%" alt="product cover" src={image} />
+              <img width="100%" height="100%" alt="product cover" src={image} />
             </Carousel.Item >
            
         ))}
