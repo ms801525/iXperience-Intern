@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // imports for routing
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -18,11 +18,22 @@ import AddProducts from "./products/AddProducts";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from './firebase/Firebase';
 
 import Registerpage from "./pages/Registerpage";
 import LoginPage from "./pages/LoginPage";
+import CartPage from "./pages/CartPage";
 
 export default function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+  }, []);
+
   return (
     <div className="container-fluid">
       <BrowserRouter>
@@ -46,6 +57,7 @@ export default function App() {
             <Route path='/upload' element={<AddProducts/>}></Route>
             <Route path='/image-list' element={<ImageList/>}></Route>
             <Route path='/recipe' element={<Recipe/>}></Route>
+            <Route path='/cart' element={<CartPage user={user}/>}></Route>
           </Routes>
         </Layout>
       </BrowserRouter>
