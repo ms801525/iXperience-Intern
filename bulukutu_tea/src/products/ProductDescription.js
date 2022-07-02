@@ -71,14 +71,13 @@ export default function ProductDescription() {
               <div className="d-flex flex-wrap">
                 <div
                   className="col-xl-5 col-lg-5 col-md-5 product-img "
-                  style={{ flex: "5",  marginLeft: 'auto', marginRight: 'auto' }}
+                  style={{ flex: "5", }}
                 >
                   <div
                     id="carouselExampleControls"
                     className="carousel slide"
-                    data-bs-ride="carousel"
-                  >
-                    <div className="carousel-size carousel-inner p-2">
+                    data-bs-ride="carousel">
+                    <div className="carousel-size carousel-inner p-2" >
                       <div className="carousel-item active">
                         <img
                           src={product?.downloadUrls[0]}
@@ -126,7 +125,7 @@ export default function ProductDescription() {
                       <span className="visually-hidden">Next</span>
                     </button>
                   </div>
-                  {/* <Carousel>
+                  <Carousel>
                     <img
                       src={product?.downloadUrls}
                       alt="placeholder"
@@ -139,7 +138,7 @@ export default function ProductDescription() {
                       src={product?.downloadUrls[2]}
                       alt="placeholder"
                     />
-                  </Carousel> */}
+                  </Carousel>
                 </div>
                 <div
                   className="container col-xl-4 col-lg-4 col-md-4 mx-3"

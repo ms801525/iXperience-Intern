@@ -7,7 +7,6 @@ const Carousel = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(children.length);
 
-  // Set the length to match current children from props
   useEffect(() => {
     setLength(children.length);
   }, [children]);
@@ -25,24 +24,48 @@ const Carousel = (props) => {
   };
 
   return (
-    <div className="carousel-container">
-      <div className="carousel-wrapper">
-        <button onClick={prev} className="left-arrow">
-          &lt;
-        </button>
-        <div className="carousel-content-wrapper">
-          <div
-            className="carousel-content"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      <div className="carousel-container carousel slide" id="carouselExampleControls" data-bs-ride="carousel">
+        <div className="carousel-wrapper">
+          {/* <button onClick={prev} className="left-arrow">
+            &lt;
+          </button> */}
+          <button
+            onClick={prev}
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
           >
-            {children}
+            <span
+              className="carousel-control-prev-icon"
+                aria-hidden="true"
+            ></span>
+          </button>
+          <div className="carousel-content-wrapper carousel-inner">
+            <div
+              className="carousel-content active"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {children}
+            </div>
           </div>
+          {/* <button onClick={next} className="right-arrow">
+            &gt;
+          </button> */}
+          <button
+            onClick={next}   
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+          </button>
         </div>
-        <button onClick={next} className="right-arrow">
-          &gt;
-        </button>
       </div>
-    </div>
   );
 };
 
