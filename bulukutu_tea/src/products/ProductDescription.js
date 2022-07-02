@@ -5,6 +5,7 @@ import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import Imagegallery from "./imagegallery";
 import { useNavigate } from "react-router-dom";
+import Carousel from "./Carousel";
 
 // renders product description
 export default function ProductDescription() {
@@ -70,7 +71,7 @@ export default function ProductDescription() {
               <div className="d-flex flex-wrap">
                 <div
                   className="col-xl-5 col-lg-5 col-md-5 product-img "
-                  style={{ flex: "5" }}
+                  style={{ flex: "5",  marginLeft: 'auto', marginRight: 'auto' }}
                 >
                   <div
                     id="carouselExampleControls"
@@ -125,6 +126,20 @@ export default function ProductDescription() {
                       <span className="visually-hidden">Next</span>
                     </button>
                   </div>
+                  {/* <Carousel>
+                    <img
+                      src={product?.downloadUrls}
+                      alt="placeholder"
+                    />
+                    <img
+                      src={product?.downloadUrls[1]}
+                      alt="placeholder"
+                    />
+                    <img
+                      src={product?.downloadUrls[2]}
+                      alt="placeholder"
+                    />
+                  </Carousel> */}
                 </div>
                 <div
                   className="container col-xl-4 col-lg-4 col-md-4 mx-3"
