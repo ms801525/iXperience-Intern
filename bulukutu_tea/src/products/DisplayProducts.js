@@ -41,7 +41,7 @@ export default function DisplayProducts() {
           products.map(product =>
             <div className='container-fluid'>
                 <div key={product.id} className="row" >
-                <div className="col-xl-5 col-lg-5 col-md-5 product-img" style={{flex:"5"}} >
+                <div className="col-xl-5 col-lg-5 col-md-5 product-img" style={{flex:"5", objectFit: "cover"}} >
                     <Imagegallery
                       product={product}
                       className="card-img-thumbnail"

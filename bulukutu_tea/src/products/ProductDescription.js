@@ -185,14 +185,13 @@ export default function ProductDescription() {
         )}
         <div className="container-fluid mx-10">
           <h2 className="d-flex align-items-center">You may also like:</h2>
-          <div className="d-flex justify-content-center">
+          <div className="row justify-content-center p-2">
             {getRelatedProducts().map((theproduct) => (
               <div
-                className="container-fluid"
+                className="container-fluid col-4"
                 key={theproduct.id}
-                style={{ width: "227px" }}
               >
-                <div className="card " hoverable="true">
+                <div className="card " hoverable="true" style={{ width: "204px" }}>
                   <img
                     src={theproduct.downloadUrls}
                     className="card-img-top d-flex justify-content-center"
@@ -203,9 +202,9 @@ export default function ProductDescription() {
                       objectFit: "cover",
                     }}
                   />
-                  <div className="card-body">
-                    <h5 className="card-title align-top">{theproduct.title}</h5>
-                    <p className="align-middle">ZAR {theproduct.price}</p>
+                  <div className="card-body d-block">
+                    <h5 className="card-title ">{theproduct.title}</h5>
+                    <p className="">ZAR {theproduct.price}</p>
                     <Link
                       to={`/products/${theproduct?.id}`}
                       className="btn btn-outline-dark"
