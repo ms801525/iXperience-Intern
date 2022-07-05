@@ -6,6 +6,7 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import Imagegallery from "./imagegallery";
 import { useNavigate } from "react-router-dom";
 import Carousel from "./Carousel";
+import Spinner from "../components/common/Spinner";
 
 // renders product description
 export default function ProductDescription() {
@@ -63,7 +64,7 @@ export default function ProductDescription() {
       <div>
         {product?.length === 0 ? (
           <div className="no-products-div">
-            <h2>Loading...</h2>
+            <Spinner/>
           </div>
         ) : (
           <div className="container my-4">

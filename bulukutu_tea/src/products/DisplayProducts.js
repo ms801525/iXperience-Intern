@@ -3,6 +3,8 @@ import ProductsService from '../products/services/product.service'
 import { Link } from 'react-router-dom'
 import { BsFillCartFill } from "react-icons/bs";
 
+import Spinner from '../components/common/Spinner';
+
 // import from image gallery
 import Imagegallery from './imagegallery';
 
@@ -33,7 +35,7 @@ export default function DisplayProducts() {
 
       {products.length === 0?
         <div className='no-products-div'>
-          <h2>No products yet...</h2>
+          <Spinner/>
         </div> :
 
         <div className='d-flex flex-wrap'>
