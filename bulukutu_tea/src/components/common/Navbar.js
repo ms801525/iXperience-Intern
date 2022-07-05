@@ -8,6 +8,9 @@ import Button from "./Button";
 // import for nav bar stylesheet
 import "../../styles/navBarStyles.css";
 
+
+
+
 // renders the navbar
 export default function Navbar() {
   return (
