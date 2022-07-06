@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+// import { Order } from "../../models/order";
 
 // import for nav buttons
 import Button from "./Button";
@@ -9,6 +10,7 @@ import "../../styles/navBarStyles.css";
 
 // renders the navbar
 export default function Navbar(props) {
+  
   return (
     <div className="container-fluid mb-5 navbar-panel">
       <div className="container center-title">
@@ -20,7 +22,8 @@ export default function Navbar(props) {
           ></img></Link>
           <div className="text-center cart-position">
             <Button size={"btn-sm"} page="/cart">
-              <i className="bi bi-cart3"></i>
+              <i className="bi bi-cart3 cart-icon"></i>
+              {/* <span className="cart-item-qty">{order.name.length}</span> */}
             </Button>
             <div>
               <div className="m-1 text-center">Welcome</div>

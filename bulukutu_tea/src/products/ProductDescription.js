@@ -4,11 +4,13 @@ import ProductsService from "../products/services/product.service";
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import Carousel from "./Carousel";
 import Spinner from "../components/common/Spinner";
+// import stylesheet for page
+import "../styles/DisplayProducts.css"
+import { Order } from '../models/order';
 
 // renders product description
-export default function ProductDescription() {
+export default function ProductDescription(props) {
   let { productId } = useParams();
   const [product, setProduct] = useState(null);
 
@@ -35,7 +37,13 @@ export default function ProductDescription() {
     }
   };
 
-  //to fetch the other ptoducts other than the product displayed
+  function onAddToCartClick() {
+    let order = new Order (null, product?.title, product?.price, num, true, null);
+    props.onAddToCartClick(order);
+  }
+
+
+  //to fetch the other products other than the product displayed
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetchProduct();
@@ -57,6 +65,7 @@ export default function ProductDescription() {
   }
 
   const navigate = useNavigate();
+
 
   return (
     <>
@@ -125,20 +134,6 @@ export default function ProductDescription() {
                       <span className="visually-hidden">Next</span>
                     </button>
                   </div>
-                  <Carousel>
-                    <img
-                      src={product?.downloadUrls}
-                      alt="placeholder"
-                    />
-                    <img
-                      src={product?.downloadUrls[1]}
-                      alt="placeholder"
-                    />
-                    <img
-                      src={product?.downloadUrls[2]}
-                      alt="placeholder"
-                    />
-                  </Carousel>
                 </div>
                 <div
                   className="container col-xl-4 col-lg-4 col-md-4 mx-3"
@@ -172,8 +167,9 @@ export default function ProductDescription() {
                         </span>
                       </p>
                     </div>
-                    <Link  
-                    to="" 
+                    <Link 
+                    onClick={(e) => {onAddToCartClick()}} 
+                    to="/cart" 
                     className="btn btn-outline-dark col-6 col-sm-3">
                       <BsFillCartFill />
                     </Link>
