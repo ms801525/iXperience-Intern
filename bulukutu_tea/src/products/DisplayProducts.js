@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom'
 import { BsFillCartFill } from "react-icons/bs";
 
 import Spinner from '../components/common/Spinner';
+import Button from '../components/common/ButtonFooter';
 
 // import from image gallery
 import Imagegallery from './imagegallery';
 
 // import stylesheet for page
 import "../styles/DisplayProducts.css"
+import { Order } from '../models/order';
 
 // displays products
-export default function DisplayProducts() {
+export default function DisplayProducts(props) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -24,6 +26,11 @@ export default function DisplayProducts() {
       const products = await ProductsService.fetchProducts();
       setProducts(products);
     } catch (err) {}
+  }
+
+  function onAddToCartClick(product) {
+    let order = new Order (null, product.title, product.price, "1", true, null);
+    props.onAddToCartClick(order);
   }
 
   return (
@@ -41,8 +48,8 @@ export default function DisplayProducts() {
         <div className='d-flex flex-wrap'>
         {
           products.map(product =>
-            <div className='container-fluid'>
-                <div key={product.id} className="row" >
+            <div  key={product.id} className='container-fluid'>
+                <div className="row" >
                 <div className="col-xl-5 col-lg-5 col-md-5 product-img" style={{flex:"5", objectFit: "cover"}} >
                     <Imagegallery
                       product={product}
@@ -61,12 +68,12 @@ export default function DisplayProducts() {
                       <h5 className="col-6 col-sm-3" style={{ flex: "0.5" }}>
                         ZAR {product.price}
                       </h5>
-                      <Link
-                        to=""
-                        className="btn btn-outline-dark col-6 col-sm-3"
-                      >
-                        <BsFillCartFill />
-                      </Link>
+                      <div onClick={(e) => {onAddToCartClick(product)}}>
+                        <Button page="" className="col-6 col-sm-3">
+                          Add to cart!
+                        </Button>
+                      </div>
+                      
                     </div>
                     <Link
                       to={`/products/${product.id}`}

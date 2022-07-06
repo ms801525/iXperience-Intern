@@ -13,18 +13,21 @@ export default function CartPage(props) {
     if (props.user){
       fetchOrders();
     }
-  }, []);
+  });
 
   async function fetchOrders() {
     const orders_var = await OrdersService.fetchOrders(props.user);
     setOrders(orders_var);
-    console.log("orders: ", orders);
-    console.log("orders_var", orders_var);
   }
 
   async function onLogoutClicked() {
       await signOut(auth);
-    }
+  }
+
+  async function deleteOrder(orderid) {
+    OrdersService.deleteOrder(orderid);
+    setOrders(orders.filter((order) => order.orderid !== orderid));
+  }
     
   return (
     <div>
@@ -40,12 +43,14 @@ export default function CartPage(props) {
             <div className='w-100'>
               {
                 orders.length > 0 ?
+                <div>
                   <table className='table w-100'>
                     <thead>
                       <tr>
                         <th>Product</th>
                         <th>Quantity</th>
                         <th>Cost</th>
+                        <th>Delete</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -55,10 +60,21 @@ export default function CartPage(props) {
                           <td>{order.name}</td>
                           <td>{order.quantity}</td>
                           <td>{order.price * order.quantity}</td>
+                          <td onClick={(e) => {deleteOrder(order.orderid)}}>
+                            <Button page="">
+                              <i className="bi bi-trash"></i>
+                            </Button>
+                          </td>
                         </tr>)
                       }       
-                    </tbody>
-                  </table>
+                      </tbody>
+                    </table>
+                    <div className='card-body'>
+                      <Button>
+                        Checkout
+                      </Button>
+                    </div>
+                  </div>
                   :
                   <div className='card-body'>
                     Your cart is empty.

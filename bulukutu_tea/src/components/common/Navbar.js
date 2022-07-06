@@ -9,10 +9,8 @@ import Button from "./Button";
 import "../../styles/navBarStyles.css";
 
 
-
-
 // renders the navbar
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <div className="container-fluid mb-5" style={{ backgroundColor: "white" }}>
       <div className="container center-title">
@@ -26,7 +24,16 @@ export default function Navbar() {
             <Button size={"btn-sm"} page="/cart">
               <i className="bi bi-cart3"></i>
             </Button>
-            <div className="m-1 text-center">Welcome Username</div>
+            <div>
+              <div className="m-1 text-center">Welcome</div>
+              {
+                props.user ?
+                <p>{props.user.email}</p>
+                :
+                <p>Guest</p>
+              }
+            </div>
+            
           </div>
         </div>
       </div>
