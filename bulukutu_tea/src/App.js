@@ -24,6 +24,7 @@ import { auth } from './firebase/Firebase';
 import Registerpage from "./pages/Registerpage";
 import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
+import OrdersService from './services/orders.service'
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -34,10 +35,15 @@ export default function App() {
     });
   }, []);
 
+  async function onAddToCartClick(order) {
+    order.userid = user.uid;
+    OrdersService.createOrder(order);
+  }
+
   return (
     <div className="container-fluid">
       <BrowserRouter>
-        <Layout>
+        <Layout user={user}>
           <Routes>
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/about-us" element={<AboutUsPage />}></Route>
@@ -52,7 +58,7 @@ export default function App() {
             <Route path="/register" element={<Registerpage/>}></Route>
             <Route path="/login" element={<LoginPage/>}></Route>
             <Route path='*' element={<NotFound/>}></Route>
-            <Route path='/products' element={<DisplayProducts/>}></Route>
+            <Route path='/products' element={<DisplayProducts onAddToCartClick={onAddToCartClick}/>}></Route>
             <Route path='/products/:productId' element={<ProductDescription/>}></Route>
             <Route path='/upload' element={<AddProducts/>}></Route>
             <Route path='/image-list' element={<ImageList/>}></Route>

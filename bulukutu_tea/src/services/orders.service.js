@@ -30,6 +30,16 @@ class OrdersService {
         }
         return  []
     }
+
+    async createOrder(order) {
+        const collectionRef = collection(db, this.collection);
+        await addDoc(collectionRef, order.toJson());
+    }
+
+    async deleteOrder(orderid) {
+        const docRef = doc(db, this.collection, orderid);
+        await deleteDoc(docRef);
+      }
 }
 
 const service = new OrdersService();
