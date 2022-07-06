@@ -69,7 +69,7 @@ export default function DisplayProducts(props) {
                         ZAR {product.price}
                       </h5>
                       <div onClick={(e) => {onAddToCartClick(product)}}>
-                        <Button page="" className="col-6 col-sm-3">
+                        <Button page="" width='w-100' className="col-6 col-sm-3">
                           Add to cart!
                         </Button>
                       </div>

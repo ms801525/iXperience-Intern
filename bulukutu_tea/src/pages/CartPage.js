@@ -62,7 +62,7 @@ export default function CartPage(props) {
                           <td>{order.quantity}</td>
                           <td>{order.price * order.quantity}</td>
                           <td onClick={(e) => {deleteOrder(order.orderid)}}>
-                            <Button page="">
+                            <Button page="" width="w-100">
                               <i className="bi bi-trash"></i>
                             </Button>
                           </td>
