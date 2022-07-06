@@ -1,13 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import { db } from '../firebase/Firebase';
 import { collection,addDoc} from "firebase/firestore"; 
 
-export default function () {
+export default function ContactUsPage() {
   
   
-    const navigate=useNavigate();
     const [name,setName]=useState('')
     const [email,setEmail]=useState('')
     const [message,setMessage]=useState('')
