@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 // imports for routing
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// import for page layout
 import Layout from "./components/common/Layout";
+
+// imports for all pages
 import Homepage from "./pages/HomePage";
 import ProductDescription from "./products/ProductDescription";
 import AboutUsPage from "./pages/AboutUsPage";
@@ -15,17 +18,23 @@ import DisplayProducts from "./products/DisplayProducts";
 import ImageList from "./pages/ImageList";
 import Recipe from "./pages/Recipe";
 import AddProducts from "./products/AddProducts";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "./App.css";
-import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from './firebase/Firebase';
-
 import Registerpage from "./pages/Registerpage";
 import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
 import OrdersService from './services/orders.service'
 
+// imports for bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+// import for App StyleSheet
+import "./App.css";
+
+// imports for firebase
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from './firebase/Firebase';
+
+// renders the website
 export default function App() {
   const [user, setUser] = useState(null);
 
