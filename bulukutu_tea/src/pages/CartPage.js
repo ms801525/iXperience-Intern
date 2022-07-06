@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase/Firebase';
 import Button from '../components/common/ButtonFooter';
 import '../styles/CartPage.css'
 import OrdersService from '../services/orders.service'
+import { AiOutlineShopping } from 'react-icons/ai';
 
 // shopping cart page
 // renders / process shopping cart functionality
@@ -70,15 +72,25 @@ export default function CartPage(props) {
                       }       
                       </tbody>
                     </table>
-                    <div className='card-body'>
-                      <Button>
+                    <div className='card-body row'>
+                    <Link to="/products" className="btn btn-outline-dark col-6 col-sm-3">
+                        Continue shopping
+                      </Link>
+                      <Link to="" className="btn btn-outline-dark col-6 col-sm-3">
                         Checkout
-                      </Button>
+                      </Link>
                     </div>
                   </div>
                   :
-                  <div className='card-body'>
-                    Your cart is empty.
+                  <div className='card-body justify-content-center align-items-center'>
+                    <div className='d-block'>
+                    <AiOutlineShopping size={150}/>
+                    <h3>Your cart is empty.</h3>
+                    <br></br>
+                    <Link to="/products" className="btn btn-outline-dark">
+                        Continue shopping
+                      </Link>
+                    </div>
                   </div>
               }
             </div>
