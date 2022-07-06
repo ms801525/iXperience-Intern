@@ -10,6 +10,7 @@
 
 .carousel-panel {
     background-color: white;
+    border-radius: 3px;
     width: 80%;
 }
 

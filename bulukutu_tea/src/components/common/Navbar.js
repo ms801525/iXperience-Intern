@@ -1,20 +1,16 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
-
 // import for nav buttons
 import Button from "./Button";
 
 // import for nav bar stylesheet
 import "../../styles/navBarStyles.css";
 
-
-
-
 // renders the navbar
 export default function Navbar() {
   return (
-    <div className="container-fluid mb-5" style={{ backgroundColor: "white" }}>
+    <div className="container-fluid mb-5 navbar-panel">
       <div className="container center-title">
         <div className="p-3">
           <Link to="/">

@@ -19,8 +19,10 @@
 
 .infoPanel {
     background-color: white;
+    border-radius: 5px;
     text-align: center;
-    width: auto;
+    max-width: 90%;
+    min-width: 20%;
     height: auto;
     margin-top: 45px;
     margin-bottom: 60px;
@@ -34,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
     background-color: #DBE3C7;
     color: #779730;
     font-size: x-large;
@@ -42,5 +45,14 @@
 .benefits-panel {
     background-color: white;
     color: #779730;
-    width: 2000px;
+    min-width: 30%;
+    max-width: 70%;
+}
+
+.margin-right {
+    margin-right: 20px;
+}
+
+.margin-left {
+    margin-left: 20px;
 }

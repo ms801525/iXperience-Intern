@@ -15,7 +15,7 @@ export default function Recipe() {
         </div>
       </div>
 
-      <div className="info-panel p-4">
+      <div className="info-panel p-4" style={{ borderRadius: "5px" }}>
         <div className="info-body">
           <div className="mt-4">
             <h1>Teabag:</h1>
@@ -23,7 +23,7 @@ export default function Recipe() {
               <ul>
                 <p> Prepare the perfect BULUKUTU Tea: </p>
                 <li>
-                  <p>Use one tea bag per cup</p>{" "}
+                  <p>Use one tea bag per cup</p>
                 </li>
                 <li>
                   <p>

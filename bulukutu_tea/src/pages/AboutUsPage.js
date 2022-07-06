@@ -22,9 +22,8 @@ function AboutUsPage() {
               width="50%"
               height="50%"
               alt="background"
-              style={{ marginRight: "30px" }}
             ></img>
-            <div className="card-body p-5">
+            <div className="card-body p-5 margin-left">
               <p>
                 Our mission is to provide our customers with the finest tea
                 experience. We aim to provide a healthy beverage, which
@@ -34,16 +33,14 @@ function AboutUsPage() {
             </div>
           </div>
           <div className="d-flex">
-            <div className="card">
-              <div className="card-body p-5">
-                <p>
-                  Our Vision is to provide a magnificent tea experience. We are
-                  committed to providing our customers with the best quality
-                  preservative-free and organic healthy tea. Our goal is to
-                  contribute to our clients’ healthy lifestyle through our
-                  herbal tea.
-                </p>
-              </div>
+            <div className="card-body p-5 margin-right">
+              <p>
+                Our Vision is to provide a magnificent tea experience. We are
+                committed to providing our customers with the best quality
+                preservative-free and organic healthy tea. Our goal is to
+                contribute to our clients’ healthy lifestyle through our herbal
+                tea.
+              </p>
             </div>
             <img
               className="background-image"
@@ -51,15 +48,8 @@ function AboutUsPage() {
               width="50%"
               height="50%"
               alt="background"
-              style={{ marginLeft: "30px" }}
             ></img>
           </div>
-        </div>
-      </div>
-
-      <div className="d-flex justify-content-center">
-        <div className="text-center">
-          <h1 className="p-3 header">Benefits of Bulukutu Tea</h1>
         </div>
       </div>
 
@@ -73,12 +63,11 @@ function AboutUsPage() {
         </p>
         <div className="d-flex">
           <img
-            className="background-image border"
+            className="background-image border margin-right"
             src={require("../images/benefits-tea.png")}
             width="50%"
             height="auto"
             alt="background"
-            style={{ marginRight: "30px" }}
           ></img>
           <div className="card-body p-5">
             <p className="mt-4">
