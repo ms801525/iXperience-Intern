@@ -90,9 +90,81 @@ export default function homepage() {
           OF THE FINEST BUDS, LEAVES AND SPICES ENSURES THAT YOU ARE NOT JUST
           DRINKING OUR TEA, BUT ALSO TASTING A PIECE OF OUR STORY.”
         </p>
-        <Button size={"btn-lg"} width={"w-100"} page="/products">
-          Where To Buy
-        </Button>
+        <p>
+          <button
+            className="btn w-100 btn-lg"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+            style={{ color: "#779730", fontSize: "x-large" }}
+          >
+            Where To Buy:
+          </button>
+        </p>
+        <div className="collapse" id="collapseExample">
+          <div className="card card-body text-center">
+            <div className="row">
+              <div className="col">
+                <img
+                  className="border border-dark shop-img"
+                  src={require("../images/shop1.png")}
+                  alt="Background"
+                ></img>
+              </div>
+              <div className="col">
+                <img
+                  className="border border-dark shop-img"
+                  src={require("../images/shop2.png")}
+                  alt="Background"
+                ></img>
+              </div>
+              <div className="col">
+                <img
+                  className="border border-dark shop-img"
+                  src={require("../images/shop3.png")}
+                  alt="Background"
+                ></img>
+              </div>
+            </div>
+            <div className="row mt-3">
+              <div className="col">
+                <img
+                  className="border border-dark shop-img"
+                  src={require("../images/shop4.png")}
+                  alt="Background"
+                ></img>
+              </div>
+              <div className="col">
+                <img
+                  className="border border-dark shop-img"
+                  src={require("../images/shop5.png")}
+                  alt="Background"
+                ></img>
+              </div>
+              <div className="col">
+                <img
+                  className="border border-dark shop-img"
+                  src={require("../images/shop6.png")}
+                  alt="Background"
+                ></img>
+              </div>
+            </div>
+            <div className="my-3">
+              <img
+                className="border border-dark shop-img"
+                src={require("../images/shop7.png")}
+                alt="Background"
+              ></img>
+            </div>
+
+            <Button size={"btn-lg"} width={"w-100"} page="/products">
+              Shop Online
+            </Button>
+          </div>
+        </div>
+
         <div className="row text-center">
           <div className="col-md">
             <img
