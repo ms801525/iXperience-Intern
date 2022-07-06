@@ -68,11 +68,14 @@ export default function DisplayProducts(props) {
                       <h5 className="col-6 col-sm-3" style={{ flex: "0.5" }}>
                         ZAR {product.price}
                       </h5>
-                      <div onClick={(e) => {onAddToCartClick(product)}}>
-                        <Button page="" width='w-100' className="col-6 col-sm-3">
-                          Add to cart!
-                        </Button>
-                      </div>
+                      <Link
+                        onClick={(e) => {onAddToCartClick(product)}} 
+                        to="/cart"
+                        width='w-100'
+                        className="btn btn-outline-dark col-6 col-sm-3"
+                      >
+                        <BsFillCartFill />
+                      </Link>
                       
                     </div>
                     <Link

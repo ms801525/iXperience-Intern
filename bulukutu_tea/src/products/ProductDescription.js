@@ -3,7 +3,6 @@ import { useParams, Link } from "react-router-dom";
 import ProductsService from "../products/services/product.service";
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import Imagegallery from "./imagegallery";
 import { useNavigate } from "react-router-dom";
 import Carousel from "./Carousel";
 import Spinner from "../components/common/Spinner";
@@ -173,7 +172,9 @@ export default function ProductDescription() {
                         </span>
                       </p>
                     </div>
-                    <Link to="" className="btn btn-outline-dark col-6 col-sm-3">
+                    <Link  
+                    to="" 
+                    className="btn btn-outline-dark col-6 col-sm-3">
                       <BsFillCartFill />
                     </Link>
                   </div>

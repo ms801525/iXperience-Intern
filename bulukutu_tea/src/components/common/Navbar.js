@@ -73,7 +73,7 @@ export default function Navbar(props) {
                   </Button>
                 </li>
                 <li className="col nav-item mx-3">
-                  <Button width={"w-100"} size={"btn-sm"} page="/contact">
+                  <Button width={"w-100"} size={"btn-sm"} page="/contact-us">
                     Contact
                   </Button>
                 </li>

@@ -22,6 +22,7 @@ import Registerpage from "./pages/Registerpage";
 import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
 import OrdersService from './services/orders.service'
+import ContactUsPage from "./pages/ContactUsPage";
 
 // imports for bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -73,6 +74,8 @@ export default function App() {
             <Route path='/image-list' element={<ImageList/>}></Route>
             <Route path='/recipe' element={<Recipe/>}></Route>
             <Route path='/cart' element={<CartPage user={user}/>}></Route>
+            <Route path="/contact-us" element={<ContactUsPage/>}></Route>
+
           </Routes>
         </Layout>
       </BrowserRouter>

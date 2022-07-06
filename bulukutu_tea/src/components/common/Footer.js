@@ -27,7 +27,7 @@ export default function Footer(page) {
           Terms & Conditions
         </Bfooter>
 
-        <Bfooter width={"w-50"} size={"btn-sm"} page="/contact">
+        <Bfooter width={"w-50"} size={"btn-sm"} page="/contact-us">
           Contact Us
           
         </Bfooter>
