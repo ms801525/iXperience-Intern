@@ -91,7 +91,7 @@ export default function homepage() {
           DRINKING OUR TEA, BUT ALSO TASTING A PIECE OF OUR STORY.”
         </p>
         <Button size={"btn-lg"} width={"w-100"} page="/products">
-          Learn More
+          Where To Buy
         </Button>
         <div className="row text-center">
           <div className="col-md">
