@@ -8,7 +8,8 @@ export default function Shop() {
     <div>
         <div className="container p-0">
         <img
-          className="image"
+          className="image info-panel p-3"
+          style={{ borderRadius: "5px" }}
           src={require("../images/tea-3.png")}
           alt="Bulukutu Tea"
         ></img>

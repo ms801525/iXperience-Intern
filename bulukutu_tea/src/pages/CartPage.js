@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase/Firebase';
 import Button from '../components/common/ButtonFooter';
 import '../styles/CartPage.css'
 import OrdersService from '../services/orders.service'
 
+// shopping cart page
+// renders / process shopping cart functionality
 export default function CartPage(props) {
   const [orders, setOrders] = useState([]);
 
