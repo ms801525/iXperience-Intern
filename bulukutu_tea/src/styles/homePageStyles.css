@@ -38,3 +38,8 @@
     border-radius: 5px;
     margin: 5px;
 }
+
+.shop-img {
+    width: 80%;
+    height: auto;
+}
