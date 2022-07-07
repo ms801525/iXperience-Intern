@@ -16,7 +16,7 @@ export default function homepage() {
           <div className="carousel-panel">
             <div
               id="carouselExampleControls"
-              className="carousel slide"
+              className="carousel slide carousel-fade"
               data-bs-ride="carousel"
             >
               <div className="carousel-size carousel-inner p-2">
@@ -25,6 +25,7 @@ export default function homepage() {
                     src={require("../images/new-tea-1.png")}
                     className="d-block w-100"
                     alt="Background"
+                    data-bs-interval="6000"
                   ></img>
                 </div>
                 <div className="carousel-item">
@@ -32,6 +33,7 @@ export default function homepage() {
                     src={require("../images/new-tea-2.png")}
                     className="d-block w-100"
                     alt="Background"
+                    data-bs-interval="6000"
                   ></img>
                 </div>
                 <div className="carousel-item">
@@ -39,6 +41,7 @@ export default function homepage() {
                     src={require("../images/new-tea-3.png")}
                     className="d-block w-100"
                     alt="Background"
+                    data-bs-interval="6000"
                   ></img>
                 </div>
               </div>
