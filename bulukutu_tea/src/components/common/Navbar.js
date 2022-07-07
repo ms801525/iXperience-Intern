@@ -21,11 +21,11 @@ export default function Navbar(props) {
             alt="Background"
           ></img></Link>
           <div className="text-center cart-position">
-            <Button size={"btn-sm"} page="/cart">
+            <Button size={"btn-sm"} page="/coming-soon">
               <i className="bi bi-cart3 cart-icon"></i>
               {/* <span className="cart-item-qty">{order.name.length}</span> */}
             </Button>
-            <div>
+            {/* <div>
               <div className="m-1 text-center">Welcome</div>
               {
                 props.user ?
@@ -33,7 +33,7 @@ export default function Navbar(props) {
                 :
                 <p>Guest</p>
               }
-            </div>
+            </div> */}
             
           </div>
         </div>

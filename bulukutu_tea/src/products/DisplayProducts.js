@@ -82,7 +82,7 @@ export default function DisplayProducts(props) {
                     <h5 className="col-6 col-sm-3" style={{ flex: "0.5" }}>
                       ZAR {product.price}
                     </h5>
-                    <div className="quantity">
+                    {/* <div className="quantity">
                       <h5>Quantity:</h5>
                       <p className="btn-group">
                         <span
@@ -101,7 +101,7 @@ export default function DisplayProducts(props) {
                           <AiOutlinePlus />
                         </span>
                       </p>
-                    </div>
+                    </div> */}
                     <div
                       className="row justify-content-between"
                       style={{ width: "500px" }}
@@ -114,7 +114,7 @@ export default function DisplayProducts(props) {
                         {" "}
                         Read More
                       </Link>
-                      <Link
+                      {/* <Link
                         onClick={(e) => {
                           onAddToCartClick(product);
                         }}
@@ -126,7 +126,7 @@ export default function DisplayProducts(props) {
                         data-bs-toggle="modal"
                       >
                         <BsFillCartFill />
-                      </Link>
+                      </Link> */}
                       <div className="modal" tabIndex="-1" id="myModal">
                         <div className="modal-dialog">
                           <div className="modal-body alert alert-success">
