@@ -30,7 +30,7 @@ export default function homepage() {
                 </div>
                 <div className="carousel-item">
                   <img
-                    src={require("../images/new-tea-2.png")}
+                    src={require("../images/tea-box3.jpeg")}
                     className="d-block w-100"
                     alt="Background"
                     data-bs-interval="6000"
@@ -139,13 +139,7 @@ export default function homepage() {
                   alt="Background"
                 ></img>
               </div>
-              <div className="col">
-                <img
-                  className="border border-dark shop-img"
-                  src={require("../images/shop5.png")}
-                  alt="Background"
-                ></img>
-              </div>
+
               <div className="col">
                 <img
                   className="border border-dark shop-img"
@@ -153,13 +147,13 @@ export default function homepage() {
                   alt="Background"
                 ></img>
               </div>
-            </div>
-            <div className="my-3">
-              <img
-                className="border border-dark shop-img"
-                src={require("../images/shop7.png")}
-                alt="Background"
-              ></img>
+              <div className="col">
+                <img
+                  className="border border-dark shop-img"
+                  src={require("../images/shop7.png")}
+                  alt="Background"
+                ></img>
+              </div>
             </div>
 
             <Button size={"btn-lg"} width={"w-100"} page="/products">

@@ -18,8 +18,8 @@ export default function Recipe() {
       <div className="info-panel p-4" style={{ borderRadius: "5px" }}>
         <div className="info-body">
           <div className="mt-4">
-            <h1>Teabag:</h1>
-            <p className="font-size">
+            <h1 >Teabag:</h1>
+            <p style={{ fontSize: "x-large" }}>
               <ul>
                 <p> Prepare the perfect BULUKUTU Tea: </p>
                 <li>
@@ -46,7 +46,7 @@ export default function Recipe() {
           </div>
           <div className="p-3">
             <h1>Leaves:</h1>
-            <p className="font-size">
+            <p style={{ fontSize: "x-large" }}>
               <ul>
                 <p> To prepare the perfect BULUKUTU Tea:</p>
                 <li>

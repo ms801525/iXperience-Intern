@@ -23,7 +23,7 @@ import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
 import OrdersService from './services/orders.service'
 import ContactUsPage from "./pages/ContactUsPage";
-import ComingSooon from "./components/common/ComingSoon";
+import ComingSooon from "./components/ComingSoon";
 
 // imports for bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";

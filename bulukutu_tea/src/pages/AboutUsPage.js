@@ -18,7 +18,7 @@ function AboutUsPage() {
           <div className="d-flex mb-4">
             <img
               className="background-image"
-              src={require("../images/new-tea-5.png")}
+              src={require("../images/tea-quote.jpeg")}
               width="50%"
               height="50%"
               alt="background"
@@ -62,13 +62,65 @@ function AboutUsPage() {
           Toxin Draining. Mood enhancer.
         </p>
         <div className="d-flex">
-          <img
-            className="background-image border margin-right"
-            src={require("../images/benefits-tea.png")}
-            width="50%"
-            height="auto"
-            alt="background"
-          ></img>
+          <div
+            id="carouselExampleControls"
+            className="carousel slide benefits-carousel"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img
+                  className="background-image border margin-right"
+                  src={require("../images/benefits-tea.png")}
+                  width="100%"
+                  height="auto"
+                  alt="background"
+                ></img>
+              </div>
+              <div className="carousel-item">
+              <img
+                  className="background-image border margin-right"
+                  src={require("../images/benefits-tea2.jpg")}
+                  width="100%"
+                  height="auto"
+                  alt="background"
+                ></img>
+              </div>
+              <div className="carousel-item">
+              <img
+                  className="background-image border margin-right"
+                  src={require("../images/benefits-tea3.jpg")}
+                  width="100%"
+                  height="auto"
+                  alt="background"
+                ></img>
+              </div>
+            </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
+          </div>
           <div className="card-body p-5">
             <p className="mt-4">
               Bulukutu's healing power extends to every system of your body:
