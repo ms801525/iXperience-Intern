@@ -169,7 +169,7 @@ export default function ProductDescription(props) {
                     </div>
                     <Link 
                     onClick={(e) => {onAddToCartClick()}} 
-                    to="/cart" 
+                    to="/coming-soon" 
                     className="btn btn-outline-dark col-6 col-sm-3">
                       <BsFillCartFill />
                     </Link>

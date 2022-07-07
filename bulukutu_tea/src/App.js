@@ -23,6 +23,7 @@ import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
 import OrdersService from './services/orders.service'
 import ContactUsPage from "./pages/ContactUsPage";
+import ComingSooon from "./components/common/ComingSoon";
 
 // imports for bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -55,6 +56,7 @@ export default function App() {
       <BrowserRouter>
         <Layout user={user}>
           <Routes>
+            <Route path="/coming-soon" element={<ComingSooon></ComingSooon>}></Route>
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/about-us" element={<AboutUsPage />}></Route>
             <Route
@@ -65,15 +67,15 @@ export default function App() {
             <Route path="/retail" element={<Retail />}></Route>
             <Route path="/policy-page" element={<PolicyPage />}></Route>
             <Route path="/terms" element={<Terms />}></Route>
-            <Route path="/register" element={<Registerpage/>}></Route>
-            <Route path="/login" element={<LoginPage/>}></Route>
+            {/* <Route path="/register" element={<Registerpage/>}></Route>
+            <Route path="/login" element={<LoginPage/>}></Route> */}
             <Route path='*' element={<NotFound/>}></Route>
             <Route path='/products' element={<DisplayProducts onAddToCartClick={onAddToCartClick}/>}></Route>
             <Route path='/products/:productId' element={<ProductDescription/>}></Route>
             <Route path='/upload' element={<AddProducts/>}></Route>
             <Route path='/image-list' element={<ImageList/>}></Route>
             <Route path='/recipe' element={<Recipe/>}></Route>
-            <Route path='/cart' element={<CartPage user={user}/>}></Route>
+            {/* <Route path='/cart' element={<CartPage user={user}/>}></Route> */}
             <Route path="/contact-us" element={<ContactUsPage/>}></Route>
 
           </Routes>
