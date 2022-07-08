@@ -22,10 +22,10 @@ export default function homepage() {
               <div className="carousel-size carousel-inner p-2">
                 <div className="carousel-item active">
                   <img
-                    src={require("../images/new-tea-1.png")}
+                    src={require("../images/new-tea-4.png")}
                     className="d-block w-100"
                     alt="Background"
-                    data-bs-interval="6000"
+                    data-bs-interval="5000"
                   ></img>
                 </div>
                 <div className="carousel-item">
@@ -33,7 +33,7 @@ export default function homepage() {
                     src={require("../images/tea-box3.jpeg")}
                     className="d-block w-100"
                     alt="Background"
-                    data-bs-interval="6000"
+                    data-bs-interval="5000"
                   ></img>
                 </div>
                 <div className="carousel-item">
@@ -41,7 +41,7 @@ export default function homepage() {
                     src={require("../images/new-tea-3.png")}
                     className="d-block w-100"
                     alt="Background"
-                    data-bs-interval="6000"
+                    data-bs-interval="5000"
                   ></img>
                 </div>
               </div>

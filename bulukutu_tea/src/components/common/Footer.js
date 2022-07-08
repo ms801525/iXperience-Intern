@@ -34,17 +34,17 @@ export default function Footer(page) {
       </div>
       <div className="text-center m-0">
         <p className="icons">
-          <a href="https://www.instagram.com/bulukutu_tea/">
+          <a href="https://www.instagram.com/bulukutu_tea/" target="_blank" rel="noreferrer noopener">
             <button className="btn btn-outline-dark btn-floating m-1">
               <FaInstagram />
             </button>
           </a>
-          <a href="https://www.facebook.com/BulukutuTea">
+          <a href="https://www.facebook.com/BulukutuTea" target="_blank" rel="noreferrer noopener">
             <button className="btn btn-outline-dark btn-floating m-1">
               <FaFacebookF />
             </button>
           </a>
-          <a href="https://www.tiktok.com/@bulukututea">
+          <a href="https://www.tiktok.com/@bulukututea" target="_blank" rel="noreferrer noopener">
           <button className="btn btn-outline-dark btn-floating m-1" href="#!">
             <FaTiktok />
           </button>
