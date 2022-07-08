@@ -1,3 +1,12 @@
+//THIS IS THE UPLOAD PRODUCTS PAGE FROM WHICH YOU CAN HAVE THE ADMIN UPLOAD THE RESPECTIVE PRODUCT (with the title,description,price and images)
+//for now it's commented but feel free to un-comment and play around with it
+//TO DO 
+  // - Guard this page so that only the admin can upload products..
+        //since the "add products" button is seen on the page where products are displayed it should be hidden and only be accessible to the admin to prevent anyone else form accessing it
+  // - re-uplolad the products
+      //I have currently uploaded the 2 products as requested by the manager but feel free to upload and re-upload to text the functionality
+//FEEL FREE TO MODIFY IT AS PER MANAGER'S INSTRUCTIONS!! :)
+
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
@@ -51,20 +60,12 @@ export default function AddProducts() {
           });
     
         } catch(err) {setUploadError(err.message)}
-        // catch (err) {
-        //   console.log(err);
-        //   // setError(err.message);
-        // }
       }
     
       function onFileSelected(e) {
         let selectedFiles = e.target.files;
         setImage(selectedFiles)
       }
-
-      // function DisplayFile(e) {
-      //   setImage(e.target.files[0]);
-      // }
     
 
   return (
@@ -81,13 +82,12 @@ export default function AddProducts() {
                 <div className='success-msg'>{successMsg}</div>
                 <br></br>
             </>}         
-            {/* <form autoComplete="off" className='form-group' onSubmit={handleAddProducts} > */}
             <form autoComplete="off" className='form-group' onSubmit={onFormSubmit} >
                 <label>Product Title</label>
                 <input type="text" className='form-control' onChange= {(e)=> setTitle(e.target.value)} value = {title} required></input>
                 <br></br>
                 <label>Product Description</label>
-                <input type="text" className='form-control' onChange= {(e)=> setDescription(e.target.value)} value = {description} required></input>
+                <input type="text" rows={5} className='form-control' onChange= {(e)=> setDescription(e.target.value)} value = {description} required></input>
                 <br></br>
                 <label>Product Price</label>
                 <input type="number" className='form-control' onChange= {(e)=> setPrice(e.target.value)} value = {price} required></input>
@@ -97,12 +97,6 @@ export default function AddProducts() {
                 onChange={onFileSelected}
                 multiple
                 required></input>
-                  
-                {/* <Link to="/products"  style={{display:'flex', justifyContent:'center'}}>
-                    <button type="submit" onSubmit={DisplayFile} className='btn btn-success btn-md mb-3'>
-                        SUBMIT
-                    </button>
-                </Link> */}
                 <div style={{display:'flex', justifyContent:'center'}}>
                     <button type="submit" onSubmit={onFileSelected} className='btn btn-success btn-md mb-3'>
                         SUBMIT

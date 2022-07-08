@@ -1,3 +1,11 @@
+//THIS PAGE DISPLAYS THE ITEMS ADDED TO THE CART
+//TO-DO
+  //it displays cart items once logged in -- so it only displays the individual user's login
+  //needs work around in
+    //the checkout and payment options
+    //Feel free to modify it as per how you think is best
+
+    
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { signOut } from 'firebase/auth';

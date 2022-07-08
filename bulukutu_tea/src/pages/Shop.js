@@ -1,3 +1,5 @@
+//HAVE THE BUYING BUTTONS NAVIGATE TO THE PRODUCTS PAGE AND NOT COMING SOON
+
 import React from 'react'
 //import Button component
 import Button from '../components/common/Button';
@@ -45,7 +47,8 @@ export default function Shop() {
                                 
                         width={'w-100'}
                         size={'btn-lg'}
-                        page="/products">
+                        // page="/products"
+                        page="/coming-soon">
                         Buying For me
                 
                     </Button>
@@ -56,7 +59,8 @@ export default function Shop() {
                                     
                             width={'w-100'}
                             size={'btn-lg'}
-                            page="/products">
+                            // page="/products"
+                            page="/coming-soon">
                             Buying For Business
                 
                         </Button>

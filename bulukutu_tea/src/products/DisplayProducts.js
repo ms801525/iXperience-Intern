@@ -1,3 +1,12 @@
+//THIS IS THE DISPLAY PRODUCTS PAGE WHICH SHOWS THE PRODUCTS THAT ARE AVAILABLE FOR SALE
+// there's currently only two products being displayed.
+//TO-DO
+  //uncomment the rounting to this page in App.js
+  //uncomment the quantity and add to cart buttons below to see how they work.
+  //you can work on making the overall layout cleaner too.. (maybe create a frame for all the images instead of them resizing randomly etc)
+  //FEEL FREE TO MODIFY IT AS PER MANAGER'S INSTRUCTIONS 
+  //the read more button navigates to the product description which for now the route is also commented out in App.js - so dont forget to uncomment it
+
 import React, { useState, useEffect } from "react";
 import ProductsService from "../products/services/product.service";
 import { Link } from "react-router-dom";

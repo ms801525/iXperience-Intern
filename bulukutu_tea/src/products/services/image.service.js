@@ -22,7 +22,6 @@ class ImageService{
             },
             ()=> {
                 getDownloadURL(uploadImage.snapshot.ref).then((downloadUrl) => {
-                    // resolve the download url
                     resolve(downloadUrl);
             })
         },
@@ -30,6 +29,7 @@ class ImageService{
     })
     
 }
+        //creates a unique id for each image uploaded
     getUniqueFileName(file) {
         const dotIndex = file.name.lastIndexOf('.');
         const fileName = file.name.substring(0, dotIndex);

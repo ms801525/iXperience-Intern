@@ -1,3 +1,4 @@
+//THIS SPINNER PAGE IS FOR THE SPINNING EFFECT WHEN A PAGE IS LOADING
 import React from 'react'
 
 export default function Spinner({

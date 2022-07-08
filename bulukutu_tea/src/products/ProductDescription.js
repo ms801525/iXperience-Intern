@@ -1,3 +1,11 @@
+//THIS IS THE PRODUCT DESCRIPTION PAGE WHICH DISPLAYS THE SPECIFIC SELECTED PRODUCT'S DETAILS
+//TO-DO
+  // Uncomment this page's route in App.js
+  // create a function that only adds to cart when its more than 0 products
+  // you can create another carousel that doesnt pile up here (to make the code neat) or you can re-use the imagegallery (refer to imagegallery.js and display products pages)
+  //work on the quantity and add to cart buttons
+  //FEEL FREE TO MODIFY IT AS PER MANAGER'S INSTRUCTIONS
+
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import ProductsService from "../products/services/product.service";
@@ -60,6 +68,7 @@ export default function ProductDescription(props) {
     return products.filter((product) => product.id !== productId);
   }
 
+  //once the page is refreshed it should be redirected to the product selected
   function refreshPage() {
     window.location.pathname(product.id);
   }
@@ -104,6 +113,27 @@ export default function ProductDescription(props) {
                       <div className="carousel-item">
                         <img
                           src={product?.downloadUrls[2]}
+                          className="d-block w-100"
+                          alt="Background"
+                        ></img>
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src={product?.downloadUrls[3]}
+                          className="d-block w-100"
+                          alt="Background"
+                        ></img>
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src={product?.downloadUrls[4]}
+                          className="d-block w-100"
+                          alt="Background"
+                        ></img>
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src={product?.downloadUrls[5]}
                           className="d-block w-100"
                           alt="Background"
                         ></img>

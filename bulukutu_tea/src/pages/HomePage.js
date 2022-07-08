@@ -156,7 +156,8 @@ export default function homepage() {
               </div>
             </div>
 
-            <Button size={"btn-lg"} width={"w-100"} page="/products">
+            {/* HAVE THE BUTTON NAVIGATE TO THE "/PRODUCTS" PAGE INSTEAD OF COMING SOON */}
+            <Button size={"btn-lg"} width={"w-100"} page="/coming-soon">
               Shop Online
             </Button>
           </div>

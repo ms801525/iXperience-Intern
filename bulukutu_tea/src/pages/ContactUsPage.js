@@ -1,3 +1,5 @@
+//HAVE HE MANAGER GIVE YOU MORE FAQS FOR THE WEBSITE
+
 import React from "react";
 import { useState } from "react";
 import { db } from "../firebase/Firebase";
@@ -80,7 +82,7 @@ export default function ContactUsPage() {
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                Accordion Item #1
+                How can I reach the company if I have questions or want to place an order?
               </button>
             </h2>
             <div
@@ -90,15 +92,9 @@ export default function ContactUsPage() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It's also worth noting that
-                just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                Fill in the form above and we will respond.
+                <p>However, if you are in a rush You can send an email to {" "}
+                <code>info@bulukututea.com</code>, and we will help you promptly </p>
               </div>
             </div>
           </div>
@@ -112,7 +108,7 @@ export default function ContactUsPage() {
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                Accordion Item #2
+                How can we buy the products?
               </button>
             </h2>
             <div
@@ -122,19 +118,11 @@ export default function ContactUsPage() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                You can buy any of the products either for business (in bulk/wholesale) or for personal use (in retail) and the prices vary accordingly
               </div>
             </div>
           </div>
-          <div className="accordion-item">
+          {/* <div className="accordion-item">
             <h2 className="accordion-header" id="headingThree">
               <button
                 className="accordion-button collapsed"
@@ -165,7 +153,7 @@ export default function ContactUsPage() {
                 overflow.
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
