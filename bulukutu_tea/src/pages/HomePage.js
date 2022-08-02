@@ -11,7 +11,7 @@ import "../styles/homePageStyles.css";
 export default function homepage() {
   return (
     <div className="mb-5">
-      <div className="container text-center">
+      <div className="container carousel-size text-center">
         <div className="carousel-center">
           <div className="carousel-panel">
             <div

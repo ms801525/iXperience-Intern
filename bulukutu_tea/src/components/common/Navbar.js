@@ -13,18 +13,19 @@ export default function Navbar(props) {
   
   return (
     <div className="container-fluid mb-5 navbar-panel">
-      <div className="container center-title">
-        <div className="p-3">
-          <Link to="/">
+      {/* <div className="container center-title">
+        <div className="p-3"> */}
+          {/* <Link to="/">
           <img
-            src={require("../../images/bulukutu-title.png")}
+            className="main-logo"
+            src={require("../../images/Logo2.png")}
             alt="Background"
-          ></img></Link>
-          <div className="text-center cart-position">
-            <Button size={"btn-sm"} page="/coming-soon">
-              <i className="bi bi-cart3 cart-icon"></i>
+          ></img></Link> */}
+          {/* <div className="text-center cart-position">
+            <Button size={"btn-sm"} page="/coming-soon"> */}
+              {/* <i className="bi bi-cart3 cart-icon"></i> */}
               {/* <span className="cart-item-qty">{order.name.length}</span> */}
-            </Button>
+            {/* </Button> */}
             {/* <div>
               <div className="m-1 text-center">Welcome</div>
               {
@@ -35,11 +36,11 @@ export default function Navbar(props) {
               }
             </div> */}
             
-          </div>
-        </div>
-      </div>
+          {/* </div> */}
+        {/* </div>
+      </div> */}
 
-      <nav className="navbar navbar-light navbar-expand-lg p-4">
+      <nav className="navbar navbar-light navbar-expand-lg p-2">
         <form className="container-fluid">
           <div className="container-fluid">
             <button
@@ -54,12 +55,12 @@ export default function Navbar(props) {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0 col">
-                <li className="col nav-item mx-3">
+              <ul className="navbar-nav me-auto my-2 mb-lg-0 col">
+                {/* <li className="col nav-item mx-1">
                   <Button width={"w-100"} size={"btn-sm"} page="/">
                     Home
                   </Button>
-                </li>
+                </li> */}
                 <li className="col nav-item mx-3">
                   <Button width={"w-100"} size={"btn-sm"} page="/shop">
                     Shop
@@ -71,6 +72,14 @@ export default function Navbar(props) {
                   </Button>
                 </li>
                 <li className="col nav-item mx-3">
+                  <Link to="/">
+                    <img
+                      className="main-logo"
+                      src={require("../../images/Logo2.png")}
+                      alt="Background"
+                    ></img></Link>
+                </li>
+                <li className="col nav-item mx-3">
                   <Button width={"w-100"} size={"btn-sm"} page="/recipe">
                     Tea Recipes
                   </Button>
@@ -80,7 +89,21 @@ export default function Navbar(props) {
                     Contact
                   </Button>
                 </li>
+                {/* <li className='col nav-item mx-3'>
+                  <div className="text-center cart-position">
+                    <Button size={"btn-sm"} page="/coming-soon">
+                      <i className="bi bi-cart3 cart-icon"></i>
+                      <span className="cart-item-qty">{order.name.length}</span>
+                    </Button>
+                  </div>
+                </li> */}
               </ul>
+              <div className="text-center cart-position">
+                <Button size={"btn-sm"} page="/coming-soon">
+                  <i className="bi bi-cart3 cart-icon"></i>
+                  {/* <span className="cart-item-qty">{order.name.length}</span> */}
+                </Button>
+              </div>
             </div>
           </div>
         </form>
