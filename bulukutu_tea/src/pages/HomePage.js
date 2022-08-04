@@ -87,10 +87,10 @@ export default function homepage() {
           Central Congo's Finest
         </h3>
         <p className="bulukutu-quote text-center mt-4">
-          "Bulukutu Tea is an aromatic and perennial plant from the Savannah bush found
+          Bulukutu Tea is an aromatic and perennial plant from the Savannah bush found
           in the DRC. The tea leaf is pungent yet soft on the palate. It has a hint of lemon, 
           mint, and eucalyptus aroma- an aroma that surrounds you like a comforting mist. The
-          tea is caffeine free"
+          tea is caffeine free.
         </p>
         <p>
           <button

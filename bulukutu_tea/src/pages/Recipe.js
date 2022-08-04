@@ -10,7 +10,8 @@ export default function Recipe() {
       <div className="title-center">
         <div className="text-center p-4 title">
           <h2 className="bulukutu-text-color">
-            To blend the Perfect BULUKUTU Tea
+            
+            How to blend the perfect Bulukutu Tea
           </h2>
         </div>
       </div>
@@ -18,10 +19,10 @@ export default function Recipe() {
       <div className="info-panel p-4" style={{ borderRadius: "5px" }}>
         <div className="info-body">
           <div className="mt-4">
-            <h1 >Teabag:</h1>
+            <h1 >
+              For tea bag:</h1>
             <p style={{ fontSize: "x-large" }}>
               <ul>
-                <p> Prepare the perfect BULUKUTU Tea: </p>
                 <li>
                   <p>Use one tea bag per cup</p>
                 </li>
@@ -32,7 +33,12 @@ export default function Recipe() {
                 </li>
                 <li>
                   <p>
-                    Brewing over 5 minutes will make the tea strong & bitter but
+                    Allow to steep and let it cool.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Brewing over 5 minutes will make the tea strong but
                     more effective.
                   </p>
                 </li>
@@ -45,10 +51,9 @@ export default function Recipe() {
             </p>
           </div>
           <div className="p-3">
-            <h1>Leaves:</h1>
+            <h1>For tea leaves:</h1>
             <p style={{ fontSize: "x-large" }}>
               <ul>
-                <p> To prepare the perfect BULUKUTU Tea:</p>
                 <li>
                   <p>
                     Put 2 cups of fresh water into a pot and slightly rinse 3-4
@@ -69,7 +74,7 @@ export default function Recipe() {
                 </li>
                 <li>
                   <p>
-                    Brewing over 5 minutes will make the tea strong & bitter but
+                    Brewing over 5 minutes will make the tea strong but
                     more effective.
                   </p>
                 </li>
