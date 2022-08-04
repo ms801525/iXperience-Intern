@@ -83,15 +83,14 @@ export default function homepage() {
       <br></br>
 
       <div className="p-4 rounded mt-4 info-panel">
-        <h1 className="bulukutu-text-color text-center">Bulukutu Tea</h1>
-        <h3 className="bulukutu-text-color text-center">
+        <h3 className="bulukutu-text-color text-center font-italic">
           Central Congo's Finest
         </h3>
         <p className="bulukutu-quote text-center mt-4">
-          “GROWN SOLELY ON AFRICAN SOIL AND ETHICALLY SOURCED, OUR GOURMET TEAS
-          PAY TRIBUTE TO AFRICAN ELEGANCE AND REFINEMENT. THE CAREFUL BLENDING
-          OF THE FINEST BUDS, LEAVES AND SPICES ENSURES THAT YOU ARE NOT JUST
-          DRINKING OUR TEA, BUT ALSO TASTING A PIECE OF OUR STORY.”
+          "Bulukutu Tea is an aromatic and perennial plant from the Savannah bush found
+          in the DRC. The tea leaf is pungent yet soft on the palate. It has a hint of lemon, 
+          mint, and eucalyptus aroma- an aroma that surrounds you like a comforting mist. The
+          tea is caffeine free"
         </p>
         <p>
           <button
