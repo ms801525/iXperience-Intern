@@ -29,13 +29,13 @@ export default function Shop() {
         <br/>
         <div className="p-4 border border-light bulukutu-text-color">
             <p><b>
-                Two Options allow to differentiate the type of purchase you are making
+                There are two options to differentiate your purchase:
             </b></p>
             <p><b>
-                - Buying for me allows for smaller individual purchases 
+                - <i>Buying for me</i> allows for smaller individual purchases 
             </b></p>
             <p><b>
-                - Buying for business allow purchases under your company name
+                - <i>Buying for business</i> allows purchases under your company name
             </b></p>
 
         </div>
@@ -49,7 +49,7 @@ export default function Shop() {
                         size={'btn-lg'}
                         // page="/products"
                         page="/coming-soon">
-                        Buying For me
+                        Buying For Me
                 
                     </Button>
                 </div>
