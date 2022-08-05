@@ -26,9 +26,9 @@ export default function ContactUsPage() {
   return (
     <div>
       <div className="card card-body">
-        <h1 className="text-center">Contact Us !</h1>
+        <h1 className="text-center">Contact Us!</h1>
 
-        <p className="text-center">We will be more than happy to assit you!</p>
+        <p className="text-center">We will be more than happy to assist you!</p>
 
         <form onSubmit={onFormSubmit}>
           <div className="mb-3">

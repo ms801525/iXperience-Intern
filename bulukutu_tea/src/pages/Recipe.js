@@ -6,12 +6,12 @@ import "../styles/recipeStyles.css";
 // renders recipe page (to blend the perfect tea)
 export default function Recipe() {
   return (
-    <div className="container p-4">
+    <div className="container p-3">
       <div className="title-center">
         <div className="text-center p-4 title">
           <h2 className="bulukutu-text-color">
             
-            How to blend the perfect Bulukutu Tea
+            <b><i>How to Blend the Perfect Bulukutu Tea</i></b>
           </h2>
         </div>
       </div>
@@ -20,7 +20,7 @@ export default function Recipe() {
         <div className="info-body">
           <div className="mt-4">
             <h1 >
-              For tea bag:</h1>
+              <b>For tea bag:</b></h1>
             <p style={{ fontSize: "x-large" }}>
               <ul>
                 <li>
@@ -51,7 +51,7 @@ export default function Recipe() {
             </p>
           </div>
           <div className="p-3">
-            <h1>For tea leaves:</h1>
+            <h1><b>For tea leaves:</b></h1>
             <p style={{ fontSize: "x-large" }}>
               <ul>
                 <li>
@@ -94,7 +94,7 @@ export default function Recipe() {
             <div className="col"></div>
             <div className="col">
               <p className="font-size bulukutu-text-color">
-                ALWAYS STORE IN A COOL, DRY AREA
+                <b>ALWAYS STORE IN A COOL, DRY AREA</b>
               </p>
             </div>
           </div>

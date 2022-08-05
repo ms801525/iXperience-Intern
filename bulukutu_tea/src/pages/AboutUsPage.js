@@ -35,7 +35,7 @@ function AboutUsPage() {
           <div className="d-flex">
             <div className="card-body p-5 margin-right">
               <p>
-                Our Vision is to provide a magnificent tea experience. We are
+                Our vision is to provide a magnificent tea experience. We are
                 committed to providing our customers with the best quality
                 preservative-free and organic healthy tea. Our goal is to
                 contribute to our clients’ healthy lifestyle through our herbal
@@ -124,13 +124,13 @@ function AboutUsPage() {
           <div className="card-body p-5">
             <p className="mt-4">
               Bulukutu's healing power extends to every system of your body:
-              Digestive, Nervous, Cardiac and Blood, Respiratory, Urinary, and
-              Muscular. For the Common Cold and flu to Malaria - The tea is
+              <b>Digestive, Nervous, Cardiac and Blood, Respiratory, Urinary, and
+              Muscular</b>. For the Common Cold and flu to Malaria - The tea is
               powerful to clean and soothe your cough, with anti-parasitic, and
               even anti-malaria virtues. Bulukutu tea is full of essential
-              nutrients, including Vitamin A, Bs, and Vitamin C, and minerals
+              nutrients, including <b>Vitamin A, Bs, and Vitamin C, and minerals
               Potassium, Calcium, Magnesium, Phosphorus, Manganese, Copper,
-              Zinc, and Iron.
+              Zinc, and Iron</b>.
             </p>
           </div>
         </div>

@@ -83,14 +83,20 @@ export default function homepage() {
       <br></br>
 
       <div className="p-4 rounded mt-4 info-panel">
-        <h3 className="bulukutu-text-color text-center font-italic">
-          Central Congo's Finest
+        <h3 className="bulukutu-text-color text-center">
+          <b><i>Central Congo's Finest</i></b>
         </h3>
         <p className="bulukutu-quote text-center mt-4">
-          Bulukutu Tea is an aromatic and perennial plant from the Savannah bush found
-          in the DRC. The tea leaf is pungent yet soft on the palate. It has a hint of lemon, 
-          mint, and eucalyptus aroma- an aroma that surrounds you like a comforting mist. The
-          tea is caffeine free.
+          <b>Bulukutu Tea</b> is an aromatic and perennial plant from the Savannah bush found
+          in the DRC. The tea leaf is <b>pungent</b> yet soft on the palate. It has a hint of <b>lemon, 
+          mint, and eucalyptus</b> aroma- an aroma that surrounds you like a comforting mist. The
+          tea is <b>caffeine free</b>.
+        </p>
+        <p className="bulukutu-quote text-center mt-4">
+          Grown solely on African soil and <b>ethically sourced</b>, our gourmet
+          teas pay tribute to African elegance and refinement. The careful 
+          blending of the finest buds, leaves and spices ensures that you 
+          are not just drinking our tea, but also <b>tasting a piece of our story</b>.
         </p>
         <p>
           <button
@@ -102,7 +108,7 @@ export default function homepage() {
             aria-controls="collapseExample"
             style={{ color: "#779730", fontSize: "x-large" }}
           >
-            Where To Buy:
+            <b><i>Where To Buy:</i></b>
           </button>
         </p>
         <div className="collapse" id="collapseExample">
@@ -165,21 +171,21 @@ export default function homepage() {
         <div className="row text-center">
           <div className="col-md">
             <img
-              className="border border-dark info-img"
+              className="info-img"
               src={require("../images/back1.jpg")}
               alt="Background"
             ></img>
           </div>
           <div className="col-md">
             <img
-              className="border border-dark info-img"
+              className="info-img"
               src={require("../images/tea.jpg")}
               alt="Background"
             ></img>
           </div>
           <div className="col-md">
             <img
-              className="border border-dark info-img"
+              className="info-img"
               src={require("../images/new-tea-4.png")}
               alt="Background"
             ></img>
