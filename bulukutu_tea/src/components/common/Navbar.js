@@ -12,7 +12,7 @@ import "../../styles/navBarStyles.css";
 export default function Navbar(props) {
   
   return (
-    <div className="container-fluid mb-5 navbar-panel">
+    <div className="container-fluid navbar-panel">
       {/* <div className="container center-title">
         <div className="p-3"> */}
           {/* <Link to="/">
@@ -98,12 +98,12 @@ export default function Navbar(props) {
                   </div>
                 </li> */}
               </ul>
-              <div className="text-center cart-position">
+              {/* <div className="text-center cart-position">
                 <Button size={"btn-sm"} page="/coming-soon">
                   <i className="bi bi-cart3 cart-icon"></i>
-                  {/* <span className="cart-item-qty">{order.name.length}</span> */}
+                  <span className="cart-item-qty">{order.name.length}</span>
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </form>

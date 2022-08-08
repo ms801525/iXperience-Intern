@@ -28,7 +28,7 @@
     margin: auto;
     background-color: white;
     min-width: 50%;
-    max-width: 70rem;
+    max-width: 100%;
 }
 
 .info-img {
@@ -47,5 +47,41 @@
 .main-logo {
     width: 200px;
     height: 200px;
+    
+}
+
+.side-image{
+    background-image: "../../images/Logo2.png";
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    top: 0;
+    right: calc(-50vw + 523px);
+    left: 13px
+}
+
+.side-content{
+    min-height: 100%;
+    min-width: 100%;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #910045;
+    /* -ms-transfrom: skewY(-5deg);
+    transform: skewY(-5deg); */
+
+}
+
+.landing-video {
+    position: relative;
+    width: 100;
+}
+
+.break-img{
+    height: 75px;
     
 }

@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/common/Layout";
 
 // imports for all pages
-import Homepage from "./pages/HomePage";
+import HomePage from "./pages/HomePage2";
 import ProductDescription from "./products/ProductDescription";
 import AboutUsPage from "./pages/AboutUsPage";
 import Shop from "./pages/Shop";
@@ -52,12 +52,12 @@ export default function App() {
   }
 
   return (
-    <div className="container-fluid">
+    <div>
       <BrowserRouter>
         <Layout user={user}>
           <Routes>
             <Route path="/coming-soon" element={<ComingSooon></ComingSooon>}></Route>
-            <Route path="/" element={<Homepage />}></Route>
+            <Route path="/" element={<HomePage/>}></Route>
             <Route path="/about-us" element={<AboutUsPage />}></Route>
             <Route
               path="/product-description"

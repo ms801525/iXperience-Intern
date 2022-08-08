@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-export default function Button2({ children, size, width, page }) {
+export default function Button({ children, size, width, page }) {
   const navigate = useNavigate();
   const [isHovering, setHovering] = useState(false);
 
@@ -21,7 +21,7 @@ export default function Button2({ children, size, width, page }) {
   return (
     <button
       className={"btn m-1 " + size + " " + width}
-      style={{ backgroundColor: "white", fontSize: "x-large", color: isHovering ? 'black' : '#779730'}}
+      style={{ backgroundColor: "white", fontSize: "x-large", color: isHovering ? 'black' : '#779730', zIndex : '2'}}
       onClick={navToPage}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
