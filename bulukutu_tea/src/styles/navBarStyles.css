@@ -5,7 +5,7 @@
 }
 
 .cart-position {
-    position: absolute;
+    position: relative;
     top: 25%;
     right: -15%;
 }
@@ -43,7 +43,7 @@
 }
 
 .navbar-panel {
-    width: 100%;
+    width: 100vw;
     background-color: white;
     border-radius: 5px;
     display: flex;

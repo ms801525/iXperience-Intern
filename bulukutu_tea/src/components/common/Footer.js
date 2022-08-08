@@ -5,12 +5,12 @@ import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 // renders the footer of the webpage
 export default function Footer(page) {
   return (
-    <div className="text-center p-1 rounded info-panel mb-1" style={{ backgroundColor: "#FFFFFF" }}>
+    <div className="text-center p-1 rounded info-panel m-0" style={{ backgroundColor: "#FFFFFF" }}>
       <img style={{ width: 180 }}
         src={require("../../images/the-miracle-tea.png")}
         alt="Background"
       ></img>
-      <div style={{ backgroundColor: "#FFFFFF" }}>
+      <div className='w-100' style={{ backgroundColor: "#FFFFFF" }}>
         <Bfooter width={"w-50"} size={"btn-sm"} page="/about-us">
           About Bulukutu Tea
         </Bfooter>
