@@ -1,15 +1,29 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import {  signOut } from 'firebase/auth'
+import { auth } from '../../firebase/Firebase'
 // import { Order } from "../../models/order";
 
 // import for nav buttons
 import Button from "./Button";
+import Button2 from './Button2'
 
 // import for nav bar stylesheet
 import "../../styles/navBarStyles.css";
 
 // renders the navbar
-export default function Navbar(props) {
+export default function Navbar({user}) {
+
+  const navigate = useNavigate();
+
+  async function onLogoutClicked() {
+    try {
+      await signOut(auth);
+      navigate('/');
+    } catch (err) {
+      console.log(err)
+    }
+  }
   
   return (
     <div className="container-fluid navbar-panel">
@@ -72,6 +86,11 @@ export default function Navbar(props) {
                   </Button>
                 </li>
                 <li className="col nav-item mx-3">
+                  <Button width={"w-100"} size={"btn-sm"} page="/recipe">
+                    Tea Recipes
+                  </Button>
+                </li>
+                <li className="col nav-item mx-3">
                   <Link to="/">
                     <img
                       className="main-logo"
@@ -80,23 +99,43 @@ export default function Navbar(props) {
                     ></img></Link>
                 </li>
                 <li className="col nav-item mx-3">
-                  <Button width={"w-100"} size={"btn-sm"} page="/recipe">
-                    Tea Recipes
-                  </Button>
-                </li>
-                <li className="col nav-item mx-3">
                   <Button width={"w-100"} size={"btn-sm"} page="/contact-us">
                     Contact
                   </Button>
                 </li>
-                {/* <li className='col nav-item mx-3'>
-                  <div className="text-center cart-position">
-                    <Button size={"btn-sm"} page="/coming-soon">
-                      <i className="bi bi-cart3 cart-icon"></i>
-                      <span className="cart-item-qty">{order.name.length}</span>
-                    </Button>
-                  </div>
-                </li> */}
+                  {
+                    user ?
+                      <>
+                        <li className="col nav-item mx-3">
+                          <Button2 variant='outline' onClick={onLogoutClicked}>
+                            Logout
+                          </Button2>
+                        </li>
+                        <li className='col nav-item mx-3'>
+                          <div className="text-center cart-position">
+                            <Button size={"btn-sm"} page="/cart">
+                              <i className="bi bi-cart3 cart-icon"></i>
+                              {/* <span className="cart-item-qty">{order.name.length}</span> */}
+                            </Button>
+                          </div>
+                        </li>
+                      </>
+                      :
+                      <>
+                        <li className="col nav-item mx-3">
+                          <Button width={"w-100"} size={"btn-sm"} page="/login">
+                            Login
+                          </Button>
+                        </li>
+                        <li className="col nav-item mx-3">
+                          <Button width={"w-100"} size={"btn-sm"} page="/register">
+                            Register
+                          </Button> 
+                        </li>
+                      </>
+                  }
+                
+                  
               </ul>
               {/* <div className="text-center cart-position">
                 <Button size={"btn-sm"} page="/coming-soon">

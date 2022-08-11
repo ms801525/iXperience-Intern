@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Spinner from './Spinner';
 
-import { useNavigate } from "react-router-dom";
 
-export default function Button({ children, size, width, page }) {
-  const navigate = useNavigate();
+
+export default function Button({
+  variant = 'primary',
+  onClick,
+  className,
+  type,
+  bgcolor,
+  loading = false,
+  disabled = false,
+  children
+}) {
+
+  // const navigate = useNavigate();
   const [isHovering, setHovering] = useState(false);
 
-  function navToPage() {
-    navigate(page);
-  }
+  // function navToPage() {
+  //   navigate(page);
+  // }
 
   function handleMouseEnter() {
     setHovering(true);
@@ -20,13 +31,24 @@ export default function Button({ children, size, width, page }) {
 
   return (
     <button
-      className={"btn m-1 " + size + " " + width}
-      style={{ backgroundColor: "white", fontSize: "x-large", color: isHovering ? 'black' : '#779730', zIndex : '2'}}
-      onClick={navToPage}
+      className={'button btn btn-' + variant + ' ' + className}
+      onClick={onClick}
+      type={type}
+      style={{ backgroundColor: {bgcolor}, fontSize: "x-large", color: isHovering ? 'black' : '#779730'}}
+      disabled={disabled || loading}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {children}
+
+      {
+        loading ?
+          <div className='button-spinner'>
+            <Spinner variant='light' />
+          </div>
+          :
+          <></>
+      }
     </button>
-  );
+  )
 }

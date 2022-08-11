@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 // imports for routing
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RequiresAuth from './components/common/RequiresAuth'
 
 // import for page layout
 import Layout from "./components/common/Layout";
-
+import Spinner from "./components/common/Spinner";
 // imports for all pages
 import HomePage from "./pages/HomePage2";
 import ProductDescription from "./products/ProductDescription";
@@ -39,10 +40,12 @@ import { auth } from './firebase/Firebase';
 // renders the website
 export default function App() {
   const [user, setUser] = useState(null);
+  const [waitingForUser, setWaitingForUser] =useState(true);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setUser(user);
+      setWaitingForUser(false);
     });
   }, []);
 
@@ -55,30 +58,43 @@ export default function App() {
     <div>
       <BrowserRouter>
         <Layout user={user}>
-          <Routes>
-            <Route path="/coming-soon" element={<ComingSooon></ComingSooon>}></Route>
-            <Route path="/" element={<HomePage/>}></Route>
-            <Route path="/about-us" element={<AboutUsPage />}></Route>
-            <Route
-              path="/product-description"
-              element={<ProductDescription />}
-            />
-            <Route path="/shop" element={<Shop />}></Route>
-            <Route path="/retail" element={<Retail />}></Route>
-            <Route path="/policy-page" element={<PolicyPage />}></Route>
-            <Route path="/terms" element={<Terms />}></Route>
-            {/* <Route path="/register" element={<Registerpage/>}></Route>
-            <Route path="/login" element={<LoginPage/>}></Route> */}
-            <Route path='*' element={<NotFound/>}></Route>
-            {/* <Route path='/products' element={<DisplayProducts onAddToCartClick={onAddToCartClick}/>}></Route> */}
-            {/* <Route path='/products/:productId' element={<ProductDescription/>}></Route> */}
-            {/* <Route path='/upload' element={<AddProducts/>}></Route> */}
-            <Route path='/image-list' element={<ImageList/>}></Route>
-            <Route path='/recipe' element={<Recipe/>}></Route>
-            {/* <Route path='/cart' element={<CartPage user={user}/>}></Route> */}
-            <Route path="/contact-us" element={<ContactUsPage/>}></Route>
 
-          </Routes>
+          {waitingForUser ?
+            <div className='mt-3 text-center'>
+              <Spinner />
+            </div>
+            :
+            <Routes>
+              <Route path="/coming-soon" element={<ComingSooon></ComingSooon>}></Route>
+              <Route path="/" element={<HomePage/>}></Route>
+              <Route path="/about-us" element={<AboutUsPage />}></Route>
+              <Route
+                path="/product-description"
+                element={<ProductDescription />}
+              />
+              <Route path="/shop" element={<Shop />}></Route>
+              <Route path="/retail" element={<Retail />}></Route>
+              <Route path="/policy-page" element={<PolicyPage />}></Route>
+              <Route path="/terms" element={<Terms />}></Route>
+              <Route path="/register" element={<Registerpage/>}></Route>
+              <Route path="/login" element={<LoginPage/>}></Route>
+              <Route path='*' element={<NotFound/>}></Route>
+              <Route path='/products' element={<DisplayProducts onAddToCartClick={onAddToCartClick}/>}></Route>
+              <Route path='/products/:productId' element={<ProductDescription/>}></Route>
+              <Route path='/upload' element={<AddProducts/>}></Route>
+              <Route path='/image-list' element={<ImageList/>}></Route>
+              <Route path='/recipe' element={<Recipe/>}></Route>
+
+              <Route path='/cart' element={
+                <RequiresAuth user={user}>
+                  <CartPage user={user}/>
+                </RequiresAuth>
+              }></Route>
+
+              <Route path="/contact-us" element={<ContactUsPage/>}></Route>
+
+            </Routes>
+          }
         </Layout>
       </BrowserRouter>
     </div>

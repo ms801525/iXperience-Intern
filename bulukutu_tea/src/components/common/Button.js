@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-export default function Button2({ children, size, width, page }) {
+export default function Button2({ children, size, width, page, color }) {
   const navigate = useNavigate();
   const [isHovering, setHovering] = useState(false);
 
