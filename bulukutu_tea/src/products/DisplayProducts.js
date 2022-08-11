@@ -58,7 +58,7 @@ export default function DisplayProducts(props) {
     <>
       <div className="container my-4">
         <div className="d-flex justify-content-end">
-          <Link to="/upload">Add Product</Link>
+         { <Link to="/upload">Add Product</Link>  }
         </div>
 
         {products.length === 0 ? (

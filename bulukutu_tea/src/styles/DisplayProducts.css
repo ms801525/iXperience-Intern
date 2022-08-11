@@ -5,15 +5,15 @@
   }
   
   .product-img {
-    height: 100%;
-    width: 500px;
-    /* width: 100vw; */
+    height: 50%;
+    width: 800px;
     object-fit: cover;
+    display: flex;
   }
 
   .no-products-div {
     display: flex;
-    height: 300px;
+    height: 700px;
     justify-content: center;
     align-items: center;
   }
