@@ -49,8 +49,10 @@ export default function HomePage() {
             <div className='row'>
                 <div className='col-xs-12 col-sm-7 m-0 p-0'>
                     <Carousel></Carousel>
-                </div>                    
+                </div> 
+
                 <div className='col-xs-12 col-sm-5 first-sm m-0 p-0'>
+                  <div className='d-flex flex-column justify-content-center align-items-center'>
                     <button
                       className="btn w-100 btn-lg"
                       type="button"
@@ -118,7 +120,7 @@ export default function HomePage() {
                         </Button1>
                       </div>
                     </div>
-                
+                  </div>
                 </div>
             </div>
             
