@@ -47,8 +47,7 @@ export default function Shop() {
                                 
                         width={'w-100'}
                         size={'btn-lg'}
-                        // page="/products"
-                        page="/coming-soon">
+                        page="/products">
                         Buying For Me
                 
                     </Button>
@@ -59,8 +58,7 @@ export default function Shop() {
                                     
                             width={'w-100'}
                             size={'btn-lg'}
-                            // page="/products"
-                            page="/coming-soon">
+                            page="/products">
                             Buying For Business
                 
                         </Button>
