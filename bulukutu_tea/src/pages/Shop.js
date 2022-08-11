@@ -47,7 +47,10 @@ export default function Shop() {
                                 
                         width={'w-100'}
                         size={'btn-lg'}
+<<<<<<< HEAD
                         // page="/products"
+=======
+>>>>>>> 2466734b66ac35ad0e11e5f613b69a8d36d3a2d4
                         page="/products">
                         Buying For Me
                 
@@ -59,7 +62,10 @@ export default function Shop() {
                                     
                             width={'w-100'}
                             size={'btn-lg'}
+<<<<<<< HEAD
                             // page="/products"
+=======
+>>>>>>> 2466734b66ac35ad0e11e5f613b69a8d36d3a2d4
                             page="/products">
                             Buying For Business
                 
