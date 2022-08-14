@@ -29,13 +29,13 @@ export default function HomePage() {
                         <h3>
                             <b><i> Central Congo's Finest</i></b>
                         </h3>
-                        <p className="bulukutu-quote text-center mt-4">
+                        <p className="text-center mt-4">
                             <b>Bulukutu Tea</b> is an aromatic and perennial plant from the Savannah bush found
                             in the DRC. The tea leaf is <b>pungent</b> yet soft on the palate. It has a hint of <b>lemon, 
                             mint, and eucalyptus</b> aroma - an aroma that surrounds you like a comforting mist. The
                             tea is <b>caffeine free</b>.
                         </p>
-                        <p className="bulukutu-quote text-center mt-4">
+                        <p className="text-center mt-4">
                           Grown solely on African soil and <b>ethically sourced</b>, our gourmet
                           teas pay tribute to African elegance and refinement. The careful 
                           blending of the finest buds, leaves and spices ensures that you 

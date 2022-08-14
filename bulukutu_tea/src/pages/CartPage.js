@@ -80,7 +80,7 @@ export default function CartPage(props) {
                       }       
                       </tbody>
                     </table>
-                    <div className='card-body row'>
+                    <div className='card-body row p-4'>
                     <Link to="/products" className="btn btn-outline-dark col-6 col-sm-3">
                         Continue shopping
                       </Link>

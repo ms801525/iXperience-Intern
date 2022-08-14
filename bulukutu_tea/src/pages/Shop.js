@@ -4,20 +4,28 @@ import React from 'react'
 //import Button component
 import Button from '../components/common/Button';
 
+import "../styles/shop.css"
+
 // renders shop page
 export default function Shop() {
   return (
     <div>
-        <div className="container p-0">
+        <div className="container mt-5 text-center heading-color">
+            <h1><b>SHOP BULUKUTU TEA</b></h1>
+            <div className="bulukutu-text-center">
+                </div>
+
+        </div>
+        <div className="container p-5">
         <img
-          className="image info-panel p-3"
-          style={{ borderRadius: "5px" }}
+          className="image info-panel p-2"
+          style={{ borderRadius: "0px" }}
           src={require("../images/tea-3.png")}
           alt="Bulukutu Tea"
         ></img>
         <br/>
         </div>
-        <div className="p-4 border border-light bulukutu-text-color">
+        <div className="p-4 border border-light text-center">
             <p>
             “If you are cold, tea will warm you;
             if you are too heated, it will cool you;
@@ -27,9 +35,11 @@ export default function Shop() {
 
         </div>
         <br/>
-        <div className="p-4 border border-light bulukutu-text-color">
+        <div className="p-4 border border-light text-center">
             <p><b>
+                <h2 className="heading-color"><b>
                 There are two options to differentiate your purchase:
+                </b></h2>
             </b></p>
             <p><b>
                 - <i>Buying for me</i> allows for smaller individual purchases 
