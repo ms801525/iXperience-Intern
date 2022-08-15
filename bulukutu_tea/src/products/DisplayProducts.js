@@ -7,155 +7,155 @@
   //FEEL FREE TO MODIFY IT AS PER MANAGER'S INSTRUCTIONS 
   //the read more button navigates to the product description which for now the route is also commented out in App.js - so dont forget to uncomment it
 
-import React, { useState, useEffect } from "react";
-import ProductsService from "../products/services/product.service";
-import { Link } from "react-router-dom";
-import { BsFillCartFill } from "react-icons/bs";
-
-import Spinner from "../components/common/Spinner";
-
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-
-// import from image gallery
-import Imagegallery from "./imagegallery";
-
-// import stylesheet for page
-import "../styles/DisplayProducts.css";
-import { Order } from "../models/order";
-
-// displays products
-export default function DisplayProducts(props) {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  async function fetchProducts() {
-    try {
-      const products = await ProductsService.fetchProducts();
-      setProducts(products);
-    } catch (err) {}
-  }
-
-  //handle add to cart
-  function onAddToCartClick(product) {
-    let order = new Order(null, product.title, product.price, num, true, null);
-    props.onAddToCartClick(order);
-  }
+  import React, { useState, useEffect } from "react";
+  import ProductsService from "../products/services/product.service";
+  import { Link } from "react-router-dom";
+  import { BsFillCartFill } from "react-icons/bs";
   
-  let [num, setNum] = useState(0);
-  let incNum = () => {
-    if (num < 10) {
-      setNum(Number(num) + 1);
+  import Spinner from "../components/common/Spinner";
+  
+  import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+  
+  // import from image gallery
+  import Imagegallery from "./imagegallery";
+  
+  // import stylesheet for page
+  import "../styles/DisplayProducts.css";
+  import { Order } from "../models/order";
+  
+  // displays products
+  export default function DisplayProducts(props) {
+    const [products, setProducts] = useState([]);
+  
+    useEffect(() => {
+      fetchProducts();
+    }, []);
+  
+    async function fetchProducts() {
+      try {
+        const products = await ProductsService.fetchProducts();
+        setProducts(products);
+      } catch (err) {}
     }
-  };
-  let decNum = () => {
-    if (num > 0) {
-      setNum(num - 1);
+  
+    //handle add to cart
+    function onAddToCartClick(product) {
+      let order = new Order(null, product.title, product.price, num, true, null);
+      props.onAddToCartClick(order);
     }
-  };
-
-  return (
-    <>
-      <div className="container my-4">
-        <div className="d-flex justify-content-end">
-          <Link to="/upload">Add Product</Link>
-        </div>
-
-        {products.length === 0 ? (
-          <div className="no-products-div">
-            <Spinner />
+    
+    let [num, setNum] = useState(0);
+    let incNum = () => {
+      if (num < 10) {
+        setNum(Number(num) + 1);
+      }
+    };
+    let decNum = () => {
+      if (num > 0) {
+        setNum(num - 1);
+      }
+    };
+  
+    return (
+      <>
+        <div className="container my-4">
+          <div className="d-flex justify-content-end">
+            <Link to="/upload">Add Product</Link>
           </div>
-        ) : (
-          <div className="d-flex flex-wrap">
-            {products.map((product) => (
-              <div key={product.id} className="container-fluid">
-                <div className="row">
-                  <div
-                    className="col-xl-5 col-lg-5 col-md-5 product-img"
-                    style={{ flex: "5", objectFit: "cover" }}
-                  >
-                    <Imagegallery
-                      product={product}
-                      className="card-img-thumbnail"
-                      alt="product cover"
-                    />
-                  </div>
-                  <div
-                    className="container col-xl-4 col-lg-4 col-md-4"
-                    style={{ flex: "5" }}
-                  >
-                    <h5 className="card-title">{product.title}</h5>
-                    <p className="card-title">{product.description}</p>
-                    <br></br>
-                    <h5 className="col-6 col-sm-3" style={{ flex: "0.5" }}>
-                      ZAR {product.price}
-                    </h5>
-                    <div className="quantity">
-                      <h5>Quantity:</h5>
-                      <p className="btn-group">
-                        <span
-                          className="btn btn-outline-primary"
-                          onClick={decNum}
-                        >
-                          <AiOutlineMinus />
-                        </span>
-                        <span className="border border-primary px-3 text-center">
-                          {num}
-                        </span>
-                        <span
-                          className="btn btn-outline-primary"
-                          onClick={incNum}
-                        >
-                          <AiOutlinePlus />
-                        </span>
-                      </p>
+  
+          {products.length === 0 ? (
+            <div className="no-products-div">
+              <Spinner />
+            </div>
+          ) : (
+            <div className="d-flex flex-wrap">
+              {products.map((product) => (
+                <div key={product.id} className="container-fluid">
+                  <div className="row">
+                    <div
+                      className="col-xl-5 col-lg-5 col-md-5 product-img"
+                      style={{ flex: "5", objectFit: "cover" }}
+                    >
+                      <Imagegallery
+                        product={product}
+                        className="card-img-thumbnail"
+                        alt="product cover"
+                      />
                     </div>
                     <div
-                      className="row justify-content-between"
-                      style={{ width: "500px" }}
+                      className="container col-xl-4 col-lg-4 col-md-4"
+                      style={{ flex: "5" }}
                     >
-                      <Link
-                        to={`/products/${product.id}`}
-                        className="btn btn-outline-dark col-6 col-sm-3"
-                        style={{ flex: "1" }}
+                      <h5 className="card-title">{product.title}</h5>
+                      <p className="card-title">{product.description}</p>
+                      <br></br>
+                      <h5 className="col-6 col-sm-3" style={{ flex: "0.5" }}>
+                        ZAR {product.price}
+                      </h5>
+                      <div className="quantity">
+                        <h5>Quantity:</h5>
+                        <p className="btn-group">
+                          <span
+                            className="btn btn-outline-primary"
+                            onClick={decNum}
+                          >
+                            <AiOutlineMinus />
+                          </span>
+                          <span className="border border-primary px-3 text-center">
+                            {num}
+                          </span>
+                          <span
+                            className="btn btn-outline-primary"
+                            onClick={incNum}
+                          >
+                            <AiOutlinePlus />
+                          </span>
+                        </p>
+                      </div>
+                      <div
+                        className="row justify-content-between"
+                        style={{ width: "500px" }}
                       >
-                        {" "}
-                        Read More
-                      </Link>
-                      <Link
-                        onClick={(e) => {
-                          onAddToCartClick(product);
-                        }}
-                        to="/cart"
-                        width="w-100"
-                        className="btn btn-outline-dark col-6 col-sm-3"
-                        style={{ flex: "1" }}
-                        data-bs-target="#myModal"
-                        data-bs-toggle="modal"
-                      >
-                        <BsFillCartFill />
-                      </Link>
-                      <div className="modal" tabIndex="-1" id="myModal">
-                        <div className="modal-dialog">
-                          <div className="modal-body alert alert-success">
-                            <p>
-                              {num} {product.title} added successfully!!
-                            </p>
+                        <Link
+                          to={`/products/${product.id}`}
+                          className="btn btn-outline-dark col-6 col-sm-3"
+                          style={{ flex: "1" }}
+                        >
+                          {" "}
+                          Read More
+                        </Link>
+                        <Link
+                          onClick={(e) => {
+                            onAddToCartClick(product);
+                          }}
+                          to="/cart"
+                          width="w-100"
+                          className="btn btn-outline-dark col-6 col-sm-3"
+                          style={{ flex: "1" }}
+                          data-bs-target="#myModal"
+                          data-bs-toggle="modal"
+                        >
+                          <BsFillCartFill />
+                        </Link>
+                        <div className="modal" tabIndex="-1" id="myModal">
+                          <div className="modal-dialog">
+                            <div className="modal-body alert alert-success">
+                              <p>
+                                {num} {product.title} added successfully!!
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <br></br>
                   </div>
-                  <br></br>
+                  <hr></hr>
                 </div>
-                <hr></hr>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </>
-  );
-}
+              ))}
+            </div>
+          )}
+        </div>
+      </>
+    );
+  }
