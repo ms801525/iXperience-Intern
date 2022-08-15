@@ -1,6 +1,7 @@
 //THIS IS THE DISPLAY PRODUCTS PAGE WHICH SHOWS THE PRODUCTS THAT ARE AVAILABLE FOR SALE
 // there's currently only two products being displayed.
 //TO-DO
+  //uncomment the rounting to this page in App.js
   //uncomment the quantity and add to cart buttons below to see how they work.
   //you can work on making the overall layout cleaner too.. (maybe create a frame for all the images instead of them resizing randomly etc)
   //FEEL FREE TO MODIFY IT AS PER MANAGER'S INSTRUCTIONS 
@@ -42,6 +43,7 @@ export default function DisplayProducts(props) {
     let order = new Order(null, product.title, product.price, num, true, null);
     props.onAddToCartClick(order);
   }
+  
   let [num, setNum] = useState(0);
   let incNum = () => {
     if (num < 10) {
@@ -58,7 +60,7 @@ export default function DisplayProducts(props) {
     <>
       <div className="container my-4">
         <div className="d-flex justify-content-end">
-         { <Link to="/upload">Add Product</Link>  }
+          <Link to="/upload">Add Product</Link>
         </div>
 
         {products.length === 0 ? (
@@ -90,7 +92,7 @@ export default function DisplayProducts(props) {
                     <h5 className="col-6 col-sm-3" style={{ flex: "0.5" }}>
                       ZAR {product.price}
                     </h5>
-                    {<div className="quantity">
+                    <div className="quantity">
                       <h5>Quantity:</h5>
                       <p className="btn-group">
                         <span
@@ -109,7 +111,7 @@ export default function DisplayProducts(props) {
                           <AiOutlinePlus />
                         </span>
                       </p>
-                    </div>}
+                    </div>
                     <div
                       className="row justify-content-between"
                       style={{ width: "500px" }}
@@ -122,7 +124,7 @@ export default function DisplayProducts(props) {
                         {" "}
                         Read More
                       </Link>
-                      { <Link
+                      <Link
                         onClick={(e) => {
                           onAddToCartClick(product);
                         }}
@@ -134,7 +136,7 @@ export default function DisplayProducts(props) {
                         data-bs-toggle="modal"
                       >
                         <BsFillCartFill />
-                      </Link>}
+                      </Link>
                       <div className="modal" tabIndex="-1" id="myModal">
                         <div className="modal-dialog">
                           <div className="modal-body alert alert-success">
