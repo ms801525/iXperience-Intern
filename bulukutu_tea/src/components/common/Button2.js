@@ -31,7 +31,7 @@ export default function Button({
 
   return (
     <button
-      className={'button btn btn-' + variant + ' ' + className}
+      className={'btn btn-' + variant + ' ' + className}
       onClick={onClick}
       type={type}
       style={{ backgroundColor: {bgcolor}, fontSize: "x-large", color: isHovering ? 'black' : '#779730'}}

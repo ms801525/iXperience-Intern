@@ -1,1 +1,15 @@
 /* Stylesheet for Cart page */
+
+.para{
+    color: black;
+    font-size:medium;
+    font-family: "Sabon", sans-serif;
+  }
+
+.th{
+    font-size: larger;
+}
+
+.main-card{
+    background-color: #b7d479;
+}

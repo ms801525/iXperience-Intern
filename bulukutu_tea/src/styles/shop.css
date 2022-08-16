@@ -1,0 +1,15 @@
+.image{
+   background-color: black;
+   border-radius: 5px;
+   max-width: 80%;
+   max-height: 80%;
+}
+
+.para{
+  font-family: "Sabon", sans-serif;
+}
+
+.borderLining{
+  border-style: groove;
+  border-radius: 5px;
+}

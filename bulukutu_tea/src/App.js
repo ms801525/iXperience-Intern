@@ -25,6 +25,7 @@ import CartPage from "./pages/CartPage";
 import OrdersService from './services/orders.service'
 import ContactUsPage from "./pages/ContactUsPage";
 import ComingSooon from "./components/ComingSoon";
+import StripeContainer from "./components/StripeContainer";
 
 // imports for bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -36,6 +37,7 @@ import "./App.css";
 // imports for firebase
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebase/Firebase';
+
 
 // renders the website
 export default function App() {
@@ -90,6 +92,8 @@ export default function App() {
                   <CartPage user={user}/>
                 </RequiresAuth>
               }></Route>
+
+              <Route path='/payment' element={<StripeContainer/>}></Route>
 
               <Route path="/contact-us" element={<ContactUsPage/>}></Route>
 
