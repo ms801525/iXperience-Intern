@@ -7,7 +7,7 @@ export default function Layout(props) {
     return (
         <div>
             <NavBar user={props.user}/>
-            <main className="container-fluid p-0 mx-0 my-0">
+            <main>
                 {props.children}
             </main>
             <Footer />

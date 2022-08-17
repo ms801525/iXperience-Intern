@@ -1,15 +1,7 @@
-import React, {useState } from "react";
-// checkout service?
-import Spinner from "../components/common/Spinner";
+import React from 'react'
 
-// import stylesheet
-
-export default function Checkout(props) {
-
+export default function Checkout() {
+  return (
+    <div>Checkout</div>
+  )
 }
-
-// on checkout click
-
-// information storage
-
-// send confirmation

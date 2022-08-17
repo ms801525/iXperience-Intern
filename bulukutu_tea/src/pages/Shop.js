@@ -4,7 +4,9 @@ import React from 'react'
 //import Button component
 import Button from '../components/common/Button';
 
+// import for shop stylesheet
 import "../styles/shop.css"
+
 
 // renders shop page
 export default function Shop() {
@@ -18,14 +20,14 @@ export default function Shop() {
         </div>
         <div className="container p-5">
         <img
-          className="image info-panel p-2"
-          style={{ borderRadius: "0px" }}
+          className="image info-panel mt-5 mb-3 p-2"
+          style={{ borderRadius: "5px" }}
           src={require("../images/tea-3.png")}
           alt="Bulukutu Tea"
         ></img>
         <br/>
         </div>
-        <div className="p-4 border border-light text-center">
+        <div className=" container blockquote text-center p-3 bulukutu-text-color para borderLining">
             <p>
             “If you are cold, tea will warm you;
             if you are too heated, it will cool you;
@@ -35,29 +37,28 @@ export default function Shop() {
 
         </div>
         <br/>
-        <div className="p-4 border border-light text-center">
+        <div className=" container p-3 bulukutu-text-color para borderLining">
             <p><b>
                 <h2 className="heading-color"><b>
                 There are two options to differentiate your purchase:
                 </b></h2>
             </b></p>
-            <p><b>
-                - <i>Buying for me</i> allows for smaller individual purchases 
-            </b></p>
-            <p><b>
-                - <i>Buying for business</i> allows purchases under your company name
-            </b></p>
+            <p>
+                - Buying for <i>me</i> allows for smaller individual purchases 
+            </p>
+            <p>
+                - Buying for <i>business</i> allows purchases under your company name
+            </p>
 
         </div>
         <br/>
-        <div className="container text-center">
+        <div className="container text-center para">
             <div className="row">
-                <div className="col-6 p-1">
-                    <Button
+                <div className="col-6 p-1 btn">
+                    <Button 
                                 
                         width={'w-100'}
                         size={'btn-lg'}
-                        // page="/products"
                         page="/products">
                         Buying For Me
                 
@@ -69,7 +70,6 @@ export default function Shop() {
                                     
                             width={'w-100'}
                             size={'btn-lg'}
-                            // page="/products"
                             page="/products">
                             Buying For Business
                 

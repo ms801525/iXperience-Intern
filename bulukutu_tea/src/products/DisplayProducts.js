@@ -33,9 +33,11 @@ export default function DisplayProducts(props) {
 
   async function fetchProducts() {
     try {
-      const products = await ProductsService.fetchProducts();
-      setProducts(products);
-    } catch (err) {}
+      const product_list = await ProductsService.fetchProducts();
+      setProducts(product_list);
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   //handle add to cart
@@ -62,7 +64,7 @@ export default function DisplayProducts(props) {
         <div className="d-flex justify-content-end">
           <Link to="/upload">Add Product</Link>
         </div>
-
+        
         {products.length === 0 ? (
           <div className="no-products-div">
             <Spinner />
