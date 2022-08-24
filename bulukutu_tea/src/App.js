@@ -22,6 +22,7 @@ import AddProducts from "./products/AddProducts";
 import Registerpage from "./pages/Registerpage";
 import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
+import Checkout from "./pages/Checkout";
 import OrdersService from './services/orders.service'
 import ContactUsPage from "./pages/ContactUsPage";
 import ComingSooon from "./components/ComingSoon";
@@ -86,6 +87,7 @@ export default function App() {
               <Route path='/upload' element={<AddProducts/>}></Route>
               <Route path='/image-list' element={<ImageList/>}></Route>
               <Route path='/recipe' element={<Recipe/>}></Route>
+              <Route path='/checkout' element={<Checkout/>}></Route>
 
               <Route path='/cart' element={
                 <RequiresAuth user={user}>

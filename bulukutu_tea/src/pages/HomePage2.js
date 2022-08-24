@@ -13,7 +13,7 @@ export default function HomePage() {
   // const navigate = useNavigate()
   // const [isHovering, setHovering] = useState(false);
   return (
-    <div className="container-fluid p-0 g-0">
+    <div className="container-fluid p-2 g-0">
       <div className="container-fluid d-flex p-0 g-0 mt-2">
         <video src={require("../images/video.mp4")} alt="...">
           {/* <Button1 size={"btn-lg btn-outline"} width = {'auto'} page='/shop'>
