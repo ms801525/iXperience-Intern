@@ -56,7 +56,7 @@ export default function Navbar({user}) {
 
       <nav className="navbar navbar-light navbar-expand-lg p-2">
         <form className="container-fluid">
-          <div className="container-fluid">
+          <div className="container-fluid d-flex flex-column justify-content-center">
             <button
               className="navbar-toggler"
               type="button"
@@ -69,7 +69,7 @@ export default function Navbar({user}) {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul className="navbar-nav me-auto my-2 mb-lg-0 col">
+              <ul className="navbar-nav me-auto my-2 mb-lg-0 col d-flex justify-content-center align-items-center">
                 {/* <li className="col nav-item mx-1">
                   <Button width={"w-100"} size={"btn-sm"} page="/">
                     Home

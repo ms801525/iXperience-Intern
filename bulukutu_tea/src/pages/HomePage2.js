@@ -3,8 +3,8 @@ import React from "react";
 // Buttons for the home page
 import Carousel from "../components/common/Carousel";
 import Button1 from "../components/common/Button";
-import Button2 from "../components/common/Button2";
-import BreakLine from "../components/common/BreakLine";
+// import Button2 from "../components/common/Button2";
+// import BreakLine from "../components/common/BreakLine";
 
 // import stylesheet for homepage
 import "../styles/homePageStyles.css";
@@ -14,8 +14,8 @@ export default function HomePage() {
   // const [isHovering, setHovering] = useState(false);
   return (
     <div className="container-fluid p-2 g-0">
-      <div className="container-fluid d-flex p-0 g-0 mt-2">
-        <video src={require("../images/video.mp4")} alt="...">
+      <div className="container-fluid d-flex p-0 g-0 mt-2 flex-wrap">
+        <video src={require("../images/video.mp4")} className=' responsive' alt="...">
           {/* <Button1 size={"btn-lg btn-outline"} width = {'auto'} page='/shop'>
                           Discover
                       </Button1> */}

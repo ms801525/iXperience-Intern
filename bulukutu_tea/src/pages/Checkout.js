@@ -2,17 +2,18 @@
 //SHIPPING AND PAYMENT DETAILS
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../styles/CartPage.css";
+import PaystackPop from '@paystack/inline-js'
 
 // services imports
-import {ShippingPaymentService} from "../services/shipping_payment.service";
+import ShippingPaymentService from "../services/shipping_payment.service";
 
 // Shipping and payment details model import
 import { Shipping_Payment } from "../models/shipping_payment";
 
 //renders the checkout page
-export default function Checkout() {
+export default function Checkout(props) {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
@@ -20,10 +21,10 @@ export default function Checkout() {
   const [address, setAddress] = useState("");
   const [address2, setAddress2] = useState("");
   const [city, setCity] = useState("");
-  const [nameOnCard, setNameOnCard] = useState("");
-  const [creditCardNumber, setCreditCardNumber] = useState(0);
-  const [expiration, setExpiration] = useState();
-  const [cvv, setCVV] = useState(0);
+  // const [nameOnCard, setNameOnCard] = useState("");
+  // const [creditCardNumber, setCreditCardNumber] = useState(0);
+  // const [expiration, setExpiration] = useState();
+  // const [cvv, setCVV] = useState(0);
 
   const [successMsg, setSuccessMsg]=useState('');
 
@@ -40,25 +41,50 @@ export default function Checkout() {
         address: address,
         address2: address2,
         city: city,
-        nameOnCard: nameOnCard,
-        creditCardNumber: creditCardNumber,
-        expiration: expiration,
-        cvv: cvv,
+        // nameOnCard: nameOnCard,
+        // creditCardNumber: creditCardNumber,
+        // expiration: expiration,
+        // cvv: cvv,
       })
     ).then(() => {
       setSuccessMsg("Order payment successful, confirmation email sent");
     });
   }
 
-  return (
-    <div className="container main-card" style={{ width: 980 }}>
-      <div className="card card-body border-secondary para" style={{ width: 950 }}>
-        <h1 className="text-center display-1 mb-2">Checkout</h1>
+  function payWithPaystack(){
+     const paystack = new PaystackPop()
+     paystack.newTransaction({
+      // test key
+      key: "pk_test_3f979b5966d8cf94c8ab22a1001cfa78b20697a3",
+      amount: props.price * 100,
+      email,
+      name,
+      surname,
+      onSuccess(transaction){
+        let message = `Payment Complete! Reference ${transaction.reference}`
+        alert(message)
+        setEmail('')
+        setName('')
+        setAddress('')
+        setAddress2('')
+        setSurname('')
+        setPhoneNumber(0)
+      },
+      onCancel(){
+        alert('You have cancelled the transaction')
+      }
+     })
+  }
 
+  return (
+    <div className="main-card" style={{ maxWidth: 980 }}>
+      <div className="card card-body border-secondary para" style={{ maxWidth: 950 }}>
+        <h1 className="text-center display-1 mb-2">Checkout</h1>
+        <h2 className='my-3'>Shipping only available in South Africa</h2>
         <form onSubmit={onFormSubmit}>
-        <h2>Billing address</h2>
+        <h3 className='mb-3'>Billing address</h3>
         <div className="container d-flex justify-content-evenly">
-          <div className="mb-3">
+          <div className="m-3">
             <label className="form-label">Firstname</label>
             <input
               type="text"
@@ -68,7 +94,7 @@ export default function Checkout() {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="m-3">
             <label className="form-label">Surname</label>
             <input
               type="text"
@@ -96,7 +122,7 @@ export default function Checkout() {
               type="tel"
               id="phone"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              placeholder="123-456-7890"
+              placeholder="123-456-7890, with hyphens"
               onChange={(e) => setPhoneNumber(e.target.value)}
               value={phoneNumber}
               className="form-control"
@@ -140,7 +166,7 @@ export default function Checkout() {
           ></input>
         </div>
 
-        <h2 className="mt-4 mb-1">Payment</h2>
+        {/* <h2 className="mt-4 mb-1">Payment</h2>
 
         <div className="container mb-3">
           <label className="form-label">Name on card</label>
@@ -188,10 +214,10 @@ export default function Checkout() {
               required
             />
           </div>
-        </div>
+        </div> */}
 
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <button className="btn btn-primary btn-md mb-3">SUBMIT</button>
+          <button type='submit' className="btn btn-primary btn-md my-3" onClick={payWithPaystack}>Pay</button>
         </div>
         
         <hr></hr>

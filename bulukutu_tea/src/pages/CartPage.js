@@ -13,13 +13,13 @@ import Button from "../components/common/ButtonFooter";
 import "../styles/CartPage.css";
 import OrdersService from "../services/orders.service";
 import { AiOutlineShopping } from "react-icons/ai";
-import StripeContainer from "../components/StripeContainer";
+// import StripeContainer from "../components/StripeContainer";
 
 // shopping cart page
 // renders / process shopping cart functionality
 export default function CartPage(props) {
   const [orders, setOrders] = useState([]);
-  const [showCart, setShowCart] = useState(false);
+  // const [showCart, setShowCart] = useState(false);
   //const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
@@ -31,6 +31,7 @@ export default function CartPage(props) {
   async function fetchOrders() {
     const orders_var = await OrdersService.fetchOrders(props.user);
     setOrders(orders_var);
+    props.setPrice(orders.reduce((a, v) => (a = a + v.price * v.quantity), 0) + 8)
   }
 
   async function onLogoutClicked() {
@@ -40,15 +41,16 @@ export default function CartPage(props) {
   async function deleteOrder(orderid) {
     OrdersService.deleteOrder(orderid);
     setOrders(orders.filter((order) => order.orderid !== orderid));
+    props.setPrice(orders.reduce((a, v) => (a = a + v.price * v.quantity), 0) + 8)
   }
 
   return (
     <div>
-      {showCart ? (
+      {/* {showCart ? (
         <StripeContainer
           cost={orders.reduce((a, v) => (a = a + v.price * v.quantity), 0)}
         />
-      ) : (
+      ) : ( */}
         <>
           {props.user ? (
             <div className="container mt-3 main-card">
@@ -123,7 +125,7 @@ export default function CartPage(props) {
                         </Link>
 
                         <Link
-                          to="/Checkout"
+                          to="/checkout"
                           className="btn btn-outline-dark btn-md col-5"
                           style={{ width: 200, margin: 20 }}
                         >
@@ -167,7 +169,7 @@ export default function CartPage(props) {
             </div>
           )}
         </>
-      )}
+      {/* )} */}
     </div>
   );
 }

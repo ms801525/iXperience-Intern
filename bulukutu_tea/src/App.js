@@ -26,7 +26,7 @@ import Checkout from "./pages/Checkout";
 import OrdersService from './services/orders.service'
 import ContactUsPage from "./pages/ContactUsPage";
 import ComingSooon from "./components/ComingSoon";
-import StripeContainer from "./components/StripeContainer";
+// import StripeContainer from "./components/StripeContainer";
 
 // imports for bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -44,6 +44,7 @@ import { auth } from './firebase/Firebase';
 export default function App() {
   const [user, setUser] = useState(null);
   const [waitingForUser, setWaitingForUser] =useState(true);
+  const [price, setPrice] = useState(0);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -87,15 +88,21 @@ export default function App() {
               <Route path='/upload' element={<AddProducts/>}></Route>
               <Route path='/image-list' element={<ImageList/>}></Route>
               <Route path='/recipe' element={<Recipe/>}></Route>
-              <Route path='/checkout' element={<Checkout/>}></Route>
+              {/* <Route path='/checkout' element={<Checkout/>}></Route> */}
 
-              <Route path='/cart' element={
+              <Route path='/checkout' element={
                 <RequiresAuth user={user}>
-                  <CartPage user={user}/>
+                  <Checkout user={user} price={price}/>
                 </RequiresAuth>
               }></Route>
 
-              <Route path='/payment' element={<StripeContainer/>}></Route>
+              <Route path='/cart' element={
+                <RequiresAuth user={user}>
+                  <CartPage user={user} setPrice={setPrice}/>
+                </RequiresAuth>
+              }></Route>
+
+              {/* <Route path='/payment' element={<StripeContainer/>}></Route> */}
 
               <Route path="/contact-us" element={<ContactUsPage/>}></Route>
 

@@ -10,10 +10,10 @@ export class Shipping_Payment {
     address,
     address2,
     city,
-    nameOnCard,
-    creditCardNumber,
-    expiration,
-    cvv,
+    // nameOnCard,
+    // creditCardNumber,
+    // expiration,
+    // cvv,
   }) {
     this.name = name;
     this.surname = surname;
@@ -22,10 +22,10 @@ export class Shipping_Payment {
     this.address = address;
     this.address2 = address2;
     this.city = city;
-    this.nameOnCard = nameOnCard;
-    this.creditCardNumber = creditCardNumber;
-    this.expiration = expiration;
-    this.cvv = cvv;
+    // this.nameOnCard = nameOnCard;
+    // this.creditCardNumber = creditCardNumber;
+    // this.expiration = expiration;
+    // this.cvv = cvv;
   }
   toJson() {
     return {
@@ -36,10 +36,10 @@ export class Shipping_Payment {
       address: this.address,
       address2: this.address2,
       city: this.city,
-      nameOnCard: this.nameOnCard,
-      creditCardNumber: this.creditCardNumber,
-      expiration: this.expiration,
-      cvv: this.cvv,
+      // nameOnCard: this.nameOnCard,
+      // creditCardNumber: this.creditCardNumber,
+      // expiration: this.expiration,
+      // cvv: this.cvv,
     };
   }
 
@@ -54,10 +54,10 @@ export class Shipping_Payment {
       address: data.address,
       address2: data.address2,
       city: data.city,
-      nameOnCard: data.nameOnCard,
-      creditCardNumber: data.creditCardNumber,
-      expiration: data.expiration,
-      cvv: data.cvv,
+      // nameOnCard: data.nameOnCard,
+      // creditCardNumber: data.creditCardNumber,
+      // expiration: data.expiration,
+      // cvv: data.cvv,
     });
   }
 }
