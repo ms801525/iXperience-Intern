@@ -125,6 +125,24 @@ export default function Checkout(props) {
             console.log(res)
           }).catch(err => console.log(err))
 
+          emailjs.send(
+            'service_at0bjyq', 
+            'template_bqwvo8o',
+            {
+              name: name,
+              surname: surname,
+              phoneNumber: phoneNumber,
+              e_mail: email,
+              address: address,
+              address2: address2,
+              city: city,
+              order: order
+            },
+            'GT5TUMHRCPFCXnHnX', 
+            ).then(res =>{
+              console.log(res)
+            }).catch(err => console.log(err))
+
         setEmail("");
         setName("");
         setAddress("");
