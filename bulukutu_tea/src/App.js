@@ -43,8 +43,9 @@ import { auth } from './firebase/Firebase';
 // renders the website
 export default function App() {
   const [user, setUser] = useState(null);
-  const [waitingForUser, setWaitingForUser] =useState(true);
+  const [waitingForUser, setWaitingForUser] = useState(true);
   const [price, setPrice] = useState(0);
+  const [cartOrder, setCartOrder] = useState()
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -92,13 +93,13 @@ export default function App() {
 
               <Route path='/checkout' element={
                 <RequiresAuth user={user}>
-                  <Checkout user={user} price={price}/>
+                  <Checkout user={user} price={price} cartOrder={cartOrder}/>
                 </RequiresAuth>
               }></Route>
 
               <Route path='/cart' element={
                 <RequiresAuth user={user}>
-                  <CartPage user={user} setPrice={setPrice}/>
+                  <CartPage user={user} setPrice={setPrice} setCartOrder={setCartOrder}/>
                 </RequiresAuth>
               }></Route>
 

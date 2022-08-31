@@ -32,6 +32,7 @@ export default function CartPage(props) {
     const orders_var = await OrdersService.fetchOrders(props.user);
     setOrders(orders_var);
     props.setPrice(orders.reduce((a, v) => (a = a + v.price * v.quantity), 0) + 8)
+    props.setCartOrder(orders_var)
   }
 
   async function onLogoutClicked() {
@@ -42,6 +43,7 @@ export default function CartPage(props) {
     OrdersService.deleteOrder(orderid);
     setOrders(orders.filter((order) => order.orderid !== orderid));
     props.setPrice(orders.reduce((a, v) => (a = a + v.price * v.quantity), 0) + 8)
+    props.setCartOrder(orders.filter((order) => order.orderid !== orderid))
   }
 
   return (
