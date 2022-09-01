@@ -104,8 +104,6 @@ export default function Checkout(props) {
       name,
       surname,
       onSuccess(transaction) {
-        let message = `Payment Complete! Reference ${transaction.reference}`;
-        alert(message);
 
         emailjs.send(
           'service_at0bjyq', 
@@ -143,13 +141,16 @@ export default function Checkout(props) {
               console.log(res)
             }).catch(err => console.log(err))
 
-        setEmail("");
-        setName("");
-        setAddress("");
-        setAddress2("");
-        setSurname("");
-        setPhoneNumber(0);
-        setCity('')
+          let message = `Payment Complete! Reference ${transaction.reference}`;
+          alert(message);
+
+          setEmail("");
+          setName("");
+          setAddress("");
+          setAddress2("");
+          setSurname("");
+          setPhoneNumber(0);
+          setCity('')
       },
       onCancel() {
         alert("You have cancelled the transaction");

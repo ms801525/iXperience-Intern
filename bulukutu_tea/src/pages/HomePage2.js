@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 // Buttons for the home page
 import Carousel from "../components/common/Carousel";
@@ -12,15 +12,32 @@ import "../styles/homePageStyles.css";
 export default function HomePage() {
   // const navigate = useNavigate()
   // const [isHovering, setHovering] = useState(false);
+  const vidRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  
+  function handlePlayVideo() {
+    if (!isPlaying) {
+      vidRef.current.play();
+      setIsPlaying(true)
+    } else {
+      vidRef.current.pause();
+      setIsPlaying(false)
+    }
+  }
+
   return (
-    <div className="container-fluid p-2 g-0">
+    <div className="container-fluid p-0 g-0">
       <div className="container-fluid d-flex p-0 g-0 mt-2 flex-wrap">
-        <video src={require("../images/video.mp4")} className=' responsive' alt="...">
-          {/* <Button1 size={"btn-lg btn-outline"} width = {'auto'} page='/shop'>
-                          Discover
-                      </Button1> */}
-        </video>
-        <div className="side-content">
+        <div className='d-flex p-0 g-0'>
+          <video ref={vidRef} src={require("../images/video.mp4")} className='m-0 p-0 responsive' alt="...">
+          </video>
+            {/* {!isPlaying ? (
+              <i class="bi bi-play-circle vidbtn" onClick={handlePlayVideo}></i>
+            ):(
+              <i class="bi bi-pause-circle vidbtn" onClick={handlePlayVideo}></i>
+            )} */}
+        </div>
+        <div className="side_content">
           <h3>
             <b>
               <i> Central Congo's Finest</i>
