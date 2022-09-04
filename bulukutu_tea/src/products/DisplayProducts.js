@@ -22,6 +22,7 @@ import Imagegallery from "./imagegallery";
 // import stylesheet for page
 import "../styles/DisplayProducts.css";
 import { Order } from "../models/order";
+import Button2 from "../components/common/Button";
 
 // displays products
 export default function DisplayProducts(props) {
@@ -60,11 +61,13 @@ export default function DisplayProducts(props) {
 
   return (
     <>
-      <div className="container my-4">
-        <div className="d-flex justify-content-end">
+      <div className="container d-flex justify-content-center flex-column my-4">
+        {/* <div className="d-flex justify-content-end">
           <Link to="/upload">Add Product</Link>
-        </div>
-        
+        </div> */}
+
+        <h2 className='my-5'>There is a bug that makes both counters the same. Please adjust the amount before every click</h2>
+
         {products.length === 0 ? (
           <div className="no-products-div">
             <Spinner />
@@ -157,6 +160,8 @@ export default function DisplayProducts(props) {
             ))}
           </div>
         )}
+
+        <Button2 page='/cart'>Proceed to Cart</Button2>
       </div>
     </>
   );

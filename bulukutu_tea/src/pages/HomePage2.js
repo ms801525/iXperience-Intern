@@ -27,15 +27,11 @@ export default function HomePage() {
 
   return (
     <div className="container-fluid p-0 g-0">
-      <div className="container-fluid d-flex p-0 g-0 mt-2 flex-wrap">
-        <div className='d-flex p-0 g-0'>
-          <video ref={vidRef} src={require("../images/video.mp4")} className='m-0 p-0 responsive' alt="...">
+      <div className="container-fluid d-flex p-0 g-0 flex-wrap">
+        <div className='d-flex p-0 g-0 responsive'>
+          <video ref={vidRef} src={require("../images/video.mp4")} alt="...">
           </video>
-            {/* {!isPlaying ? (
-              <i class="bi bi-play-circle vidbtn" onClick={handlePlayVideo}></i>
-            ):(
-              <i class="bi bi-pause-circle vidbtn" onClick={handlePlayVideo}></i>
-            )} */}
+           
         </div>
         <div className="side_content">
           <h3>
@@ -57,6 +53,11 @@ export default function HomePage() {
             you are not just drinking our tea, but also{" "}
             <b>tasting a piece of our story</b>.
           </p>
+           {!isPlaying ? (
+              <button className='btn btn-dark btn-large' onClick={handlePlayVideo}>Play Video <i class="bi bi-play-circle" ></i></button>
+            ):(
+              <button className='btn btn-dark btn-large' onClick={handlePlayVideo}>Pause Video <i class="bi bi-pause-circle"></i></button>
+            )}
         </div>
       </div>
       {/* <BreakLine></BreakLine> */}

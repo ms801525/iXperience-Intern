@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom'
 import {  signOut } from 'firebase/auth'
 import { auth } from '../../firebase/Firebase'
@@ -15,6 +15,21 @@ import "../../styles/navBarStyles.css";
 export default function Navbar({user}) {
 
   const navigate = useNavigate();
+  const [logo, setLogo] = useState(true)
+
+  function showLogo() {
+    if (window.innerWidth <= 960) {
+      setLogo(true)
+    } else {
+      setLogo(false)
+    }
+  }
+
+  useEffect(() => {
+    showLogo();
+  }, [])
+
+  window.addEventListener('resize', showLogo)
 
   async function onLogoutClicked() {
     try {
@@ -27,6 +42,16 @@ export default function Navbar({user}) {
   
   return (
     <div className="container-fluid navbar-panel">
+
+      {logo && <Link to="/">
+                    <img
+                      className="main-logo"
+                      src={require("../../images/Logo2.png")}
+                      alt="Background"
+                    ></img>
+                </Link>}
+
+
       {/* <div className="container center-title">
         <div className="p-3"> */}
           {/* <Link to="/">
@@ -90,14 +115,15 @@ export default function Navbar({user}) {
                     Tea Recipes
                   </Button>
                 </li>
-                <li className="col nav-item mx-3">
-                  <Link to="/">
-                    <img
-                      className="main-logo"
-                      src={require("../../images/Logo2.png")}
-                      alt="Background"
-                    ></img></Link>
-                </li>
+                {!logo && <li className="col nav-item mx-3">
+                    <Link to="/">
+                      <img
+                        className="main-logo"
+                        src={require("../../images/Logo2.png")}
+                        alt="Background"
+                      ></img></Link>
+                  </li>
+                }
                 <li className="col nav-item mx-3">
                   <Button width={"w-100"} size={"btn-sm"} page="/contact-us">
                     Contact

@@ -1,0 +1,70 @@
+.vid {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1
+}
+
+.hero-container {
+    /* background: url("../images/tea-box3.jpeg") center center/cover no-repeat; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(1, 49, 9, 0.2);
+    object-fit: contain;
+    justify-content: center;
+}
+
+.hero-container .btn{
+    background: #242424;
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+.hero-container .btn:hover{
+    background: #fff;
+    color: #242424;
+    transition: all 0.3s ease-out;
+}
+
+.hero-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    margin-top: -450px
+}
+
+.hero-btns {
+    margin-top: 32px;
+}
+
+.hero-btns .btn {
+    margin: 6px
+}
+
+.hero-btns > i{
+    margin-left: 4px
+}
+
+@media screen and (max-width: 960px) {
+    .hero-container > h1 {
+        font-size: 70px;
+        margin-top: -250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container > h1 {
+        font-size: 50px;
+        margin-top: -250px;
+    }
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+    .hero-container .btn {
+        width: 100%
+    }
+}
