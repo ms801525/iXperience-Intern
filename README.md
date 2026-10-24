@@ -9,6 +9,8 @@ An online store for Bulukutu Tea, built on a live Agile team with sprint plannin
 - `bulukutu_tea/`: React front end with React Router, React Bootstrap and Ant Design, Firebase, and Stripe checkout
 - `server/`: Node.js back end for payments
 
+**My part:** I created the repository and the React app scaffold, then built the home page, shop page, recipe page and image gallery, and the shared navbar and footer with social media links. I worked in feature branches merged through pull requests (for example #3 home page, #9 shop page, #11 navbar, #22 recipe and gallery), alongside about 9 contributors, with 32 commits between June 13 and July 8, 2022.
+
 ## Mini projects
 
 Smaller exercises from earlier in the bootcamp, in `mini-projects/`:
