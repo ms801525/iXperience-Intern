@@ -1,6 +1,6 @@
 # iXperience Software Engineering Bootcamp (Summer 2022)
 
-Work from the iXperience software engineering bootcamp, June to August 2022.
+Work from the iXperience software engineering bootcamp, May to August 2022.
 
 ## Bulukutu Tea (team project)
 
